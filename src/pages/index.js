@@ -2,11 +2,13 @@ import React, { Component } from "react"
 import { Link, graphql } from "gatsby"
 import { Content } from '../components/Scaffold'
 
+
 import Lorem from '../components/Lorem'
 import Img from "gatsby-image"
 import FluidGrid from 'react-fluid-grid'
 import Layout from '../components/Layout'
 import styled from 'styled-components'
+
 
 
 const styleStrategies = [
@@ -17,31 +19,44 @@ const styleStrategies = [
 const transition = 'top 200ms ease-in-out, left 200ms ease-in-out'
 
 class Home extends Component {
-  drawerToggleClickHandler = () => {
-    console.log('hello')
-   
-  };
+ 
 
   render() {
-    const data = this.props.data
- 
+    const data = this.props.data.projects
+    const allposts = this.props.data.posts
     console.log(data);
+   
+ 
+  
     return (
     <Layout>
       <h2>Projects</h2>
       <FluidGrid className ="posts" styleStrategies={styleStrategies} transition={transition}>
-        {data.allWordpressPost.edges.map(({ node }) => (
+      
+        {data.edges.map(({ node }) => (
           <div key={node.slug} className="homepost" >
-            <Img className="bloglead" fluid={node.featured_media.localFile.childImageSharp.fluid} />
-            {node.categories[0].name !== null ?
-                
-                <p dangerouslySetInnerHTML={{__html: node.categories[0].name }} className="categories"></p>
-                : ''}
+           <Img className="bloglead" fluid={node.featured_media.localFile.childImageSharp.fluid} /> 
             <Link to={`/post/${node.slug}/`} css={{ textDecoration: `none` }}>
               <h3>{node.title}</h3>
             </Link>
-           
-               
+            {console.log()}
+            {node.categories[0].name !== null ?
+                
+                <p dangerouslySetInnerHTML={{__html: node.categories[0].name }} className="categories"></p>
+                
+                : ''
+                
+                
+                }
+
+              {node.acf.test !== null ?
+                
+                <p dangerouslySetInnerHTML={{__html: node.acf.test }} className="categories"></p>
+                
+                : ''
+                
+                
+                }   
             <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
            
            
@@ -50,15 +65,28 @@ class Home extends Component {
         ))}
         </FluidGrid>
         <div>
-          <h2>Pages</h2>
-          {data.allWordpressPage.edges.map(({ node }) => (
-            <div key={node.slug}>
-              <Link to={node.slug} css={{ textDecoration: `none` }}>
-                <h3>{node.title}</h3>
-              </Link>
-              <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-              </div>
-              ))}
+        <h2>Posts</h2>
+      <FluidGrid className ="posts" styleStrategies={styleStrategies} transition={transition}>
+      
+        {allposts.edges.map(({ node }) => (
+          <div key={node.slug} className="allpost" >
+           
+            <Link to={`/post/${node.slug}/`} css={{ textDecoration: `none` }}>
+              <h3>{node.title}</h3>
+            </Link>
+          
+          
+              {node.acf.test !== null ?
+                <p dangerouslySetInnerHTML={{__html: node.acf.test }} className="categories"></p>
+                
+                : ''
+                }   
+            <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+           
+          </div>
+        ))}
+        </FluidGrid>
+      
           </div>
         </Layout>
     )
@@ -69,19 +97,9 @@ export default Home
 
 // Set here the ID of the home page.
 export const pageQuery = graphql`
-query {
-  allWordpressPage  {
-    edges {
-      node {
-        id
-        title
-        excerpt
-        slug
-        date(formatString: "MMMM DD, YYYY")
-      }
-    }
-  }
-  allWordpressPost(sort: { fields: [date], order: ASC  } )  {
+query 
+{
+  projects: allWordpressPost(filter: {acf: {status: {eq: "project"}}}, limit: 6) {
     edges {
       node {
         title
@@ -93,16 +111,36 @@ query {
           name
           description
         }
-        featured_media{
-          localFile{
-            childImageSharp{
-              fluid(maxWidth: 220, maxHeight: 250){
+        acf {
+          test
+        }
+        featured_media {
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 220, maxHeight: 250) {
                 ...GatsbyImageSharpFluid
               }
-           }
+            }
           }
+        }
       }
-       
+    }
+  }
+  posts: allWordpressPost(filter: {acf: {status: {eq: "post"}}}, limit: 6) {
+    edges {
+      node {
+        title
+        excerpt
+        slug
+        categories {
+          id
+          slug
+          name
+          description
+        }
+        acf {
+          test
+        }
       }
     }
   }

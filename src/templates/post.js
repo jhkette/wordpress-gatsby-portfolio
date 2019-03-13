@@ -13,7 +13,7 @@ class PostTemplate extends Component {
             <Layout>
             <div>
                 <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
-                {post.categories[0].name !== null ?
+                 {post.categories[0].name !== null ?
                 
                 <p dangerouslySetInnerHTML={{__html:post.categories[0].name }}></p>
                 : ''}

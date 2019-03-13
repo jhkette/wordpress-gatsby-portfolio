@@ -73,7 +73,13 @@ export const pageQuery = graphql`
         }
       }
     }
-    allWordpressPost(sort: { fields: [date], order: ASC  } )  {
+    allWordpressPost
+    (
+      filter: { acf: {statusl:{eq: "project"}}} 
+      limit: 4
+      ), 
+    
+     {
       edges {
         node {
           title
@@ -103,3 +109,55 @@ childImageSharp{
                      ...GatsbyImageSharpFluid
                    }
                 }
+
+
+
+{
+  
+  posts: allWordpressPost(filter: { acf: {status:{eq: "project"}}} 
+  limit: 6
+  ),   {
+    edges {
+      node {
+        title
+        excerpt
+        slug
+        categories {
+          id
+          slug
+          name
+          description
+        }
+        acf{
+          test
+        }
+    
+       
+      }
+    }
+  }
+  
+  projects: allWordpressPost(filter: { acf: {status:{eq: "post"}}} 
+  limit: 6
+  ),   {
+    edges {
+      node {
+        title
+        excerpt
+        slug
+        categories {
+          id
+          slug
+          name
+          description
+        }
+        acf{
+          test
+        }
+    
+       
+      }
+    }
+  }
+
+}
