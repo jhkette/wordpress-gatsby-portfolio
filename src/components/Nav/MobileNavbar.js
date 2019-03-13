@@ -29,7 +29,7 @@ const SecondaryMenu = styled.div`
   left: 0;
   right: 0;
   ${p => p.open ? css`
-    height: 45%;
+    height: 100%;
     width: 100%;
    
     z-index: 2;
@@ -47,8 +47,9 @@ const SecondaryMenu = styled.div`
   -webkit-overflow-scrolling: touch;
   overflow-x: scroll;
   overflow-y: hidden;
-  background: rgba(198, 198, 198, .96);
+  background: rgba(198, 198, 198, 1);
   color: #1a1a1a;
+  margin-top: .5rem;
   h1{
     font-size: 1rem;
   }

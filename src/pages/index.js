@@ -6,6 +6,7 @@ import Lorem from '../components/Lorem'
 import Img from "gatsby-image"
 import FluidGrid from 'react-fluid-grid'
 import Layout from '../components/Layout'
+import styled from 'styled-components'
 
 
 const styleStrategies = [
@@ -32,10 +33,18 @@ class Home extends Component {
         {data.allWordpressPost.edges.map(({ node }) => (
           <div key={node.slug} className="homepost" >
             <Img className="bloglead" fluid={node.featured_media.localFile.childImageSharp.fluid} />
+            {node.categories[0].name !== null ?
+                
+                <p dangerouslySetInnerHTML={{__html: node.categories[0].name }} className="categories"></p>
+                : ''}
             <Link to={`/post/${node.slug}/`} css={{ textDecoration: `none` }}>
               <h3>{node.title}</h3>
             </Link>
+           
+               
             <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+           
+           
            
           </div>
         ))}
@@ -78,6 +87,12 @@ query {
         title
         excerpt
         slug
+        categories {
+          id
+          slug
+          name
+          description
+        }
         featured_media{
           localFile{
             childImageSharp{

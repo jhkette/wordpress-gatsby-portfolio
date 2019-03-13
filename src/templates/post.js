@@ -13,16 +13,17 @@ class PostTemplate extends Component {
             <Layout>
             <div>
                 <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
-                <Img resolutions ={resolutions} className="lead-postimage"/>
-                <div dangerouslySetInnerHTML={{ __html: post.content }} />
-                {post.acf !== null ?
-                <p dangerouslySetInnerHTML={{__html:post.acf.social }}></p>
-                : ''}
-                
                 {post.categories[0].name !== null ?
                 
                 <p dangerouslySetInnerHTML={{__html:post.categories[0].name }}></p>
                 : ''}
+                <Img resolutions ={resolutions} className="lead-postimage"/>
+                <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                {/* {post.acf !== null ?
+                <p dangerouslySetInnerHTML={{__html:post.acf.social }}></p>
+                : ''}
+                 */}
+               
                
             </div>
             </Layout>

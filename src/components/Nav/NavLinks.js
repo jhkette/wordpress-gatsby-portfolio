@@ -18,6 +18,7 @@ const NavLink = styled(Link)`
   transition: opacity 0.2s, transform 0.2s;
   cursor: pointer;
   letter-spacing: 0.025rem;
+  padding-bottom: .2rem;
   color: currentColor;
   &:hover,
   &:focus {
@@ -26,6 +27,11 @@ const NavLink = styled(Link)`
   &:active {
     transform: scale(0.95);
     opacity: 0.6;
+  }
+  &:hover {
+    text-decoration: none;
+   color: #DA0E19;
+    transition-duration: 1s;
   }
 `
 

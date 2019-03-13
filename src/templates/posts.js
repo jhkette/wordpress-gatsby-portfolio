@@ -17,13 +17,13 @@ const NavLink = props => {
     { mediaQuery: '(min-width: 720px) and (max-width: 1023.9px)', style: { numberOfColumns: 1, gutterHeight: 15, gutterWidth: 15 } },
     { mediaQuery: '(min-width: 1024px)', style: { numberOfColumns: 2, gutterHeight: 30, gutterWidth: 30 } }
   ]
-  const transition = 'top 200ms ease-in-out, left 200ms ease-in-out'
-const IndexPage = ({ data, pathContext }) => {
+    const transition = 'top 200ms ease-in-out, left 200ms ease-in-out'
+    const IndexPage = ({ data, pathContext }) => {
     const { group, index, first, last, pageCount } = pathContext;
     const previousUrl = index - 1 == 1 ? "" : (index - 1).toString();
     const nextUrl = (index + 1).toString();
 
-    console.log(group)
+    
 
     return (
       <Layout>
@@ -44,10 +44,7 @@ const IndexPage = ({ data, pathContext }) => {
                 </div>
                 }
                     
-                    <div className={"post-content"} dangerouslySetInnerHTML={{__html: node.excerpt}}></div>
-                  
-
-                    
+                    <div className={"post-content"} dangerouslySetInnerHTML={{__html: node.excerpt}}></div> 
                 </div>
                 
             ))}

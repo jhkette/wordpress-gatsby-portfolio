@@ -38,7 +38,7 @@ const NormalNavbar = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 ${rem(30)};
+  padding: 0;
 
   ${mobile(css`
     display: none;
@@ -86,8 +86,9 @@ class NavBar extends PureComponent {
         <LogoLink>
                 <Logo>{data.site.siteMetadata.title}</Logo>
         </LogoLink>
-        <Intro>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id pellentesque nulla. Phasellus odio libero, consequat ut erat quis,
-           euismod malesuada augue. Sed tempus, libero eu ultricies rutrum,</Intro>
+        <Intro>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id pellentesque nulla.
+           Phasellus odio libero, consequat ut erat quis.
+           </Intro>
       
           <NormalNavbar>
          
