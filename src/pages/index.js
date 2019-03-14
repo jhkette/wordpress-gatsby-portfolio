@@ -36,31 +36,17 @@ class Home extends Component {
         {data.edges.map(({ node }) => (
           <div key={node.slug} className="homepost" >
            <Img className="bloglead" fluid={node.featured_media.localFile.childImageSharp.fluid} /> 
-            <Link to={`/post/${node.slug}/`} css={{ textDecoration: `none` }}>
-              <h3>{node.title}</h3>
-            </Link>
-            {console.log()}
-            {node.categories[0].name !== null ?
-                
-                <p dangerouslySetInnerHTML={{__html: node.categories[0].name }} className="categories"></p>
-                
-                : ''
-                
-                
-                }
-
-              {node.acf.test !== null ?
+           {node.acf.test !== null ?
                 
                 <p dangerouslySetInnerHTML={{__html: node.acf.test }} className="categories"></p>
                 
                 : ''
-                
-                
                 }   
+            <Link to={`/post/${node.slug}/`} css={{ textDecoration: `none` }}>
+              <h3>{node.title}</h3>
+            </Link>
+             
             <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-           
-           
-           
           </div>
         ))}
         </FluidGrid>
@@ -76,11 +62,7 @@ class Home extends Component {
             </Link>
           
           
-              {node.acf.test !== null ?
-                <p dangerouslySetInnerHTML={{__html: node.acf.test }} className="categories"></p>
-                
-                : ''
-                }   
+             
             <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
            
           </div>
