@@ -32,7 +32,7 @@ const SecondaryMenu = styled.div`
     height: 100%;
     width: 100%;
    
-    z-index: 2;
+    z-index: 3;
   ` : css`
     height: 0;
     width: 25%;
@@ -68,6 +68,7 @@ const LogoLink = styled(Link).attrs({
 const IconWrapper = styled.div`
   transition: transform 0.1s;
   color: #1a1a1a;
+  
   ${p => p.rotate && css`
     transform-origin: 50% 55%;
     transform: rotate(180deg);

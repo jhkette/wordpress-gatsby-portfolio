@@ -3,7 +3,7 @@ $break-tablet: 720px;
 $break-large: 1024px;
 $mainred: #da0e19;
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 * {
   margin: 0;
@@ -11,7 +11,7 @@ $mainred: #da0e19;
 }
 
 html {
-  font-family: Helvetica, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 
@@ -27,12 +27,32 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Source Sans Pro';
+}
+
+p {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+  font-weight: 300;
+  line-height: 1.7rem;
+  font-size: 1.2rem;
 }
 
 .wrapper {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+}
+
+.svg-inline--fa {
+  width: 1rem !important;
+  height: 1rem !important;
 }
 
 article,
@@ -54,7 +74,6 @@ summary {
   width: 100%;
   background-color: #ffffff;
   border: 1px solid red;
-
 }
 
 main {
@@ -73,12 +92,17 @@ header {
   counter-reset: section;
   display: flex;
   flex-direction: row;
-  background-color: #ffffff;
+  background-color: #fff;
   justify-content: space-around;
-
   @media screen and (max-width: $break-small) {
     flex-direction: column;
   }
+}
+
+.navcontainer{
+  width: 33%;
+  min-height: 100vh;
+  background-color: #f4f4f4;
 }
 
 .container {
@@ -99,19 +123,31 @@ header {
   @media screen and (max-width: $break-tablet) {
     flex-direction: column;
     align-items: center;
-
   }
 }
 
 .bloglead {
-  width: 285px;
-
+  position: relative;
+  z-index: 2;
   &:hover {
-    opacity: 0;
-    transition-duration: .1s;
-    background-color: white;
+   transition: .5s;
+    opacity: .5;
+    z-index: 0;
+   
+    &:before{
+      content:url('../images/mag.svg');
+      opacity: .98;
+      position: absolute;
+      width: 8rem;
+      top: 9rem;;
+      left: 50%;
+      margin-left: -4rem;
+      z-index: 1;
+     
+    }
   }
-
+ 
+ 
   @media screen and (min-width:$break-tablet) and (max-width: $break-large) {
     width: 200px;
   }
@@ -131,16 +167,24 @@ h1 {
 h2 {
   font-family: 'Roboto', serif;
   margin: 2rem 0;
-
+  color: $mainred;
 }
-.homepost {
-  width: min-content;
-  
 
+.homepost {
+  position: relative;
+  width: 420px;
+  background-color: white;
   display: inline-block;
   text-align: left;
   margin-bottom: 2rem;
 
+  @media screen and (max-width: $break-large) {
+    width: 200px;
+  }
+
+  @media screen and (max-width: $break-small) {
+    width: 400px;
+  }
 
   h1 {
     font-family: 'Roboto', serif;
@@ -150,8 +194,7 @@ h2 {
     font-family: 'Roboto', serif;
     padding: .1rem 1rem;
     margin-bottom: 0;
-    position: relative;
-    top: -1rem;
+  
 
 
   }
@@ -160,51 +203,52 @@ h2 {
     padding: 0rem 1rem .7rem 1rem;
   }
 
-.categories {
-  background-color: $mainred;
-  border-radius: .2rem;
-  width: fit-content;
-  color: white;
-  vertical-align: center;
-  font-size: .9rem;
-  margin: 0;
-  padding: .3rem;
-  font-weight: 900;
+  .categories {
+    background-color: $mainred;
+    border-radius: .2rem;
+    width: fit-content;
+    color: white;
+    
+    font-size: .7rem;
+    margin: .6rem 0;
+    padding: .3rem;
+    font-weight: 900;
 
-  margin-left: 1rem;
-  
-  position: relative;
-top: -5rem;
-}
+    margin-left: 1rem;
+    display: block;
+    position: relative;
+    top: -5rem;
+    z-index: 5;
+  }
+
 }
 
 .allpost {
-  width: 220px;
+  width: 450px;
   background-color: white;
 
   display: inline-block;
   text-align: left;
   margin-bottom: 2rem;
+
   h1 {
     font-family: 'Roboto', serif;
   }
+
   h3 {
     font-family: 'Roboto', serif;
     padding: .4rem 0rem;
     margin-bottom: 0;
   }
+
   p {
     padding: 0rem;
   }
-
-
 }
-
-
 
 .posts {
   width: 100%;
-  border: 1px solid red;
+
   display: block;
   text-align: center;
 }
@@ -482,16 +526,7 @@ dd {
   margin-bottom: 1.45rem;
 }
 
-p {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
+
 
 figure {
   margin-left: 0;

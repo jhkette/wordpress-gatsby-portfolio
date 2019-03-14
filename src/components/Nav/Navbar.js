@@ -19,11 +19,11 @@ const Wrapper = styled.nav`
   height: 100%;
   font-size: ${rem(15)};
   font-weight: 500;
-  background: #ededed;
+  background: #f4f4f4;
   transition: background 300ms ease-out;
   color: #1a1a1a;
   padding: 2rem;
-  width: 15rem;
+  width: 25rem;
 
   a {
     text-decoration: none;

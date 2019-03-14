@@ -46,10 +46,12 @@ class Layout extends PureComponent {
     return (
       <div clasname= "wrapper">
         <div class="maincontent">
+         
         <Nav
           isMobileNavFolded={isMobileNavFolded}
           onMobileNavToggle={this.toggleMobileNav}
         />
+        
        
  
         <div className ="container">
