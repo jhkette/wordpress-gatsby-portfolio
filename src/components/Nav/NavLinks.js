@@ -1,6 +1,8 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import { Link } from 'gatsby'
+import { mobile, tablet } from '../../utils/media'
+
 
 import NavSeparator from './NavSeparator'
 
@@ -8,7 +10,12 @@ const Wrapper = styled.nav`
   display: flex;
   align-items: center;
   flex: 0 0 auto;
+  flex-direction: row;
+
+  ${tablet(css`
   flex-direction: column;
+`)}
+  
 `
 
 const NavLink = styled(Link)`

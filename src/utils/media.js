@@ -6,8 +6,8 @@ export const mobile = inner => css`
   }
 `
 
-export const phone = inner => css`
-  @media (max-width: ${720 / 16}em) {
+export const tablet = inner => css`
+  @media (max-width: ${1024}px) {
     ${inner}
   }
 `

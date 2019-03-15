@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 
 import rem from '../../utils/rem'
 
-import { mobile } from '../../utils/media'
+import { mobile, tablet } from '../../utils/media'
 import NavLinks from './NavLinks'
 
 import MobileNavbar from './MobileNavbar'
@@ -23,11 +23,15 @@ const Wrapper = styled.nav`
   transition: background 300ms ease-out;
   color: #1a1a1a;
   padding: 2rem;
-  width: 25rem;
+  width: 22rem;
 
   a {
     text-decoration: none;
   }
+  ${tablet(css`
+  width: 15rem;
+`)}
+
   ${mobile(css`
   padding: .5rem;
   width: 100%;
