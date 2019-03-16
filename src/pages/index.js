@@ -115,7 +115,7 @@ query
       }
     }
   }
-  posts: allWordpressPost(filter: {acf: {status: {eq: "post"}}}, limit: 6) {
+  posts: allWordpressPost(filter: {acf: {status: {eq: "post"}}}, limit: 2) {
     edges {
       node {
         title

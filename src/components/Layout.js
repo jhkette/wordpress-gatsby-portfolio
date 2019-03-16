@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import styled,  { injectGlobal } from 'styled-components'
-import 'typeface-ibm-plex-sans'
+
 import "./layout.scss"
 
 import rem from '../utils/rem'
@@ -10,7 +10,7 @@ import Footer from './Footer'
 injectGlobal`
   body {
     margin: 0;
-    font-family: "ibm plex sans";
+    font-family: "Source Sans Pro";
     letter-spacing: ${rem(.25)};
   }
 `
@@ -35,11 +35,11 @@ class Layout extends PureComponent {
     }))
   }
 
-  onRouteChange = () => {
-    this.setState({
-      isMobileNavFolded: true,
-    })
-  }
+  // onRouteChange = () => {
+  //   this.setState({
+  //     isMobileNavFolded: true,
+  //   })
+  // }
 
   render() {
     const { isMobileNavFolded } = this.state
