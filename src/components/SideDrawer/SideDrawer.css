@@ -1,0 +1,34 @@
+.sidedrawer{
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0px 5px rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 400px;
+    z-index: 200;
+    width: 70%;
+    transition-duration: .3s;
+    transform: translateX(-100%);
+
+}
+.sidedrawer.open{
+    transform: translateX(0);
+}
+
+.sidedrawer ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.sidedrawer li{
+
+
+}
+.sidedrawer a{
+    color: purple;
+    text-decoration: none;
+    font-size: 1.2rem;
+}

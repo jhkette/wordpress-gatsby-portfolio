@@ -3,17 +3,11 @@ import styled,  { injectGlobal } from 'styled-components'
 
 import "./layout.scss"
 
-import rem from '../utils/rem'
-import Nav from './Nav'
+import Toolbar from './toolbar/toolbar'
+import SideDrawer from './SideDrawer/SideDrawer.js'
+import Backdrop from './backdrop/backdrop'
 import Footer from './Footer'
-
-injectGlobal`
-  body {
-    margin: 0;
-    font-family: "Source Sans Pro";
-    letter-spacing: ${rem(.25)};
-  }
-`
+import './layout.scss'
 
 // const Wrapper = styled.div`
 //   display: flex;
@@ -26,39 +20,37 @@ injectGlobal`
 
 class Layout extends PureComponent {
   state = {
-    isMobileNavFolded: true,
-  }
+    sideDrawerOpen: false
+  };
 
-  toggleMobileNav = () => {
-    this.setState(prevState => ({
-      isMobileNavFolded: !prevState.isMobileNavFolded,
-    }))
-  }
+  drawerToggleClickHandler = () =>{
+    this.setState((prevState) => {
+      return {sideDrawerOpen: !prevState.sideDrawerOpen};
+    })
+  };
 
-  // onRouteChange = () => {
-  //   this.setState({
-  //     isMobileNavFolded: true,
-  //   })
-  // }
+  backdropClickHandler = () =>{
+    this.setState({sideDrawerOpen: false})
+  }
 
   render() {
-    const { isMobileNavFolded } = this.state
+    let backDrop;
+    if(this.state.sideDrawerOpen){
+      
+      backDrop =  <Backdrop click={this.backdropClickHandler} />
+    }
+   
     return (
-      <div clasname= "wrapper">
-        <div class="maincontent">
-         
-        <Nav
-          isMobileNavFolded={isMobileNavFolded}
-          onMobileNavToggle={this.toggleMobileNav}
-        />
-        
-       
- 
-        <div className ="container">
-        {this.props.children}
+      <div className = "wrapper">
+        <div className = "maincontent">
+          <Toolbar drawerClickHandler = {this.drawerToggleClickHandler} />
+          <SideDrawer show = {this.state.sideDrawerOpen} />
+          <div className ="container">
+            {this.props.children}
         </div>
         </div>
         <Footer />
+        {backDrop}
       </div>
     )
   }

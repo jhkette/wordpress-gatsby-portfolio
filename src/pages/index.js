@@ -13,14 +13,14 @@ import styled from 'styled-components'
 
 
 const styleStrategies = [
-  { mediaQuery: '(max-width: 719.9px)', style: { numberOfColumns: 1, gutterHeight: 5, gutterWidth: 0 } },
-  { mediaQuery: '(min-width: 720px) and (max-width: 1023.9px)', style: { numberOfColumns: 2, gutterHeight: 15, gutterWidth: 15 } },
+  { mediaQuery: '(max-width: 768.9px)', style: { numberOfColumns: 1, gutterHeight: 5, gutterWidth: 0 } },
+  { mediaQuery: '(min-width: 769px) and (max-width: 1023.9px)', style: { numberOfColumns: 2, gutterHeight: 15, gutterWidth: 15 } },
   { mediaQuery: '(min-width: 1024px)', style: { numberOfColumns: 3, gutterHeight: 30, gutterWidth: 30 } }
 ]
 
 const styleStrategies2 = [
-  { mediaQuery: '(max-width: 719.9px)', style: { numberOfColumns: 1, gutterHeight: 5, gutterWidth: 0 } },
-  { mediaQuery: '(min-width: 720px) and (max-width: 1023.9px)', style: { numberOfColumns: 3, gutterHeight: 15, gutterWidth: 15 } },
+  { mediaQuery: '(max-width: 768.9px)', style: { numberOfColumns: 1, gutterHeight: 5, gutterWidth: 0 } },
+  { mediaQuery: '(min-width: 769px) and (max-width: 1023.9px)', style: { numberOfColumns: 3, gutterHeight: 15, gutterWidth: 15 } },
   { mediaQuery: '(min-width: 1024px)', style: { numberOfColumns: 2, gutterHeight: 30, gutterWidth: 30 } }
 ]
 const transition = 'top 200ms ease-in-out, left 200ms ease-in-out'

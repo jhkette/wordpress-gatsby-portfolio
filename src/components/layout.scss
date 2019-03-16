@@ -1,5 +1,5 @@
-$break-small: 719px;
-$break-tablet: 720px;
+$break-small: 768px;
+$break-tablet: 769px;
 $break-large: 1024px;
 $mainred: #da0e19;
 
@@ -468,7 +468,7 @@ textarea {
 
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: 'Source Sans Pro';
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
