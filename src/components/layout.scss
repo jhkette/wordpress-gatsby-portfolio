@@ -3,7 +3,7 @@ $break-tablet: 769px;
 $break-large: 1024px;
 $mainred: #da0e19;
 
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 
 * {
   margin: 0;
@@ -11,7 +11,7 @@ $mainred: #da0e19;
 }
 
 html {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Nunito', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 
@@ -27,7 +27,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Source Sans Pro';
+  font-family: 'Nunito';
 }
 
 p {
@@ -39,14 +39,14 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  font-weight: 300;
+  font-weight: 800;
   line-height: 1.7rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .wrapper {
   display: flex;
-  min-height: 100vh;
+  min-height: 100%;
   flex-direction: column;
 }
 
@@ -73,19 +73,19 @@ summary {
 .content {
   width: 100%;
   background-color: #ffffff;
-  border: 1px solid red;
+ 
 }
 
 main {
   width: 75%;
   text-align: center;
-  border: 1px solid red;
+  
 
 }
 
 header {
   width: 15rem;
-  border: 1px solid red;
+ 
 }
 
 .maincontent {
@@ -101,8 +101,10 @@ header {
 
 
 
+
+
 .container {
-  width: 95%;
+  width: 75%;
   margin: 2rem auto 0 auto;
   padding: 0 2rem;
   border: 1px red;
@@ -152,6 +154,34 @@ header {
     width: 400px;
     height: 400px;
   }
+}
+
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 3px;
+  background-color: #1a1a1a;
+ 
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
 }
 
 h1 {
@@ -208,7 +238,7 @@ h2 {
         font-size: 1.5rem;
 
         &:hover{
-          color: $mainred;
+          color: #1c9195;
           text-decoration: underline;
         }
     }
@@ -219,7 +249,7 @@ h2 {
   }
 
   .categories {
-    background-color: #1a1a1a;
+    background-color: #1c9195;
     border-radius: .2rem;
     width: fit-content;
     color: white;
@@ -305,7 +335,8 @@ header {
 
 .mobileheader {
 
-  border: 1px solid red;
+  
+
 
   @media screen and (max-width: $break-small) {
     width: 100%;
@@ -468,7 +499,7 @@ textarea {
 
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: 'Source Sans Pro';
+  font-family: 'Nunito';
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;

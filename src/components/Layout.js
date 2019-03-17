@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import styled,  { injectGlobal } from 'styled-components'
+
 
 import "./layout.scss"
 
@@ -8,14 +8,6 @@ import SideDrawer from './SideDrawer/SideDrawer.js'
 import Backdrop from './backdrop/backdrop'
 import Footer from './Footer'
 import './layout.scss'
-
-// const Wrapper = styled.div`
-//   display: flex;
-//   min-height: 100vh;
-//   flex-direction: column;
- 
-// `
-
 
 
 class Layout extends PureComponent {
@@ -33,6 +25,13 @@ class Layout extends PureComponent {
     this.setState({sideDrawerOpen: false})
   }
 
+  closeHandler = () =>{
+    this.setState({sideDrawerOpen: false})
+  }
+
+
+ 
+
   render() {
     let backDrop;
     if(this.state.sideDrawerOpen){
@@ -42,9 +41,12 @@ class Layout extends PureComponent {
    
     return (
       <div className = "wrapper">
+        <SideDrawer show = {this.state.sideDrawerOpen} 
+        click = {this.closeHandler}/>
         <div className = "maincontent">
-          <Toolbar drawerClickHandler = {this.drawerToggleClickHandler} />
-          <SideDrawer show = {this.state.sideDrawerOpen} />
+          <Toolbar drawerClickHandler = {this.drawerToggleClickHandler} 
+          closeHandler = {this.closeHandler}/>
+          
           <div className ="container">
             {this.props.children}
         </div>

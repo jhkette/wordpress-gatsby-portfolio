@@ -1,8 +1,8 @@
 .toolbar {
  
-    width: 20rem;
+    width: 18rem;
     background: #ededed;
-    height: 100%;
+    
     display: flex;
     flex-direction: column;
   }
@@ -17,12 +17,15 @@
   
   .toolbar__logo {
     margin-left: 1.5rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
   }
   
   .toolbar__logo a {
-    color: white;
+    color: #1a1a1a;
     text-decoration: none;
     font-size: 1.5rem;
+    
   }
   
   .spacer {
@@ -34,7 +37,7 @@
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
   
   .toolbar_navigation-items li {
@@ -59,7 +62,10 @@
         width: 100%;
     }
     .toolbar__navigation{
-        flex-direction: row;
+        flex-direction: column;
+    }
+    .toolbar_navigation-items ul{
+        flex-direction: column;
     }
   }
   

@@ -18,9 +18,10 @@
 }
 
 .toggle-button__line{
-    width: 100%;
+    width: 24px;
     height: 4px;
-    background: #1a1a1a;
+   
+    background-color: #1a1a1a;
     border-radius: .2rem;
 
 }
