@@ -43,7 +43,7 @@ class Layout extends PureComponent {
           <Toolbar drawerClickHandler = {this.drawerToggleClickHandler} 
           closeHandler = {this.closeHandler}/>
           
-          <div className ="container">
+          <div className ="right-container">
             {this.props.children}
         </div>
         </div>

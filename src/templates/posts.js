@@ -31,7 +31,7 @@ const NavLink = props => {
          <div>
            <FluidGrid className ="posts" styleStrategies={styleStrategies} transition={transition}>
              {group.map(({ node }) => (
-               <div key={node.slug} className="post">
+               <section key={node.slug} className="post">
                  {node.featured_media.localFile.childImageSharp.resolutions &&
                  <div>
                    <Link to={'post/' + node.slug}>
@@ -43,9 +43,8 @@ const NavLink = props => {
                          
                 </div>
                 }
-                    
-                    <div className={"post-content"} dangerouslySetInnerHTML={{__html: node.excerpt}}></div> 
-                </div>
+                <div className={"post-content"} dangerouslySetInnerHTML={{__html: node.excerpt}}></div> 
+                </section>
                 
             ))}
             </FluidGrid>

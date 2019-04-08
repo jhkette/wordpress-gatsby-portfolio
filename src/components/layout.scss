@@ -60,6 +60,16 @@ h4 {
   font-family: 'Playfair Display', serif;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
+
+h2 {
+  margin: 2rem 0;
+  color: $mainred;
+}
+
 .wrapper {
   display: flex;
   min-height: 100%;
@@ -87,7 +97,7 @@ header {
   width: 15rem;
 
 }
-
+// Main container for all content
 .maincontent {
   counter-reset: section;
   display: flex;
@@ -100,11 +110,8 @@ header {
   }
 }
 
-
-
-
-
-.container {
+// right container for main content
+.right-container {
   width: 80%;
   margin: 2rem auto 0 auto;
   padding: 0 2rem;
@@ -124,23 +131,22 @@ header {
     align-items: center;
   }
 }
-
+// image css
 .bloglead {
   position: relative;
   z-index: 2;
-
+  // hover image
   &:hover {
     transition: .5s;
     opacity: .5;
     z-index: 0;
-
+   // hover image magnifying glass
     &:before {
       content: url('../images/mag.svg');
       opacity: .98;
       position: absolute;
       width: 6rem;
       top: 6rem;
-      ;
       left: 50%;
       margin-left: -3rem;
       z-index: 1;
@@ -167,7 +173,6 @@ header {
   height: 32px;
   opacity: 1;
   cursor: pointer;
-
 }
 
 .close:hover:before,
@@ -184,30 +189,14 @@ header {
   height: 33px;
   width: 3px;
   background-color: $black;
-
-
 }
-
 .close:before {
   transform: rotate(45deg);
-
 }
-
 .close:after {
   transform: rotate(-45deg);
 }
 
-h1 {
-
-  font-size: 2rem;
-}
-
-
-h2 {
-
-  margin: 2rem 0;
-  color: $mainred;
-}
 
 .homepost {
   position: relative;
