@@ -1,8 +1,5 @@
 import React, { PureComponent } from 'react'
-
-
 import "./layout.scss"
-
 import Toolbar from './toolbar/toolbar'
 import SideDrawer from './SideDrawer/SideDrawer.js'
 import Backdrop from './backdrop/backdrop'
@@ -30,7 +27,6 @@ class Layout extends PureComponent {
   }
 
 
- 
 
   render() {
     let backDrop;

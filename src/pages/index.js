@@ -1,13 +1,13 @@
 import React, { Component } from "react"
 import { Link, graphql } from "gatsby"
-import { Content } from '../components/Scaffold'
 
 
-import Lorem from '../components/Lorem'
+
+
 import Img from "gatsby-image"
 import FluidGrid from 'react-fluid-grid'
 import Layout from '../components/Layout'
-import styled from 'styled-components'
+import Code from "../images/code.svg"
 
 
 
@@ -47,11 +47,15 @@ class Home extends Component {
             <Link to={`/post/${node.slug}/`} css={{ textDecoration: `none` }}>
               <h3 className="slug">{node.title}</h3>
             </Link>
+            <div class="codelist">
+            <img src = {Code} alt = "code" className="code" />
             {node.acf.test !== null ?
+                
                 <p dangerouslySetInnerHTML={{__html: node.acf.test }} className="categories"></p>
                 : ''
-                }  
-            <div className="excerpt" dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                }
+            </div>      
+            <div className="excerpt"  dangerouslySetInnerHTML={{ __html: node.excerpt }} />
           </div>
         ))}
         </FluidGrid>
@@ -66,10 +70,7 @@ class Home extends Component {
            
             <Link to={`/post/${node.slug}/`} css={{ textDecoration: `none` }}>
               <h3>{node.title}</h3>
-            </Link>
-          
-          
-             
+            </Link>   
             <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
            
           </div>

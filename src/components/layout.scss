@@ -2,59 +2,17 @@ $break-small: 768px;
 $break-tablet: 769px;
 $break-large: 1024px;
 $mainred: #da0e19;
+$turq: #1c9195;
+$black: #1a1a1a;
 
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro');
 
 * {
   margin: 0;
   padding: 0
 }
 
-html {
-  font-family: 'Nunito', sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-
-}
-
-html {
-  font-size: 112.5%;
-  box-sizing: border-box;
-  overflow-y: scroll;
-}
-
-body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: 'Nunito';
-}
-
-p {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  font-weight: 800;
-  line-height: 1.7rem;
-  font-size: 1rem;
-}
-
-.wrapper {
-  display: flex;
-  min-height: 100%;
-  flex-direction: column;
-}
-
-.svg-inline--fa {
-  width: 1rem !important;
-  height: 1rem !important;
-}
-
+// display all html5 elements as blocks
 article,
 aside,
 details,
@@ -70,22 +28,64 @@ summary {
   display: block;
 }
 
+
+html {
+  font-size: 112.5%;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 1.45rem 0;
+  font-weight: 500;
+  line-height: 1.7rem;
+  font-size: 1.15rem;
+  font-family: 'Source San Pro', helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+.svg-inline--fa {
+  width: 1rem !important;
+  height: 1rem !important;
+}
+
+
 .content {
   width: 100%;
   background-color: #ffffff;
- 
 }
 
 main {
   width: 75%;
   text-align: center;
-  
 
 }
 
 header {
   width: 15rem;
- 
+
 }
 
 .maincontent {
@@ -94,6 +94,7 @@ header {
   flex-direction: row;
   background-color: #fff;
   justify-content: space-around;
+
   @media screen and (max-width: $break-small) {
     flex-direction: column;
   }
@@ -104,7 +105,7 @@ header {
 
 
 .container {
-  width: 75%;
+  width: 80%;
   margin: 2rem auto 0 auto;
   padding: 0 2rem;
   border: 1px red;
@@ -127,25 +128,27 @@ header {
 .bloglead {
   position: relative;
   z-index: 2;
+
   &:hover {
-   transition: .5s;
+    transition: .5s;
     opacity: .5;
     z-index: 0;
-   
-    &:before{
-      content:url('../images/mag.svg');
+
+    &:before {
+      content: url('../images/mag.svg');
       opacity: .98;
       position: absolute;
-      width: 8rem;
-      top: 5rem;;
+      width: 6rem;
+      top: 6rem;
+      ;
       left: 50%;
-      margin-left: -4rem;
+      margin-left: -3rem;
       z-index: 1;
-     
+
     }
   }
- 
- 
+
+
   @media screen and (min-width:$break-tablet) and (max-width: $break-large) {
     width: 200px;
   }
@@ -162,36 +165,46 @@ header {
   top: 32px;
   width: 32px;
   height: 32px;
-  opacity: 0.8;
-  cursor: pointer;
-}
-.close:hover {
   opacity: 1;
+  cursor: pointer;
+
 }
-.close:before, .close:after {
+
+.close:hover:before,
+.close:hover:after {
+  background-color: $turq;
+  ;
+}
+
+.close:before,
+.close:after {
   position: absolute;
   left: 15px;
   content: ' ';
   height: 33px;
   width: 3px;
-  background-color: #1a1a1a;
- 
+  background-color: $black;
+
+
 }
+
 .close:before {
   transform: rotate(45deg);
+
 }
+
 .close:after {
   transform: rotate(-45deg);
 }
 
 h1 {
-  font-family: 'Roboto', serif;
+
   font-size: 2rem;
 }
 
 
 h2 {
-  font-family: 'Roboto', serif;
+
   margin: 2rem 0;
   color: $mainred;
 }
@@ -204,10 +217,45 @@ h2 {
   text-align: left;
   margin-bottom: 2rem;
 
-  .excerpt{
-    padding: 1rem 0;
-    
-    border-bottom: 2px dotted #1a1a1a;
+  a {
+    color: #484848;
+    text-decoration: none;
+
+    h3 {
+     
+      padding-bottom: 1rem;
+      margin-top: 1.25rem;
+      margin-bottom: 0;
+      text-decoration: none;
+      font-size: 1.5rem;
+
+      &:hover {
+        color:  $turq;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .excerpt {
+    border-bottom: 1px solid $turq;
+  }
+
+  .code {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin-top: .15rem;
+    margin-right: 1rem;
+
+  }
+
+  .codelist {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    // align-content: flex-end;
+
   }
 
   @media screen and (max-width: $break-large) {
@@ -218,50 +266,22 @@ h2 {
     width: 400px;
   }
 
-  h1 {
-    font-family: 'Roboto', serif;
-  }
-
- 
-    a{
-      color: #1a1a1a;
-      text-decoration: none;
-      h3 {
-        border-top: 2px dotted #1a1a1a;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        margin-top: 1.5rem;
-        font-family: 'Roboto', serif;
-        
-        margin-bottom: 0;
-        text-decoration: none;
-        font-size: 1.5rem;
-
-        &:hover{
-          color: #1c9195;
-          text-decoration: underline;
-        }
-    }
-  }
 
   p {
-    // padding: 0rem 1rem .7rem 1rem;
+    color: darkslategray;
   }
 
   .categories {
-    background-color: #1c9195;
     border-radius: .2rem;
-    width: fit-content;
-    color: white;
-    
-    font-size: .7rem;
-    margin: 0;
-   
+    color: #1c9195;
     font-weight: 900;
-
-    padding: .2rem 1rem;
+    margin: .3rem 0 0 0;
+    font-size: 1rem;
+    line-height: 1.1rem;
+    padding: 0rem .2rem;
     display: block;
     z-index: 5;
+
   }
 
 }
@@ -275,17 +295,20 @@ h2 {
   margin-bottom: 2rem;
 
   h1 {
-    font-family: 'Roboto', serif;
+
+    color: #484848;
   }
 
   h3 {
-    font-family: 'Roboto', serif;
+
     padding: .4rem 0rem;
     margin-bottom: 0;
+    color: #484848;
   }
 
   p {
     padding: 0rem;
+    color: #969696;
   }
 }
 
@@ -312,12 +335,12 @@ header {
 
 .mainnav {
   li {
-    font-family: helvetica;
+
     display: block;
 
     a {
       text-decoration: none;
-      color: #1a1a1a;
+      color: $black;
 
       @media screen and (max-width: $break-small) {
         display: none;
@@ -335,9 +358,6 @@ header {
 
 .mobileheader {
 
-  
-
-
   @media screen and (max-width: $break-small) {
     width: 100%;
     display: flex;
@@ -345,17 +365,6 @@ header {
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 .lead-postimage {
@@ -499,7 +508,7 @@ textarea {
 
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: 'Nunito';
+  font-family: 'Source Sans Pro';
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;

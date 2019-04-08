@@ -1,6 +1,6 @@
 .toolbar {
  
-    width: 18rem;
+    width: 16rem;
     background: #ededed;
     
     display: flex;
@@ -24,7 +24,8 @@
   .toolbar__logo a {
     color: #1a1a1a;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.95rem;
+    font-family: 'Playfair Display', sans-serif;
     
   }
   
@@ -66,6 +67,11 @@
     }
     .toolbar_navigation-items ul{
         flex-direction: column;
+    }
+    .toolbar__logo{
+      margin: 1rem 0 0 0;
+      padding-bottom: 1rem;
+      
     }
   }
   
