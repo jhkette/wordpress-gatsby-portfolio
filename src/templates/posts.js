@@ -34,9 +34,9 @@ const NavLink = props => {
                <section key={node.slug} className="post">
                  {node.featured_media.localFile.childImageSharp.resolutions &&
                  <div>
-                   <Link to={'post/' + node.slug}>
+                 
                        <Img className="bloglead" resolutions={node.featured_media.localFile.childImageSharp.resolutions} />
-                   </Link>
+                  
                    <Link to={'post/' + node.slug}>
                        <h3>{node.title}</h3>
                    </Link>

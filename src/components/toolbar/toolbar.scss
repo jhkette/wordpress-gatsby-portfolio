@@ -1,6 +1,16 @@
+$break-small: 768px;
+$break-tablet: 769px;
+$break-large: 1024px;
+$mainred: #da0e19;
+$turq: #1c9195;
+$black: #1a1a1a;
+
+
+
+
 .toolbar {
  
-    width: 16rem;
+    width: 19rem;
     background: #ededed;
     
     display: flex;
@@ -17,14 +27,16 @@
   .toolbar__logo {
     margin-left: 1.5rem;
     margin-bottom: 1.5rem;
-    margin-top: 3rem;
+    margin-top: 2.25rem;
   }
   
   .toolbar__logo a {
     color: #1a1a1a;
     text-decoration: none;
     font-size: 1.95rem;
-    font-family: 'Playfair Display', sans-serif;
+    display: inline-block;
+border-bottom: 3px solid #1a1a1a;
+   
     
   }
   
@@ -37,7 +49,7 @@
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
   
   .toolbar_navigation-items li {
@@ -52,7 +64,7 @@
   
   .toolbar_navigation-items a:hover,
   .toolbar_navigation-items a:active {
-    color: #fa923f;
+    color: $turq;
   }
   
   @media (max-width: 768px) {
@@ -65,9 +77,7 @@
     .toolbar__navigation{
         flex-direction: column;
     }
-    .toolbar_navigation-items ul{
-        flex-direction: column;
-    }
+   
     .toolbar__logo{
       margin: .5rem 0 0 0;
       padding-bottom: .5rem;

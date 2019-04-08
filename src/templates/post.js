@@ -11,12 +11,13 @@ class PostTemplate extends Component {
 
         return (
             <Layout>
-            <div>
+            <section>
                 <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
-                 {post.categories[0].name !== null ?
+                {post.acf.test !== null ?
                 
-                <p dangerouslySetInnerHTML={{__html:post.categories[0].name }}></p>
-                : ''}
+                <p dangerouslySetInnerHTML={{__html: post.acf.test }} className="categoriespost"></p>
+                : ''
+                }
                 <Img resolutions ={resolutions} className="lead-postimage"/>
                 <div dangerouslySetInnerHTML={{ __html: post.content }} />
                 {/* {post.acf !== null ?
@@ -25,7 +26,7 @@ class PostTemplate extends Component {
                  */}
                
                
-            </div>
+            </section>
             </Layout>
         )
     }
@@ -46,6 +47,9 @@ export const pageQuery = graphql`
                 name
                 
                 
+              }
+              acf {
+                test
               }  
               featured_media{
                 localFile{

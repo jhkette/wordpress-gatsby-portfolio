@@ -37,12 +37,14 @@ class Home extends Component {
   
     return (
     <Layout>
-  
+      
       <FluidGrid className ="posts" styleStrategies={styleStrategies} transition={transition}>
       
         {data.edges.map(({ node }) => (
-          <div key={node.slug} className="homepost" >
+          <article key={node.slug} className="homepost" >
+          <Link to={`/post/${node.slug}/`} css={{ textDecoration: `none` }}>
            <Img className="bloglead" fluid={node.featured_media.localFile.childImageSharp.fluid} /> 
+           </Link>
             
             <Link to={`/post/${node.slug}/`} css={{ textDecoration: `none` }}>
               <h3 className="slug">{node.title}</h3>
@@ -56,28 +58,28 @@ class Home extends Component {
                 }
             </div>      
             <div className="excerpt"  dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-          </div>
+          </article>
         ))}
         </FluidGrid>
-        <div>
+        <section>
         <h2>Posts</h2>
       
         
       <FluidGrid className ="posts" styleStrategies={styleStrategies2} transition={transition}>
       
         {allposts.edges.map(({ node }) => (
-          <div key={node.slug} className="allpost" >
+          <article key={node.slug} className="allpost" >
            
             <Link to={`/post/${node.slug}/`} css={{ textDecoration: `none` }}>
               <h3>{node.title}</h3>
             </Link>   
             <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
            
-          </div>
+          </article>
         ))}
         </FluidGrid>
       
-          </div>
+          </section>
         </Layout>
     )
   }

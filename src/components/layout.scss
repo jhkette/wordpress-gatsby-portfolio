@@ -7,8 +7,8 @@ $turq: #1c9195;
 $black: #1a1a1a;
 
 
-// import fonts
 
+// import fonts
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro');
 
 // browser reset
@@ -55,15 +55,19 @@ p {
   margin: 0 0 1.45rem 0;
   font-weight: 500;
   line-height: 1.7rem;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-family: 'Source San Pro', helvetica, sans-serif;
 }
 
-h1,
+h1{
+  font-family: 'Playfair display', serif;
+  text-rendering: geometricPrecision;
+
+}
 h2,
 h3,
 h4 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair display', serif;
   text-rendering: geometricPrecision;
 }
 
@@ -133,15 +137,94 @@ header {
   }
 }
 
+
+
+
+.homepost {
+  position: relative;
+  width: 280px;
+  background-color: white;
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 2rem;
+
+  a {
+    color: #1a1a1a;
+    text-decoration: none;
+
+    h3 {
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: .7rem;
+      padding-bottom: .3rem;
+      margin-top: 1.25rem;
+      margin-bottom: 0;
+      text-decoration: none;
+      font-size: 1.3rem;
+
+      &:hover {
+        color:  $turq;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .excerpt {
+    border-bottom: 1px dotted $turq;
+  }
+
+  .code {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin-top: .15rem;
+    margin-right: 1rem;
+  }
+  .codelist {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: .95rem;
+    // align-content: flex-end;
+  }
+
+  @media screen and (max-width: $break-large) {
+    width: 200px;
+  }
+
+  @media screen and (max-width: $break-small) {
+    width: 400px;
+  }
+
+  
+
+  .categories {
+    border-radius: .2rem;
+    color: #1c9195;
+    font-weight: 900;
+    margin: .3rem 0 0 0;
+    font-size: .9rem;
+    line-height: 1.1rem;
+    padding: 0rem .2rem;
+    display: block;
+    z-index: 5;
+    // font-family: 'Ralewayb', serif;
+
+  }
+}
+
 // Image lead css
 .bloglead {
   position: relative;
   z-index: 2;
+  
   // hover image
   &:hover {
     transition: .5s;
     opacity: .5;
     z-index: 0;
+  
+    
    // hover image magnifying glass
     &:before {
       content: url('../images/mag.svg');
@@ -164,110 +247,24 @@ header {
   }
 }
 
-
-
-
-.homepost {
-  position: relative;
-  width: 280px;
-  background-color: white;
-  display: inline-block;
-  text-align: left;
-  margin-bottom: 2rem;
-
-  a {
-    color: #484848;
-    text-decoration: none;
-
-    h3 {
-     
-      padding-bottom: 1rem;
-      margin-top: 1.25rem;
-      margin-bottom: 0;
-      text-decoration: none;
-      font-size: 1.5rem;
-
-      &:hover {
-        color:  $turq;
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .excerpt {
-    border-bottom: 1px solid $turq;
-  }
-
-  .code {
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    margin-top: .15rem;
-    margin-right: 1rem;
-
-  }
-
-  .codelist {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    // align-content: flex-end;
-
-  }
-
-  @media screen and (max-width: $break-large) {
-    width: 200px;
-  }
-
-  @media screen and (max-width: $break-small) {
-    width: 400px;
-  }
-
-
-  p {
-    color: darkslategray;
-  }
-
-  .categories {
-    border-radius: .2rem;
-    color: #1c9195;
-    font-weight: 900;
-    margin: .3rem 0 0 0;
-    font-size: 1rem;
-    line-height: 1.1rem;
-    padding: 0rem .2rem;
-    display: block;
-    z-index: 5;
-
-  }
-
-}
-
 .allpost {
   width: 450px;
   background-color: white;
-
   display: inline-block;
   text-align: left;
   margin-bottom: 2rem;
 
   h1 {
-
     color: #484848;
   }
 
   h3 {
-
     padding: .4rem 0rem;
     margin-bottom: 0;
     color: #484848;
   }
 
-  p {
-    padding: 0rem;
-    color: #969696;
-  }
+  
 }
 
 .posts {
@@ -315,23 +312,34 @@ header {
 
 
 .mobileheader {
-
   @media screen and (max-width: $break-small) {
     width: 100%;
     display: flex;
     justify-content: space-between;
   }
-
 }
 
 
 .lead-postimage {
+  width: 100% !important;
+  margin-bottom: 2rem;
   img {
-    width: 100%;
+    width: 100% !important;
+    height: auto !important; 
+    
   }
 
 }
 
+
+.categoriespost{
+  background-color: $turq;
+  padding: .2rem .9rem;
+  border-radius: .3rem;
+  color: white;
+  display: inline-block;
+  font-size: .8rem;
+}
 
 
 audio,
