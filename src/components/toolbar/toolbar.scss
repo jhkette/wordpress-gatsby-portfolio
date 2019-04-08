@@ -9,7 +9,6 @@
   
   .toolbar__navigation {
     display: flex;
-
     align-items: baseline;
     padding: 0 1rem;
     flex-direction: column;
@@ -17,7 +16,7 @@
   
   .toolbar__logo {
     margin-left: 1.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     margin-top: 3rem;
   }
   
@@ -48,6 +47,7 @@
   .toolbar_navigation-items a {
     color:#1a1a1a;
     text-decoration: none;
+    font-size: 1.3rem;
   }
   
   .toolbar_navigation-items a:hover,
@@ -69,8 +69,8 @@
         flex-direction: column;
     }
     .toolbar__logo{
-      margin: 1rem 0 0 0;
-      padding-bottom: 1rem;
+      margin: .5rem 0 0 0;
+      padding-bottom: .5rem;
       
     }
   }

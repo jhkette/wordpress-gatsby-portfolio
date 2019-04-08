@@ -1,3 +1,12 @@
+$break-small: 768px;
+$break-tablet: 769px;
+$break-large: 1024px;
+$mainred: #da0e19;
+$turq: #1c9195;
+$black: #1a1a1a;
+
+
+
 .sidedrawer{
     height: 100%;
     background-color: white;
@@ -32,3 +41,38 @@
     text-decoration: none;
     font-size: 1.2rem;
 }
+
+// CSS for close button.
+// Position and hover effect
+.close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+  .close:hover:before,
+  .close:hover:after {
+    background-color: $turq;
+    ;
+  }
+  
+  .close:before,
+  .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 3px;
+    background-color: $black;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+  

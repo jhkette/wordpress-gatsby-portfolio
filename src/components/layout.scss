@@ -1,3 +1,4 @@
+// scss variables
 $break-small: 768px;
 $break-tablet: 769px;
 $break-large: 1024px;
@@ -5,8 +6,12 @@ $mainred: #da0e19;
 $turq: #1c9195;
 $black: #1a1a1a;
 
+
+// import fonts
+
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro');
 
+// browser reset
 * {
   margin: 0;
   padding: 0
@@ -42,6 +47,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Source Sans Pro', sans-serif;
+  text-rendering: optimizeLegibility;
 }
 
 p {
@@ -58,6 +64,7 @@ h2,
 h3,
 h4 {
   font-family: 'Playfair Display', serif;
+  text-rendering: geometricPrecision;
 }
 
 h1 {
@@ -87,11 +94,6 @@ h2 {
   background-color: #ffffff;
 }
 
-main {
-  width: 75%;
-  text-align: center;
-
-}
 
 header {
   width: 15rem;
@@ -99,7 +101,6 @@ header {
 }
 // Main container for all content
 .maincontent {
-  counter-reset: section;
   display: flex;
   flex-direction: row;
   background-color: #fff;
@@ -131,7 +132,8 @@ header {
     align-items: center;
   }
 }
-// image css
+
+// Image lead css
 .bloglead {
   position: relative;
   z-index: 2;
@@ -150,52 +152,19 @@ header {
       left: 50%;
       margin-left: -3rem;
       z-index: 1;
-
     }
   }
-
-
+// Media queries for .bloglead - this controls image size
   @media screen and (min-width:$break-tablet) and (max-width: $break-large) {
     width: 200px;
   }
-
   @media screen and (max-width:$break-small) {
     width: 400px;
     height: 400px;
   }
 }
 
-.close {
-  position: absolute;
-  right: 32px;
-  top: 32px;
-  width: 32px;
-  height: 32px;
-  opacity: 1;
-  cursor: pointer;
-}
 
-.close:hover:before,
-.close:hover:after {
-  background-color: $turq;
-  ;
-}
-
-.close:before,
-.close:after {
-  position: absolute;
-  left: 15px;
-  content: ' ';
-  height: 33px;
-  width: 3px;
-  background-color: $black;
-}
-.close:before {
-  transform: rotate(45deg);
-}
-.close:after {
-  transform: rotate(-45deg);
-}
 
 
 .homepost {
