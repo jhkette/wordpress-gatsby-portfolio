@@ -1,8 +1,9 @@
 import React, { Component } from "react"
 import { Link, graphql } from "gatsby"
+import { SpringGrid } from 'react-stonecutter';
 
 
-
+import { CSSGrid, layout } from 'react-stonecutter';
 
 import Img from "gatsby-image"
 import FluidGrid from 'react-fluid-grid'
@@ -12,10 +13,10 @@ import Code from "../images/code.svg"
 
 
 
-const styleStrategies = [
+const styleStrategies1 = [
   { mediaQuery: '(max-width: 768.9px)', style: { numberOfColumns: 1, gutterHeight: 5, gutterWidth: 0 } },
-  { mediaQuery: '(min-width: 769px) and (max-width: 1023.9px)', style: { numberOfColumns: 2, gutterHeight: 15, gutterWidth: 15 } },
-  { mediaQuery: '(min-width: 1024px)', style: { numberOfColumns: 3, gutterHeight: 30, gutterWidth: 30 } }
+  { mediaQuery: '(min-width: 769px) and (max-width: 1199.9px)', style: { numberOfColumns: 2, gutterHeight: 15, gutterWidth: 15 } },
+  { mediaQuery: '(min-width: 1200px)', style: { numberOfColumns: 3, gutterHeight: 30, gutterWidth: 30 } }
 ]
 
 const styleStrategies2 = [
@@ -23,6 +24,15 @@ const styleStrategies2 = [
   { mediaQuery: '(min-width: 769px) and (max-width: 1023.9px)', style: { numberOfColumns: 3, gutterHeight: 15, gutterWidth: 15 } },
   { mediaQuery: '(min-width: 1024px)', style: { numberOfColumns: 2, gutterHeight: 30, gutterWidth: 30 } }
 ]
+
+// const styleStrategies3 = [
+//   { mediaQuery: '(max-width: 768.9px)', style: { numberOfColumns: 1, gutterHeight: 5, gutterWidth: 0 } },
+//   { mediaQuery: '(min-width: 769px) and (max-width: 1023.9px)', style: { numberOfColumns: 3, gutterHeight: 15, gutterWidth: 15 } },
+//   { mediaQuery: '(min-width: 1024px)', style: { numberOfColumns: 2, gutterHeight: 30, gutterWidth: 30 } }
+// ]
+
+
+
 const transition = 'top 200ms ease-in-out, left 200ms ease-in-out'
 
 class Home extends Component {
@@ -31,15 +41,20 @@ class Home extends Component {
   render() {
     const data = this.props.data.projects
     const allposts = this.props.data.posts
+    // const lead = this.props.data.lead
+   
     console.log(data);
    
  
   
     return (
     <Layout>
-      
-      <FluidGrid className ="posts" styleStrategies={styleStrategies} transition={transition}>
-      
+  
+    <h2>Projects</h2>
+
+<FluidGrid className="posts" styleStrategies={styleStrategies1} transition={transition}
+>
+
         {data.edges.map(({ node }) => (
           <article key={node.slug} className="homepost" >
           <Link to={`/post/${node.slug}/`} css={{ textDecoration: `none` }}>
@@ -61,6 +76,7 @@ class Home extends Component {
           </article>
         ))}
         </FluidGrid>
+
         <section>
         <h2>Posts</h2>
       
@@ -91,6 +107,7 @@ export default Home
 export const pageQuery = graphql`
 query 
 {
+
   projects: allWordpressPost(filter: {acf: {status: {eq: "project"}}}, limit: 6) {
     edges {
       node {
@@ -109,7 +126,7 @@ query
         featured_media {
           localFile {
             childImageSharp {
-              fluid(maxWidth: 220, maxHeight: 250) {
+              fluid(maxWidth: 180) {
                 ...GatsbyImageSharpFluid
               }
             }

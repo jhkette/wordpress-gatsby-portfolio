@@ -7,7 +7,8 @@ import Layout from '../components/Layout'
 class PostTemplate extends Component {
     render() {
         const post = this.props.data.wordpressPost
-        const resolutions =post.featured_media.localFile.childImageSharp.resolutions
+        console.log(post.acf.leadimage.localFile.childImageSharp.resolutions);
+        
 
         return (
             <Layout>
@@ -18,7 +19,9 @@ class PostTemplate extends Component {
                 <p dangerouslySetInnerHTML={{__html: post.acf.test }} className="categoriespost"></p>
                 : ''
                 }
-                <Img resolutions ={resolutions} className="lead-postimage"/>
+                {/* {post.acf.leadimage.localFile.childImageSharp.resolutions == null ?  */}
+                <Img resolutions ={post.acf.leadimage.localFile.childImageSharp.resolutions} className="lead-postimage"/>
+                {/* : '' } */}
                 <div dangerouslySetInnerHTML={{ __html: post.content }} />
                 {/* {post.acf !== null ?
                 <p dangerouslySetInnerHTML={{__html:post.acf.social }}></p>
@@ -50,6 +53,18 @@ export const pageQuery = graphql`
               }
               acf {
                 test
+                leadimage{
+                    localFile{
+                        childImageSharp{
+                            resolutions(width:500, height: 200){
+                                src
+                                width
+                                height
+                            }
+                        }
+                    }
+
+                }
               }  
               featured_media{
                 localFile{

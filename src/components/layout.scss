@@ -78,7 +78,11 @@ h1 {
 
 h2 {
   margin: 2rem 0;
-  color: $mainred;
+  color: $black;
+  display: inline-block;
+  border-bottom: 3px solid $turq;
+  padding-right: 4rem;
+  
 }
 
 .wrapper {
@@ -117,10 +121,15 @@ header {
 
 // right container for main content
 .right-container {
-  width: 80%;
+  flex: 1;
   margin: 2rem auto 0 auto;
   padding: 0 2rem;
   border: 1px red;
+ 
+  @media screen and (max-width: $break-tablet) {
+  flex: 0;
+  width: 100%;
+}
 }
 
 .flex-main {
@@ -134,13 +143,65 @@ header {
   @media screen and (max-width: $break-tablet) {
     flex-direction: column;
     align-items: center;
+   
   }
 }
 
 
 
 
+
+.homepost.lead{
+  
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 4rem;
+  border-bottom: 1px dotted $turq;
+  padding-bottom: 3rem;
+  .excerpt{
+    border: 0;
+  }
+  .imagecontainer{
+    margin-top: 1rem;
+    width: 35% !important;
+    height: 350px !important;
+   
+    display: block;
+    margin-right: 2rem;
+    
+  }
+  h3{
+    border-bottom: 3px solid $turq;
+    font-size: 1.9rem;
+  }
+  
+
+  .textcontainer{
+    margin-top: 1rem;
+    width: 55%;
+    .slug{
+      margin-top: 0;
+    }
+  }
+
+  @media screen and (max-width: $break-large)  {
+    flex-direction: column;
+    .imagecontainer{
+      width: 100%
+    }
+
+    .textcontainer{
+      width: 100%
+    }
+
+  }
+ 
+  
+}
+
 .homepost {
+  
   position: relative;
   width: 280px;
   background-color: white;
@@ -217,24 +278,26 @@ header {
 .bloglead {
   position: relative;
   z-index: 2;
+  background-color: $turq;
+  
   
   // hover image
   &:hover {
     transition: .5s;
     opacity: .5;
     z-index: 0;
+    color: $turq;
   
     
    // hover image magnifying glass
     &:before {
-      content: url('../images/mag.svg');
-      opacity: .98;
-      position: absolute;
-      width: 6rem;
-      top: 6rem;
-      left: 50%;
-      margin-left: -3rem;
-      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background-color: $turq;
+     
+      opacity: .5;
+      
+    
     }
   }
 // Media queries for .bloglead - this controls image size
@@ -334,7 +397,7 @@ header {
 
 .categoriespost{
   background-color: $turq;
-  padding: .2rem .9rem;
+  padding: .1rem .8rem;
   border-radius: .3rem;
   color: white;
   display: inline-block;

@@ -10,11 +10,14 @@ $black: #1a1a1a;
 
 .toolbar {
  
-    width: 19rem;
+    width: 25%;
+    min-width: 15rem;
     background: #ededed;
     
     display: flex;
     flex-direction: column;
+    border-right: 1px solid #ddd;
+    box-shadow: 2px 2px 3px rgba(227, 227, 227, 0.639);
   }
   
   .toolbar__navigation {
@@ -27,15 +30,15 @@ $black: #1a1a1a;
   .toolbar__logo {
     margin-left: 1.5rem;
     margin-bottom: 1.5rem;
-    margin-top: 2.25rem;
+   
   }
   
   .toolbar__logo a {
     color: #1a1a1a;
     text-decoration: none;
-    font-size: 1.95rem;
+    font-size: 1.65rem;
     display: inline-block;
-border-bottom: 3px solid #1a1a1a;
+
    
     
   }
@@ -49,7 +52,12 @@ border-bottom: 3px solid #1a1a1a;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;
+    
+    font-family: 'Playfair Display', serif;
+    align-items: flex-start;
+    align-content: flex-start;
+    
+    
   }
   
   .toolbar_navigation-items li {
@@ -59,7 +67,7 @@ border-bottom: 3px solid #1a1a1a;
   .toolbar_navigation-items a {
     color:#1a1a1a;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: .95rem;
   }
   
   .toolbar_navigation-items a:hover,
@@ -73,6 +81,7 @@ border-bottom: 3px solid #1a1a1a;
     }
     .toolbar{
         width: 100%;
+        border-bottom: 1px solid #ddd;
     }
     .toolbar__navigation{
         flex-direction: column;
