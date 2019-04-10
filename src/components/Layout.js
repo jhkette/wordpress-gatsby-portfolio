@@ -39,14 +39,15 @@ class Layout extends PureComponent {
       <div className = "wrapper">
         <SideDrawer show = {this.state.sideDrawerOpen} 
         click = {this.closeHandler}/>
-        <main className = "maincontent">
+        <div className = "maincontent">
+       
           <Toolbar drawerClickHandler = {this.drawerToggleClickHandler} 
           closeHandler = {this.closeHandler}/>
           
-          <div className ="right-container">
+          <main className ="right-container">
             {this.props.children}
-        </div>
         </main>
+        </div>
         <Footer />
         {backDrop}
       </div>

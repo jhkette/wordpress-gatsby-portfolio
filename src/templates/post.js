@@ -7,21 +7,21 @@ import Layout from '../components/Layout'
 class PostTemplate extends Component {
     render() {
         const post = this.props.data.wordpressPost
-        console.log(post.acf.leadimage.localFile.childImageSharp.resolutions);
+      
         
 
         return (
             <Layout>
             <section>
-                <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
+                <h2 dangerouslySetInnerHTML={{ __html: post.title }} />
                 {post.acf.test !== null ?
                 
                 <p dangerouslySetInnerHTML={{__html: post.acf.test }} className="categoriespost"></p>
                 : ''
                 }
-                {/* {post.acf.leadimage.localFile.childImageSharp.resolutions == null ?  */}
+                {post.acf.leadimage.localFile.childImageSharp.resolutions !== null ?  
                 <Img resolutions ={post.acf.leadimage.localFile.childImageSharp.resolutions} className="lead-postimage"/>
-                {/* : '' } */}
+                 : ' ' } 
                 <div dangerouslySetInnerHTML={{ __html: post.content }} />
                 {/* {post.acf !== null ?
                 <p dangerouslySetInnerHTML={{__html:post.acf.social }}></p>
@@ -56,7 +56,7 @@ export const pageQuery = graphql`
                 leadimage{
                     localFile{
                         childImageSharp{
-                            resolutions(width:500, height: 200){
+                            resolutions(width:700, height: 370){
                                 src
                                 width
                                 height
@@ -66,17 +66,6 @@ export const pageQuery = graphql`
 
                 }
               }  
-              featured_media{
-                localFile{
-                    childImageSharp{
-                        resolutions(width: 700, height: 300){
-                            src
-                            width
-                            height
-                        }
-                    }
-                }
-            }
         }
         
         site {

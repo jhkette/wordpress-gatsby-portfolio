@@ -41,9 +41,7 @@ class Home extends Component {
   render() {
     const data = this.props.data.projects
     const allposts = this.props.data.posts
-    // const lead = this.props.data.lead
    
-    console.log(data);
    
  
   

@@ -10,7 +10,7 @@ $black: #1a1a1a;
 
 .toolbar {
  
-    width: 25%;
+    width: 30%;
     min-width: 15rem;
     background: #ededed;
     
@@ -28,6 +28,7 @@ $black: #1a1a1a;
   }
   
   .toolbar__logo {
+    margin-top: 2.5rem;
     margin-left: 1.5rem;
     margin-bottom: 1.5rem;
    
@@ -36,7 +37,7 @@ $black: #1a1a1a;
   .toolbar__logo a {
     color: #1a1a1a;
     text-decoration: none;
-    font-size: 1.65rem;
+    font-size: 1.7rem;
     display: inline-block;
 
    
@@ -56,6 +57,7 @@ $black: #1a1a1a;
     font-family: 'Playfair Display', serif;
     align-items: flex-start;
     align-content: flex-start;
+    border-bottom: 1px solid #1a1a1a;
     
     
   }
@@ -75,7 +77,7 @@ $black: #1a1a1a;
     color: $turq;
   }
   
-  @media (max-width: 768px) {
+  @media screen and (max-width: $break-tablet) {
     .toolbar_navigation-items {
       display: none;
     }
@@ -88,8 +90,7 @@ $black: #1a1a1a;
     }
    
     .toolbar__logo{
-      margin: .5rem 0 0 0;
-      padding-bottom: .5rem;
+      margin: .5rem 0rem 0 0;
       
     }
   }

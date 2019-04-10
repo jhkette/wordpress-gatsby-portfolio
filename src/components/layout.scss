@@ -79,9 +79,9 @@ h1 {
 h2 {
   margin: 2rem 0;
   color: $black;
-  display: inline-block;
+  display: block;
   border-bottom: 3px solid $turq;
-  padding-right: 4rem;
+  width: 90%;
   
 }
 
@@ -147,59 +147,6 @@ header {
   }
 }
 
-
-
-
-
-.homepost.lead{
-  
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 4rem;
-  border-bottom: 1px dotted $turq;
-  padding-bottom: 3rem;
-  .excerpt{
-    border: 0;
-  }
-  .imagecontainer{
-    margin-top: 1rem;
-    width: 35% !important;
-    height: 350px !important;
-   
-    display: block;
-    margin-right: 2rem;
-    
-  }
-  h3{
-    border-bottom: 3px solid $turq;
-    font-size: 1.9rem;
-  }
-  
-
-  .textcontainer{
-    margin-top: 1rem;
-    width: 55%;
-    .slug{
-      margin-top: 0;
-    }
-  }
-
-  @media screen and (max-width: $break-large)  {
-    flex-direction: column;
-    .imagecontainer{
-      width: 100%
-    }
-
-    .textcontainer{
-      width: 100%
-    }
-
-  }
- 
-  
-}
-
 .homepost {
   
   position: relative;
@@ -238,7 +185,7 @@ header {
     height: 25px;
     display: inline-block;
     margin-top: .15rem;
-    margin-right: 1rem;
+    margin-right: .5rem;
   }
   .codelist {
     width: 100%;
@@ -263,7 +210,7 @@ header {
     border-radius: .2rem;
     color: #1c9195;
     font-weight: 900;
-    margin: .3rem 0 0 0;
+    margin: .4rem 0 0 0;
     font-size: .9rem;
     line-height: 1.1rem;
     padding: 0rem .2rem;
@@ -556,7 +503,7 @@ img {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
 }
 
 
