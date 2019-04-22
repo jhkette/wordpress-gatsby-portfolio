@@ -1,6 +1,7 @@
 import React from "react";
 import DrawerToggleButton from "../SideDrawer/DrawerToggle.js";
 import "./Toolbar.scss";
+import { Link } from "gatsby";
 
 const Toolbar = props => (
   <header className="toolbar">
@@ -22,13 +23,13 @@ const Toolbar = props => (
       <div className="toolbar_navigation-items">
         <ul>
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/posts">All projects</a>
+            <Link to="/posts">All projects</Link>
           </li>
           <li>
-            <a href="/pages">All posts</a>
+            <Link to="/">All posts</Link>
           </li>
         </ul>
       </div>
