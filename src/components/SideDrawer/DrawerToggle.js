@@ -1,14 +1,18 @@
-import React from 'react';
-import './DrawerToggleButton.scss'
+import React from "react";
+import "./DrawerToggleButton.scss";
 
-const drawerToggleButton = props => (
-    <button className ="toggle-button" onClick={props.clicked}>
-        <div className ="toggle-button__line"/>
-        <div className ="toggle-button__line"/>
-        <div className ="toggle-button__line"/>
+const drawerToggleButton = props => {
+  let crossLines = "nav-icon1";
+  if (props.change) {
+    crossLines = "nav-icon1 open";
+  }
 
-        
-    </button>
-);
-
+  return (
+    <div className={crossLines} onClick={props.clicked}>
+      <span />
+      <span />
+      <span />
+    </div>
+  );
+};
 export default drawerToggleButton;

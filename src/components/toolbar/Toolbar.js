@@ -5,9 +5,12 @@ import { Link } from "gatsby";
 
 const Toolbar = props => (
   <header className="toolbar">
-    <nav className="toolbar__navigation">
+    <div className="toolbar__navigation">
       <div className="toolbar__toggle-button">
-        <DrawerToggleButton clicked={props.drawerClickHandler} />
+        <DrawerToggleButton
+          clicked={props.drawerClickHandler}
+          change={props.change}
+        />
       </div>
       <div className="toolbar__logo">
         <h1>
@@ -33,7 +36,7 @@ const Toolbar = props => (
           </li>
         </ul>
       </div>
-    </nav>
+    </div>
   </header>
 );
 

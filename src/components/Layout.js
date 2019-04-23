@@ -1,58 +1,49 @@
-import React, { PureComponent } from 'react'
-import "./layout.scss"
-import Toolbar from './toolbar/toolbar'
-import SideDrawer from './SideDrawer/SideDrawer.js'
-import Backdrop from './backdrop/backdrop'
-import Footer from './Footer'
-import './layout.scss'
-
+import React, { PureComponent } from "react";
+import "./layout.scss";
+import Toolbar from "./toolbar/toolbar";
+import SideDrawer from "./SideDrawer/SideDrawer.js";
+import Backdrop from "./backdrop/backdrop";
+import Footer from "./Footer";
+import "./layout.scss";
 
 class Layout extends PureComponent {
   state = {
     sideDrawerOpen: false
   };
 
-  drawerToggleClickHandler = () =>{
-    this.setState((prevState) => {
-      return {sideDrawerOpen: !prevState.sideDrawerOpen};
-    })
+  drawerToggleClickHandler = () => {
+    this.setState(prevState => {
+      return { sideDrawerOpen: !prevState.sideDrawerOpen };
+    });
   };
 
-  backdropClickHandler = () =>{
-    this.setState({sideDrawerOpen: false})
-  }
-
-  closeHandler = () =>{
-    this.setState({sideDrawerOpen: false})
-  }
-
-
+  backdropClickHandler = () => {
+    this.setState({ sideDrawerOpen: false });
+  };
 
   render() {
     let backDrop;
-    if(this.state.sideDrawerOpen){
-      
-      backDrop =  <Backdrop click={this.backdropClickHandler} />
+    if (this.state.sideDrawerOpen) {
+      backDrop = <Backdrop click={this.backdropClickHandler} />;
     }
-   
+
     return (
-      <div className = "wrapper">
-        <SideDrawer show = {this.state.sideDrawerOpen} 
-        click = {this.closeHandler}/>
-        <div className = "maincontent">
-       
-          <Toolbar drawerClickHandler = {this.drawerToggleClickHandler} 
-          closeHandler = {this.closeHandler}/>
-          
-          <main className ="right-container">
-            {this.props.children}
-        </main>
+      <div className="wrapper">
+        <SideDrawer show={this.state.sideDrawerOpen} />
+        <div className="maincontent">
+          <Toolbar
+            drawerClickHandler={this.drawerToggleClickHandler}
+            closeHandler={this.closeHandler}
+            change={this.state.sideDrawerOpen}
+          />
+
+          <main className="right-container">{this.props.children}</main>
         </div>
         <Footer />
         {backDrop}
       </div>
-    )
+    );
   }
 }
 
-export default Layout
+export default Layout;

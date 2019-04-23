@@ -5,71 +5,32 @@ $mainred: #da0e19;
 $turq: #1c9195;
 $black: #1a1a1a;
 
+.sidedrawer {
+  height: 100%;
+  background-color: white;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
 
-
-.sidedrawer{
-    height: 100%;
-    background-color: white;
-    box-shadow: 2px 0px 5px rgba(0,0,0,0.5);
-    position: fixed;
-    top: 0;
-    left: 0;
-    
-    z-index: 200;
-    width: 100%;
-    transition-duration: .3s;
-    transform: translateY(-110%);
-
+  z-index: 200;
+  width: 100%;
+  transition-duration: 0.3s;
+  transform: translateY(-110%);
 }
-.sidedrawer.open{
-    transform: translateY(0);
+.sidedrawer.open {
+  transform: translateY(0);
 }
 
-.sidedrawer ul{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
+.sidedrawer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.sidedrawer a{
-    color: purple;
-    text-decoration: none;
-    font-size: 1.2rem;
+.sidedrawer a {
+  color: purple;
+  text-decoration: none;
+  font-size: 1.2rem;
 }
-
-// CSS for close button.
-// Position and hover effect
-.close {
-    position: absolute;
-    right: 32px;
-    top: 32px;
-    width: 32px;
-    height: 32px;
-    opacity: 1;
-    cursor: pointer;
-  }
-  
-  .close:hover:before,
-  .close:hover:after {
-    background-color: $turq;
-    ;
-  }
-  
-  .close:before,
-  .close:after {
-    position: absolute;
-    left: 15px;
-    content: ' ';
-    height: 33px;
-    width: 3px;
-    background-color: $black;
-  }
-  .close:before {
-    transform: rotate(45deg);
-  }
-  .close:after {
-    transform: rotate(-45deg);
-  }
-  

@@ -6,15 +6,13 @@ $mainred: #da0e19;
 $turq: #1c9195;
 $black: #1a1a1a;
 
-
-
 // import fonts
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro');
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro");
 
 // browser reset
 * {
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 // display all html5 elements as blocks
@@ -33,7 +31,6 @@ summary {
   display: block;
 }
 
-
 html {
   font-size: 112.5%;
   box-sizing: border-box;
@@ -46,7 +43,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   text-rendering: optimizeLegibility;
 }
 
@@ -56,18 +53,17 @@ p {
   font-weight: 500;
   line-height: 1.7rem;
   font-size: 1.05rem;
-  font-family: 'Source San Pro', helvetica, sans-serif;
+  font-family: "Source San Pro", helvetica, sans-serif;
 }
 
-h1{
-  font-family: 'Playfair display', serif;
+h1 {
+  font-family: "Playfair display", serif;
   text-rendering: geometricPrecision;
-
 }
 h2,
 h3,
 h4 {
-  font-family: 'Playfair display', serif;
+  font-family: "Playfair display", serif;
   text-rendering: geometricPrecision;
 }
 
@@ -75,20 +71,19 @@ h1 {
   font-size: 2rem;
 }
 
-
 h2 {
   margin: 2rem 0;
   color: $black;
   display: block;
   border-bottom: 3px solid $turq;
   width: 90%;
-  
 }
 
 .wrapper {
   display: flex;
   min-height: 100%;
   flex-direction: column;
+  position: relative;
 }
 
 .svg-inline--fa {
@@ -96,16 +91,13 @@ h2 {
   height: 1rem !important;
 }
 
-
 .content {
   width: 100%;
   background-color: #ffffff;
 }
 
-
 header {
   width: 15rem;
-
 }
 // Main container for all content
 .maincontent {
@@ -125,11 +117,11 @@ header {
   margin: 2rem auto 0 auto;
   padding: 0 2rem;
   border: 1px red;
- 
+
   @media screen and (max-width: $break-tablet) {
-  flex: 0;
-  width: 100%;
-}
+    flex: 0;
+    width: 100%;
+  }
 }
 
 .flex-main {
@@ -143,12 +135,10 @@ header {
   @media screen and (max-width: $break-tablet) {
     flex-direction: column;
     align-items: center;
-   
   }
 }
 
 .homepost {
-  
   position: relative;
   width: 280px;
   background-color: white;
@@ -162,15 +152,15 @@ header {
 
     h3 {
       border-bottom: 1px solid #1a1a1a;
-      margin-bottom: .7rem;
-      padding-bottom: .3rem;
+      margin-bottom: 0.7rem;
+      padding-bottom: 0.3rem;
       margin-top: 1.25rem;
       margin-bottom: 0;
       text-decoration: none;
       font-size: 1.3rem;
 
       &:hover {
-        color:  $turq;
+        color: $turq;
         text-decoration: underline;
       }
     }
@@ -184,15 +174,15 @@ header {
     width: 25px;
     height: 25px;
     display: inline-block;
-    margin-top: .15rem;
-    margin-right: .5rem;
+    margin-top: 0.15rem;
+    margin-right: 0.5rem;
   }
   .codelist {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-top: .95rem;
+    margin-top: 0.95rem;
     // align-content: flex-end;
   }
 
@@ -204,20 +194,17 @@ header {
     width: 400px;
   }
 
-  
-
   .categories {
-    border-radius: .2rem;
+    border-radius: 0.2rem;
     color: #1c9195;
     font-weight: 900;
-    margin: .4rem 0 0 0;
-    font-size: .9rem;
+    margin: 0.4rem 0 0 0;
+    font-size: 0.9rem;
     line-height: 1.1rem;
-    padding: 0rem .2rem;
+    padding: 0rem 0.2rem;
     display: block;
     z-index: 5;
     // font-family: 'Ralewayb', serif;
-
   }
 }
 
@@ -226,32 +213,28 @@ header {
   position: relative;
   z-index: 2;
   background-color: $turq;
-  
-  
+
   // hover image
   &:hover {
-    transition: .5s;
-    opacity: .5;
+    transition: 0.5s;
+    opacity: 0.5;
     z-index: 0;
     color: $turq;
-  
-    
-   // hover image magnifying glass
+
+    // hover image magnifying glass
     &:before {
       width: 100%;
       height: 100%;
       background-color: $turq;
-     
-      opacity: .5;
-      
-    
+
+      opacity: 0.5;
     }
   }
-// Media queries for .bloglead - this controls image size
-  @media screen and (min-width:$break-tablet) and (max-width: $break-large) {
+  // Media queries for .bloglead - this controls image size
+  @media screen and (min-width: $break-tablet) and (max-width: $break-large) {
     width: 200px;
   }
-  @media screen and (max-width:$break-small) {
+  @media screen and (max-width: $break-small) {
     width: 400px;
     height: 400px;
   }
@@ -269,12 +252,10 @@ header {
   }
 
   h3 {
-    padding: .4rem 0rem;
+    padding: 0.4rem 0rem;
     margin-bottom: 0;
     color: #484848;
   }
-
-  
 }
 
 .posts {
@@ -287,9 +268,7 @@ header {
 .post {
   width: 15rem;
   margin: 3rem;
-
 }
-
 
 header {
   @media screen and (max-width: $break-small) {
@@ -300,7 +279,6 @@ header {
 
 .mainnav {
   li {
-
     display: block;
 
     a {
@@ -319,8 +297,6 @@ header {
   }
 }
 
-
-
 .mobileheader {
   @media screen and (max-width: $break-small) {
     width: 100%;
@@ -329,28 +305,23 @@ header {
   }
 }
 
-
 .lead-postimage {
   width: 100% !important;
   margin-bottom: 2rem;
   img {
     width: 100% !important;
-    height: auto !important; 
-    
+    height: auto !important;
   }
-
 }
 
-
-.categoriespost{
+.categoriespost {
   background-color: $turq;
-  padding: .1rem .8rem;
-  border-radius: .3rem;
+  padding: 0.1rem 0.8rem;
+  border-radius: 0.3rem;
   color: white;
   display: inline-block;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
-
 
 audio,
 canvas,
@@ -363,9 +334,6 @@ audio:not([controls]) {
   display: none;
   height: 0;
 }
-
-
-
 
 a {
   background-color: transparent;
@@ -449,7 +417,6 @@ hr {
   overflow: visible;
 }
 
-
 fieldset {
   border: 1px solid silver;
   margin: 0 2px;
@@ -469,7 +436,6 @@ textarea {
   overflow: auto;
 }
 
-
 * {
   box-sizing: inherit;
 }
@@ -484,7 +450,7 @@ textarea {
 
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: 'Source Sans Pro';
+  font-family: "Source Sans Pro";
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -505,7 +471,6 @@ img {
   padding-top: 0;
   margin-bottom: 1rem;
 }
-
 
 ul {
   margin-left: 1.45rem;
@@ -554,8 +519,6 @@ dd {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
-
-
 
 figure {
   margin-left: 0;
@@ -705,13 +668,13 @@ ul li {
   padding-left: 0;
 }
 
-li>ol {
+li > ol {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
 }
 
-li>ul {
+li > ul {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
@@ -729,7 +692,7 @@ p *:last-child {
   margin-bottom: 0;
 }
 
-li>p {
+li > p {
   margin-bottom: calc(1.45rem / 2);
 }
 
