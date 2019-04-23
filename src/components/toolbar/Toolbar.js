@@ -6,16 +6,18 @@ import { Link } from "gatsby";
 const Toolbar = props => (
   <header className="toolbar">
     <div className="toolbar__navigation">
-      <div className="toolbar__toggle-button">
-        <DrawerToggleButton
-          clicked={props.drawerClickHandler}
-          change={props.change}
-        />
-      </div>
-      <div className="toolbar__logo">
-        <h1>
-          <Link to="/">Portfolio</Link>
-        </h1>
+      <div className="heading">
+        <div className="toolbar__logo">
+          <h1>
+            <Link to="/">Portfolio</Link>
+          </h1>
+        </div>
+        <div className="toolbar__toggle-button">
+          <DrawerToggleButton
+            clicked={props.drawerClickHandler}
+            change={props.change}
+          />
+        </div>
       </div>
       <div className="spacer" />
       <p>
