@@ -1,9 +1,5 @@
 import React, { Component } from "react";
 import { Link, graphql } from "gatsby";
-import { SpringGrid } from "react-stonecutter";
-
-import { CSSGrid, layout } from "react-stonecutter";
-
 import Img from "gatsby-image";
 import FluidGrid from "react-fluid-grid";
 import Layout from "../components/Layout";

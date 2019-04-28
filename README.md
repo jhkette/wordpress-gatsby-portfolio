@@ -1,15 +1,8 @@
-# gatsby-responsive-nav
+# Personal portfolio website (unfinished)
 
-A responsive nav inspired by the [styled-components site](https://styled-components.com) built with Gatsby v2 and styled-components
+A personal website made using gatsby.
 
-[Demo](https://priceless-darwin-b1604a.netlify.com)
-
-## Install
-
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-site https://github.com/arsmth/gatsby-responsive-nav
-```
-
-## Running in development
-`gatsby develop`
+#gatsby
+I choose gatsby as I felt it made it easier to use a fully functional react app with a CMS like wordpress - which would make it easy for me to update the site.
+The data is pulled from a WordPress site using the WordPress REST API.
+The gatsby wordpress plugin [gatsby-source-wordpress] to

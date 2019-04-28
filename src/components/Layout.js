@@ -3,7 +3,7 @@ import "./layout.scss";
 import Toolbar from "./toolbar/toolbar";
 import SideDrawer from "./SideDrawer/SideDrawer.js";
 import Backdrop from "./backdrop/backdrop";
-import Footer from "./Footer";
+
 import "./layout.scss";
 
 class Layout extends PureComponent {
@@ -39,7 +39,7 @@ class Layout extends PureComponent {
 
           <main className="right-container">{this.props.children}</main>
         </div>
-        <Footer />
+
         {backDrop}
       </div>
     );
