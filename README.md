@@ -3,6 +3,7 @@
 A personal website made using gatsby.
 
 ##Gatsby##
-I choose gatsby as I felt it made it easier to use a fully functional react app with a CMS like wordpress - which would make it easy for me to update the site.
+
+I choose gatsby as I felt it made it easier to use a fully functional react app with a CMS like Wordpress.
 The data is pulled from a WordPress site using the WordPress REST API.
-The gatsby wordpress plugin [gatsby-source-wordpress] to
+The gatsby wordpress plugin [gatsby-source-wordpress] and I use graphQL to query the API data
