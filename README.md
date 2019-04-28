@@ -2,7 +2,7 @@
 
 A personal website made using gatsby.
 
-##Gatsby##
+## Gatsby
 
 I choose gatsby as I felt it made it easier to use a fully functional react app with a CMS like Wordpress.
 The data is pulled from a WordPress site using the WordPress REST API.
