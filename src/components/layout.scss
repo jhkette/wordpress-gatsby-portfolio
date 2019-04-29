@@ -10,9 +10,94 @@ $black: #1a1a1a;
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro");
 
 // browser reset
-* {
+/* browser resest */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 // display all html5 elements as blocks
@@ -77,6 +162,7 @@ h2 {
   display: block;
   border-bottom: 3px solid $turq;
   width: 90%;
+  font-size: 1.4rem;
 }
 
 .wrapper {
@@ -86,14 +172,51 @@ h2 {
   position: relative;
 }
 
-.svg-inline--fa {
-  width: 1rem !important;
-  height: 1rem !important;
+.posts {
+  width: 100%;
+
+  display: block;
+  text-align: center;
 }
 
-.content {
-  width: 100%;
-  background-color: #ffffff;
+.post {
+  width: 15rem;
+  margin: 3rem;
+}
+
+header {
+  @media screen and (max-width: $break-small) {
+    width: 100%;
+    margin-right: auto;
+  }
+}
+
+.mainnav {
+  li {
+    display: block;
+
+    a {
+      text-decoration: none;
+      color: $black;
+
+      @media screen and (max-width: $break-small) {
+        display: none;
+        margin-right: auto;
+      }
+
+      &:hover {
+        color: blue;
+      }
+    }
+  }
+}
+
+.mobileheader {
+  @media screen and (max-width: $break-small) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 header {
@@ -177,6 +300,11 @@ header {
     margin-top: 0.15rem;
     margin-right: 0.5rem;
   }
+  .svg-inline--fa {
+    width: 1rem !important;
+    height: 1rem !important;
+  }
+
   .codelist {
     width: 100%;
     display: flex;
@@ -208,11 +336,9 @@ header {
   }
 }
 
-// Image lead css
+// Lead image for articles
 .bloglead {
   position: relative;
-  z-index: 2;
-  background-color: $turq;
 
   // hover image
   &:hover {
@@ -240,6 +366,7 @@ header {
   }
 }
 
+// Blog posts styling on index page
 .allpost {
   width: 450px;
   background-color: white;
@@ -255,55 +382,11 @@ header {
     padding: 0.4rem 0rem;
     margin-bottom: 0;
     color: #484848;
+    font-size: 1.2rem;
   }
 }
 
-.posts {
-  width: 100%;
-
-  display: block;
-  text-align: center;
-}
-
-.post {
-  width: 15rem;
-  margin: 3rem;
-}
-
-header {
-  @media screen and (max-width: $break-small) {
-    width: 100%;
-    margin-right: auto;
-  }
-}
-
-.mainnav {
-  li {
-    display: block;
-
-    a {
-      text-decoration: none;
-      color: $black;
-
-      @media screen and (max-width: $break-small) {
-        display: none;
-        margin-right: auto;
-      }
-
-      &:hover {
-        color: blue;
-      }
-    }
-  }
-}
-
-.mobileheader {
-  @media screen and (max-width: $break-small) {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-}
+// View post page
 
 .lead-postimage {
   width: 100% !important;

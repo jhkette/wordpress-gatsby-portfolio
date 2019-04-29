@@ -59,20 +59,26 @@ class Home extends Component {
         >
           {data.edges.map(({ node }) => (
             <article key={node.slug} className="homepost">
-              <Link to={`/post/${node.slug}/`} css={{ textDecoration: `none` }}>
+              <Link
+                to={`/post/${node.slug}/`}
+                style={{ textDecoration: `none` }}
+              >
                 <Img
                   className="bloglead"
                   fluid={node.featured_media.localFile.childImageSharp.fluid}
                 />
               </Link>
 
-              <Link to={`/post/${node.slug}/`} css={{ textDecoration: `none` }}>
+              <Link
+                to={`/post/${node.slug}/`}
+                style={{ textDecoration: `none` }}
+              >
                 <h3 className="slug">{node.title}</h3>
               </Link>
               <div class="codelist">
                 <img src={Code} alt="code" className="code" />
                 {node.acf.test !== null ? (
-                  <p className="categories">{node.acf.test}</p>
+                  <code className="categories">{node.acf.test}</code>
                 ) : (
                   ""
                 )}
