@@ -6,7 +6,7 @@ $turq: #1c9195;
 $black: #1a1a1a;
 
 .toolbar {
-  width: 30%;
+  width: 25%;
   min-width: 15rem;
   background: #ededed;
   padding: 0 2rem;
@@ -14,7 +14,6 @@ $black: #1a1a1a;
   display: flex;
   flex-direction: column;
   border-right: 1px solid #ddd;
-  box-shadow: 2px 2px 3px rgba(227, 227, 227, 0.639);
 }
 
 .toolbar__navigation {
@@ -25,7 +24,7 @@ $black: #1a1a1a;
 }
 
 .toolbar__logo {
-  margin-top: 2.5rem;
+  margin-top: 0.5rem;
   margin-left: 1.5rem;
   margin-bottom: 1.5rem;
   display: inline-block;
@@ -34,7 +33,7 @@ $black: #1a1a1a;
 .toolbar__logo a {
   color: #1a1a1a;
   text-decoration: none;
-  font-size: 1.7rem;
+
   display: inline-block;
 }
 
@@ -43,11 +42,8 @@ $black: #1a1a1a;
   margin: 0;
   padding: 0;
   display: flex;
-
-  font-family: "Playfair Display", serif;
   align-items: flex-start;
   align-content: flex-start;
-  border-bottom: 1px solid #1a1a1a;
 }
 
 .toolbar_navigation-items li {
@@ -57,7 +53,7 @@ $black: #1a1a1a;
 .toolbar_navigation-items a {
   color: #1a1a1a;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
 }
 
 .toolbar_navigation-items a:hover,

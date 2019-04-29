@@ -50,8 +50,6 @@ class Home extends Component {
 
     return (
       <Layout>
-        <h2>Projects</h2>
-
         <FluidGrid
           className="posts"
           styleStrategies={styleStrategies1}

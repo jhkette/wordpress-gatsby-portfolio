@@ -6,8 +6,29 @@ $mainred: #da0e19;
 $turq: #1c9195;
 $black: #1a1a1a;
 
+// /Users/joseph/Desktop/wordpress/blog/gatsby-responsive-nav-master/fonts
+@font-face {
+  font-family: Inter;
+  src: url("./../../fonts/Inter-Medium.woff") format("woff");
+  // url('../fonts/parisr.eot?#iefix') format("embedded-opentype"),
+  // url('../fonts/parisr.ttf') format("truetype"),
+  // url('../fonts/parisr.svg#Parisr') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Inter-regular;
+  src: url("./../../fonts/Inter-Light-BETA.woff") format("woff");
+  // url('../fonts/parisr.eot?#iefix') format("embedded-opentype"),
+  // url('../fonts/parisr.ttf') format("truetype"),
+  // url('../fonts/parisr.svg#Parisr') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 // import fonts
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro|Raleway");
 
 // browser reset
 /* browser resest */
@@ -128,7 +149,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Inter-regular", sans-serif;
   text-rendering: optimizeLegibility;
 }
 
@@ -136,33 +157,35 @@ p {
   padding: 0;
   margin: 0 0 1.45rem 0;
   font-weight: 500;
-  line-height: 1.7rem;
-  font-size: 1.05rem;
-  font-family: "Source San Pro", helvetica, sans-serif;
+  line-height: 1.6rem;
+  font-size: 1rem;
+  font-family: "Inter-regular", sans-serif;
 }
 
 h1 {
-  font-family: "Playfair display", serif;
+  font-family: "Inter", serif;
   text-rendering: geometricPrecision;
+  margin: 1rem 0 0.25rem 0;
 }
 h2,
 h3,
 h4 {
-  font-family: "Playfair display", serif;
+  font-family: "Inter", serif;
   text-rendering: geometricPrecision;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.8rem;
 }
 
 h2 {
-  margin: 2rem 0;
+  margin: 0.5rem 0 2.4rem 0;
   color: $black;
   display: block;
-  border-bottom: 3px solid $turq;
-  width: 90%;
-  font-size: 1.4rem;
+  border-bottom: 1px solid $black;
+  width: 100%;
+  font-size: 1.85rem;
+  padding-bottom: 0.35rem;
 }
 
 .wrapper {
@@ -170,6 +193,13 @@ h2 {
   min-height: 100%;
   flex-direction: column;
   position: relative;
+}
+
+footer {
+  height: 10rem;
+  width: 100%;
+  background-color: #ededed;
+  border-top: 1px solid #c0c0c0;
 }
 
 .posts {
@@ -284,7 +314,7 @@ header {
 
       &:hover {
         color: $turq;
-        text-decoration: underline;
+        text-decoration: none;
       }
     }
   }
@@ -406,6 +436,13 @@ header {
   font-size: 0.8rem;
 }
 
+.container.text-content {
+  p:first-of-type {
+    font-size: 1.4rem;
+    font-family: "Inter", serif;
+  }
+}
+
 audio,
 canvas,
 progress,
@@ -445,8 +482,6 @@ dfn {
 }
 
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
 }
 
 mark {

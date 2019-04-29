@@ -12,7 +12,7 @@ class PostTemplate extends Component {
         <section>
           <h2> {post.title}</h2>
           {post.acf.test !== null ? (
-            <p className="categoriespost"> {post.acf.test}</p>
+            <code className="categoriespost"> {post.acf.test}</code>
           ) : (
             ""
           )}
@@ -26,7 +26,10 @@ class PostTemplate extends Component {
           ) : (
             " "
           )}
-          <div dangerouslySetInnerHTML={{ __html: post.content }} />
+          <div
+            className="container text-content"
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          />
         </section>
       </Layout>
     );
