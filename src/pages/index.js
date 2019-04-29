@@ -4,6 +4,7 @@ import Img from "gatsby-image";
 import FluidGrid from "react-fluid-grid";
 import Layout from "../components/Layout";
 import Code from "../images/code.svg";
+import Circle from "../components/circles.js";
 
 const styleStrategies1 = [
   {
@@ -50,6 +51,7 @@ class Home extends Component {
 
     return (
       <Layout>
+        <Circle />
         <FluidGrid
           className="posts"
           styleStrategies={styleStrategies1}
