@@ -75,7 +75,7 @@ class Home extends Component {
               >
                 <h3 className="slug">{node.title}</h3>
               </Link>
-              <div class="codelist">
+              <div className="codelist">
                 <img src={Code} alt="code" className="code" />
                 {node.acf.test !== null ? (
                   <code className="categories">{node.acf.test}</code>

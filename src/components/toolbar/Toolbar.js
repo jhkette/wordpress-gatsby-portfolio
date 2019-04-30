@@ -12,12 +12,12 @@ const Toolbar = props => (
             <Link to="/">Portfolio</Link>
           </h1>
         </div>
-        <div className="toolbar__toggle-button">
+        <nav className="toolbar__toggle-button">
           <DrawerToggleButton
             clicked={props.drawerClickHandler}
             change={props.change}
           />
-        </div>
+        </nav>
       </div>
       <div className="spacer" />
       <p>
@@ -25,7 +25,7 @@ const Toolbar = props => (
         lLorem ipsum dolor sit amet, pro mundi commodo at. Numquam honestatis e
         deterruisset mel.
       </p>
-      <div className="toolbar_navigation-items">
+      <nav className="toolbar_navigation-items">
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -37,7 +37,7 @@ const Toolbar = props => (
             <Link to="/">All posts</Link>
           </li>
         </ul>
-      </div>
+      </nav>
     </div>
   </header>
 );

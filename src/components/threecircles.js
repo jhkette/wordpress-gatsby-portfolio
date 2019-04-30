@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
 const Circle = ({ bgColor }) => {
-  var diameter = Math.random() * 250;
-  var heights = [820, 700, 630, 5, 30, 100, 900, 15, 400, 450];
-  var lefts = [100, 200, 50, 74, 800, 900, 1200, 1400, 25, 4];
+  var diameter = Math.random() * (100 - 50) + 50;
+  var heights = [3, 700, 630, 100, 900, 15, 400, 450, 8];
+  var lefts = [100, 200, 800, 900, 1200, 1400, 25];
   var height = heights[Math.floor(Math.random() * heights.length)];
   var width = lefts[Math.floor(Math.random() * lefts.length)];
 
@@ -11,7 +11,7 @@ const Circle = ({ bgColor }) => {
     padding: 10,
     margin: 20,
     display: "inline-block",
-    backgroundColor: bgColor,
+    background: "linear-gradient(to right bottom," + bgColor + ")",
     borderRadius: "50%",
     width: diameter,
     height: diameter,
@@ -27,13 +27,12 @@ const Circle = ({ bgColor }) => {
 class Background extends Component {
   state = {
     colors: [
-      "#E94F37",
-      "#1C89BF",
-      "#A1D363",
-      "#85FFC7",
-      "#FF8552",
-      "#A40E4C",
-      "#393E41"
+      "#1C89BF, #e3f7ff",
+      "#A1D363,#90ee90",
+      "#85FFC7, #3cb371",
+      "#297373, #2f4f4f",
+      "#FF8552, #fdc888",
+      "#A40E4C ,#ffc2c2"
     ]
   };
 

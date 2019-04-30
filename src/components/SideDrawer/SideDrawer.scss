@@ -3,14 +3,15 @@ $break-tablet: 769px;
 $break-large: 1024px;
 $mainred: #da0e19;
 $turq: #1c9195;
+$turqlight: #cad8d8;
 $black: #1a1a1a;
 
 .sidedrawer {
-  height: 100%;
-  background-color: white;
+  height: 70vh;
+  background-color: $turqlight;
   box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 0;
 
   z-index: 200;
@@ -19,7 +20,10 @@ $black: #1a1a1a;
   transform: translateY(-110%);
 }
 .sidedrawer.open {
-  transform: translateY(0);
+  transform: translateY(0%);
+  @media screen and (min-width: $break-small) {
+    display: none;
+  }
 }
 
 .sidedrawer ul {
@@ -27,10 +31,12 @@ $black: #1a1a1a;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 5rem;
+  margin-left: 4rem;
 }
 
 .sidedrawer a {
-  color: purple;
+  color: $black;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
