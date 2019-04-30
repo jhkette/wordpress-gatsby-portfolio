@@ -258,6 +258,8 @@ header {
   flex-direction: row;
   background-color: #fff;
   justify-content: space-around;
+  overflow: hidden;
+  position: relative;
 
   @media screen and (max-width: $break-small) {
     flex-direction: column;

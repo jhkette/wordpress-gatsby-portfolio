@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Img from "gatsby-image";
 import Layout from "../components/Layout";
+import Circle from "../components/threecircles.js";
 
 class PostTemplate extends Component {
   render() {
@@ -10,6 +11,7 @@ class PostTemplate extends Component {
     return (
       <Layout>
         <section>
+          <Circle />
           <h2> {post.title}</h2>
           {post.acf.test !== null ? (
             <code className="categoriespost"> {post.acf.test}</code>
