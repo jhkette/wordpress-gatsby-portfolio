@@ -61,7 +61,7 @@ class Home extends Component {
             <article key={node.slug} className="homepost">
               <Link
                 to={`/post/${node.slug}/`}
-                style={{ textDecoration: `none` }}
+                style={{textDecoration: "none"}}
               >
                 <Img
                   className="bloglead"
@@ -71,7 +71,7 @@ class Home extends Component {
 
               <Link
                 to={`/post/${node.slug}/`}
-                style={{ textDecoration: `none` }}
+                style={ {textDecoration: "none"} }
               >
                 <h3 className="slug">{node.title}</h3>
               </Link>
