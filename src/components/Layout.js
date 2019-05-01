@@ -1,9 +1,7 @@
 import React, { PureComponent } from "react";
-import "./layout.scss";
 import Toolbar from "./toolbar/Toolbar";
 import SideDrawer from "./SideDrawer/SideDrawer.js";
-
-import "./layout.scss";
+import "../layout.scss";
 
 class Layout extends PureComponent {
   state = {
