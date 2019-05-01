@@ -77,10 +77,8 @@ class Home extends Component {
               </Link>
               <div className="codelist">
                 <img src={Code} alt="code" className="code" />
-                {node.acf.test !== null ? (
-                  <code className="categories">{node.acf.test}</code>
-                ) : (
-                  ""
+                {node.acf.test && (
+                  <div className="categories">{node.acf.test}</div>
                 )}
               </div>
               <div

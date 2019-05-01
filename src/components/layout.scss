@@ -4,6 +4,7 @@ $break-tablet: 769px;
 $break-large: 1024px;
 $mainred: #da0e19;
 $turq: #1c9195;
+$turqlight: #bce2e2;
 $black: #1a1a1a;
 
 // /Users/joseph/Desktop/wordpress/blog/gatsby-responsive-nav-master/fonts
@@ -155,7 +156,7 @@ body {
 
 p {
   padding: 0;
-  margin: 0 0 1.45rem 0;
+  margin: 0 0 1rem 0;
   font-weight: 500;
   line-height: 1.6rem;
   font-size: 1rem;
@@ -180,7 +181,7 @@ h4 {
 }
 
 h2 {
-  margin: 0.5rem 0 2.4rem 0;
+  margin: 1rem 0 1rem 0;
   color: $black;
   display: block;
   border-bottom: 1px solid $black;
@@ -311,8 +312,8 @@ header {
       border-bottom: 1px solid #1a1a1a;
       margin-bottom: 0.7rem;
       padding-bottom: 0.3rem;
-      margin-top: 1.25rem;
-      margin-bottom: 0;
+      margin-top: 0.7rem;
+      margin-bottom: 0.7rem;
       text-decoration: none;
       font-size: 1.3rem;
 
@@ -344,8 +345,8 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-top: 0.95rem;
-    // align-content: flex-end;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
   }
 
   @media screen and (max-width: $break-large) {
@@ -358,14 +359,14 @@ header {
 
   .categories {
     border-radius: 0.2rem;
-    color: #1c9195;
+    color: $black;
     font-weight: 900;
-    margin: 0.4rem 0 0 0;
+    margin: 0.15rem 0 0 0;
     font-size: 0.9rem;
     line-height: 1.1rem;
-    padding: 0rem 0.2rem;
+    padding: 0.2rem 0.3rem;
     display: block;
-    z-index: 5;
+    background-color: $turqlight;
     // font-family: 'Ralewayb', serif;
   }
 }
@@ -379,13 +380,11 @@ header {
     transition: 0.5s;
     opacity: 0.5;
     z-index: 0;
-    color: $turq;
 
     // hover image magnifying glass
     &:before {
       width: 100%;
       height: 100%;
-      background-color: $turq;
 
       opacity: 0.5;
     }
@@ -424,7 +423,7 @@ header {
 
 .lead-postimage {
   width: 100% !important;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   img {
     width: 100% !important;
     height: auto !important;
@@ -432,15 +431,17 @@ header {
 }
 
 .categoriespost {
-  background-color: $turq;
+  background-color: $turqlight;
+  margin-bottom: 1rem;
   padding: 0.1rem 0.8rem;
   border-radius: 0.3rem;
-  color: white;
+  color: $black;
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 
 .container.text-content {
+  position: relative;
   p:first-of-type {
     font-size: 1.4rem;
     font-family: "Inter", serif;
@@ -597,7 +598,6 @@ img {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1rem;
 }
 
 ul {

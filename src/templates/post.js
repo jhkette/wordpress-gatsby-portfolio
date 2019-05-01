@@ -13,10 +13,8 @@ class PostTemplate extends Component {
         <section>
           <Circle />
           <h2> {post.title}</h2>
-          {post.acf.test !== null ? (
-            <code className="categoriespost"> {post.acf.test}</code>
-          ) : (
-            ""
+          {post.acf.test && (
+            <div className="categoriespost"> {post.acf.test}</div>
           )}
           {post.acf.leadimage.localFile.childImageSharp.resolutions !== null ? (
             <Img
