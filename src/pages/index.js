@@ -63,10 +63,12 @@ class Home extends Component {
                 to={`/post/${node.slug}/`}
                 style={{textDecoration: "none"}}
               >
+              {node.featured_media.localFile.childImageSharp.fluid && 
                 <Img
                   className="bloglead"
                   fluid={node.featured_media.localFile.childImageSharp.fluid}
                 />
+              }
               </Link>
 
               <Link

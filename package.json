@@ -31,7 +31,7 @@
     "react-fluid-grid": "^1.0.9",
     "react-helmet": "^5.2.0",
     "react-stack-grid": "^0.7.1",
-    "react-stonecutter": "^0.3.9",
+    "react-transition-group": "^4.0.0",
     "react-truncate": "^2.4.0",
     "slash": "^2.0.0",
     "styled-components": "^3.4.2",
