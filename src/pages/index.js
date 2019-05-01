@@ -12,11 +12,11 @@ const styleStrategies1 = [
     style: { numberOfColumns: 1, gutterHeight: 5, gutterWidth: 0 }
   },
   {
-    mediaQuery: "(min-width: 769px) and (max-width: 1199.9px)",
+    mediaQuery: "(min-width: 769px) and (max-width: 1279.99px)",
     style: { numberOfColumns: 2, gutterHeight: 15, gutterWidth: 15 }
   },
   {
-    mediaQuery: "(min-width: 1200px)",
+    mediaQuery: "(min-width: 1280px)",
     style: { numberOfColumns: 3, gutterHeight: 30, gutterWidth: 30 }
   }
 ];

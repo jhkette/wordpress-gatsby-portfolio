@@ -28,7 +28,7 @@ const styleStrategies = [
 const transition = "top 200ms ease-in-out, left 200ms ease-in-out";
 const IndexPage = ({ data, pathContext }) => {
   const { group, index, first, last, pageCount } = pathContext;
-  const previousUrl = index - 1 == 1 ? "" : (index - 1).toString();
+  const previousUrl = index - 1 === 1 ? "" : (index - 1).toString();
   const nextUrl = (index + 1).toString();
 
   return (
