@@ -1,6 +1,5 @@
 import React from "react";
 import DrawerToggleButton from "../SideDrawer/DrawerToggle.js";
-import './Toolbar.scss';
 import { Link } from "gatsby";
 
 
