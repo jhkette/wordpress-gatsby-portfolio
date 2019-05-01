@@ -408,15 +408,15 @@ header {
   text-align: left;
   margin-bottom: 2rem;
 
-  h1 {
-    color: #484848;
-  }
-
+ 
   h3 {
     padding: 0.4rem 0rem;
     margin-bottom: 0;
-    color: #484848;
+    color: $black;
     font-size: 1.2rem;
+  }
+  a{
+    text-decoration: none;
   }
 }
 

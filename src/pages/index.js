@@ -42,7 +42,7 @@ const styleStrategies2 = [
 //   { mediaQuery: '(min-width: 1024px)', style: { numberOfColumns: 2, gutterHeight: 30, gutterWidth: 30 } }
 // ]
 
-const transition = "top 200ms ease-in-out, left 200ms ease-in-out";
+const transition = "top 400ms ease-in-out, left 400ms ease-in-out";
 
 class Home extends Component {
   render() {
@@ -103,7 +103,7 @@ class Home extends Component {
               <article key={node.slug} className="allpost">
                 <Link
                   to={`/post/${node.slug}/`}
-                  css={{ textDecoration: `none` }}
+                  css={{ textDecoration: "none" }}
                 >
                   <h3>{node.title}</h3>
                 </Link>

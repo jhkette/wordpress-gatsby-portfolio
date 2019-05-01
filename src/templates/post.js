@@ -16,15 +16,13 @@ class PostTemplate extends Component {
           {post.acf.test && (
             <div className="categoriespost"> {post.acf.test}</div>
           )}
-          {post.acf.leadimage.localFile.childImageSharp.resolutions !== null ? (
+          {post.acf.leadimage.localFile.childImageSharp.resolutions && (
             <Img
               resolutions={
                 post.acf.leadimage.localFile.childImageSharp.resolutions
               }
               className="lead-postimage"
             />
-          ) : (
-            " "
           )}
           <div
             className="container text-content"
