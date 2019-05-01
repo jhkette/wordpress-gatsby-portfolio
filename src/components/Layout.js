@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import "./layout.scss";
-import Toolbar from "./toolbar/toolbar";
+import Toolbar from "./toolbar/Toolbar";
 import SideDrawer from "./SideDrawer/SideDrawer.js";
 
 import "./layout.scss";
