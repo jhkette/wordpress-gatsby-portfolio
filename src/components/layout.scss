@@ -20,7 +20,7 @@ $black: #1a1a1a;
 
 @font-face {
   font-family: Inter-regular;
-  src: url("./../../fonts/Inter-Light-BETA.woff") format("woff");
+  src: url("./../../fonts/Inter-Regular.woff") format("woff");
   // url('../fonts/parisr.eot?#iefix') format("embedded-opentype"),
   // url('../fonts/parisr.ttf') format("truetype"),
   // url('../fonts/parisr.svg#Parisr') format("svg");
@@ -139,6 +139,7 @@ summary {
 }
 
 html {
+  // set rem size
   font-size: 112.5%;
   box-sizing: border-box;
   overflow-y: scroll;
@@ -924,7 +925,7 @@ pre tt:after {
 
 // Toolbar
 .toolbar {
-  width: 25%;
+  width: 30%;
   min-width: 15rem;
   background: #ededed;
   padding: 0 2rem;
