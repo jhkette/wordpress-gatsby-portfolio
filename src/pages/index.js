@@ -53,7 +53,7 @@ class Home extends Component {
       <Layout>
         <Circle />
         <FluidGrid
-          className="container-projects"
+          className="container-projects-posts"
           styleStrategies={styleStrategies1}
           transition={transition}
         >
@@ -95,7 +95,7 @@ class Home extends Component {
           <h2>Posts</h2>
 
           <FluidGrid
-            className="posts"
+            className="container-projects-posts"
             styleStrategies={styleStrategies2}
             transition={transition}
           >

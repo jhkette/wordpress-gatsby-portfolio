@@ -2,6 +2,7 @@
 $break-small: 768px;
 $break-tablet: 769px;
 $break-large: 1024px;
+$break-smalldesktop: 1279.99px;
 $mainred: #da0e19;
 $turq: #1c9195;
 $turqlight: #bce2e2;
@@ -229,9 +230,8 @@ footer {
   border-top: 1px solid #c0c0c0;
 }
 
-.container-projects {
+.container-projects-posts {
   width: 100%;
-
   display: block;
   text-align: center;
 }
@@ -360,8 +360,12 @@ header {
     margin-bottom: 0.7rem;
   }
 
+  @media screen and (max-width: $break-smalldesktop) {
+    width: 340px;
+  }
+
   @media screen and (max-width: $break-large) {
-    width: 200px;
+    width: 260px;
   }
 
   @media screen and (max-width: $break-small) {
@@ -403,19 +407,19 @@ header {
     }
   }
   // Media queries for .bloglead - this controls image size
-  @media screen and (min-width: $break-tablet) and (max-width: $break-large) {
-    width: 200px;
-  }
+  // @media screen and (min-width: $break-tablet) and (max-width: $break-large) {
+  //   width: 200px;
+  // }
   @media screen and (max-width: $break-small) {
     width: 400px;
-    height: 300px;
+    height: 350px;
   }
 }
 
 // Blog posts styling on index page
 .allpost {
-  width: 450px;
-  background-color: white;
+  width: 400px;
+  // background-color: white;
   display: inline-block;
   text-align: left;
   margin-bottom: 2rem;
@@ -423,7 +427,7 @@ header {
  
   h3 {
     padding: 0.2rem 0rem;
-    margin-bottom: 0;
+    
     color: $black;
     font-size: 1.2rem;
   }
