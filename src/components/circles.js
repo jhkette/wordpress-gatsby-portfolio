@@ -33,9 +33,8 @@ class Background extends Component {
       "#297373, #2f4f4f",
       "#FF8552, #fdc888",
       "#A40E4C ,#ffc2c2",
-      // "#393E41, #cecece",
-      "#E94F37, #ba3c40",
-      "#1C89BF, #709b9d"
+      
+     
     ]
   };
 
