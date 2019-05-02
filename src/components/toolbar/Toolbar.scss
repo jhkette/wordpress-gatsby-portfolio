@@ -2,6 +2,7 @@
 $break-small: 768px;
 $break-tablet: 769px;
 $break-large: 1024px;
+$break-smalldesktop: 1279.99px;
 $mainred: #da0e19;
 $turq: #1c9195;
 $turqlight: #bce2e2;
@@ -48,12 +49,14 @@ $black: #1a1a1a;
     display: flex;
     align-items: flex-start;
     align-content: flex-start;
-    font-weight: 900;
+    font-weight: 500;
+    // display: inline-block;
+    border-bottom: 1px solid $black;
     &:first-of-type li {
       padding: 0 0.5rem 0 0;
     }
 
-    @media(max-width: $break-large){
+    @media(max-width: $break-smalldesktop){
      flex-direction: column;
     }
   }

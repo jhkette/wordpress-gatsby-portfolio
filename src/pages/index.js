@@ -29,7 +29,7 @@ const styleStrategies2 = [
   },
   {
     mediaQuery: "(min-width: 1280px)",
-    style: { numberOfColumns: 2, gutterHeight: 30, gutterWidth: 30 }
+    style: { numberOfColumns: 2, gutterHeight: 15, gutterWidth: 30 }
   }
 ];
 
