@@ -118,5 +118,11 @@ $black: #1a1a1a;
   @media (max-width: $break-small){
     .toolbar {
       padding: 0 1.2rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 8rem;
+      z-index: 2000;
+      margin-bottom: 5rem;
     }
   }
