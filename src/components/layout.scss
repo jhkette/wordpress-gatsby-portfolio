@@ -323,6 +323,8 @@ header {
         text-decoration: none;
       }
     }
+
+    
   }
 
   .excerpt {
@@ -356,6 +358,7 @@ header {
 
   @media screen and (max-width: $break-small) {
     width: 400px;
+   
   }
 
   .categories {
@@ -396,7 +399,7 @@ header {
   }
   @media screen and (max-width: $break-small) {
     width: 400px;
-    height: 400px;
+    height: 300px;
   }
 }
 
@@ -427,8 +430,9 @@ header {
   margin-bottom: 1.5rem;
   img {
     width: 100% !important;
-    height: auto !important;
+
   }
+ 
 }
 
 .categoriespost {
