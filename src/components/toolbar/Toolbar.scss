@@ -115,3 +115,8 @@ $black: #1a1a1a;
     }
   }
   
+  @media (max-width: $break-small){
+    .toolbar {
+      padding: 0 1.2rem;
+    }
+  }
