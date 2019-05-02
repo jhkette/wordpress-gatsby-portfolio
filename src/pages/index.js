@@ -53,12 +53,12 @@ class Home extends Component {
       <Layout>
         <Circle />
         <FluidGrid
-          className="posts"
+          className="container-projects"
           styleStrategies={styleStrategies1}
           transition={transition}
         >
           {data.edges.map(({ node }) => (
-            <article key={node.slug} className="homepost">
+            <article key={node.slug} className="container-post">
               <Link
                 to={`/post/${node.slug}/`}
                 style={{textDecoration: "none"}}
@@ -77,10 +77,10 @@ class Home extends Component {
               >
                 <h3 className="slug">{node.title}</h3>
               </Link>
-              <div className="codelist">
+              <div className="container-codelist">
                 <img src={Code} alt="code" className="code" />
                 {node.acf.test && (
-                  <div className="categories">{node.acf.test}</div>
+                  <p className="highlight-categories">{node.acf.test}</p>
                 )}
               </div>
               <div
