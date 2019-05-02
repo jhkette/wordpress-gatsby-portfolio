@@ -236,10 +236,10 @@ footer {
   text-align: center;
 }
 
-.post {
-  width: 15rem;
-  margin: 3rem;
-}
+// .post {
+//   width: 15rem;
+//   margin: 3rem;
+// }
 
 header {
   @media screen and (max-width: $break-small) {
@@ -371,6 +371,7 @@ header {
 
   @media screen and (max-width: $break-small) {
     width: 400px;
+    padding-bottom: 2rem;
    
   }
 
@@ -423,10 +424,10 @@ header {
   height: 40px;
   width: 155px;
   border: 1px solid $black;
-  padding: 8px 0px;
+  padding: 7.5px 0px;
   // font-weight: 700;
   font-size: 18px;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   color: $black;
   text-align: left;
   border-radius: .1rem;
