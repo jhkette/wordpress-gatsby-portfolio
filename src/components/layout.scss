@@ -328,6 +328,7 @@ header {
   display: inline-block;
   text-align: left;
   margin-bottom: 2rem;
+  padding: 0 0 4rem 0;
 
   a {
     color: #1a1a1a;
@@ -335,9 +336,9 @@ header {
     
   }
 
-  .excerpt {
-    border-bottom: 1px solid $black;
-  }
+  // .excerpt {
+  //   border-bottom: 1px solid $black;
+  // }
 
   .code {
     width: 25px;
@@ -415,6 +416,60 @@ header {
     height: 350px;
   }
 }
+// Button
+.button {
+  position: absolute;
+  //display:block;
+  height: 45px;
+  width: 165px;
+  border: 1px solid $black;
+  padding: 9px 0px;
+  // font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: $black;
+  text-align: left;
+  border-radius: .1rem;
+ 
+  outline: 0;
+  overflow:hidden;
+  background: white;
+  z-index: 1000;
+  cursor: pointer;
+  transition:         0.08s ease-in;
+  -o-transition:      0.08s ease-in;
+  -ms-transition:     0.08s ease-in;
+  -moz-transition:    0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
+}
+
+
+.arrow{
+  text-align:left;
+  padding-left:17px;
+  padding-bottom: 5px;
+}
+
+.arrow:before{
+  content:"→";
+  position:absolute;
+  color: $black;
+  font-size: 20px;
+  left: 83%;
+  opacity: 0;
+  -webkit-transition: all 250ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+}
+
+.arrow:hover:before{
+  left:84%;
+  opacity:1;
+}
+
+.arrow:hover {
+  width:175px;
+}
+
+
 
 // Blog posts styling on index page
 .allpost {

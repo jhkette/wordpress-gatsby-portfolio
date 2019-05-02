@@ -87,6 +87,8 @@ class Home extends Component {
                 className="excerpt"
                 dangerouslySetInnerHTML={{ __html: node.excerpt }}
               />
+              <Link
+                to={`/post/${node.slug}/`} class="button arrow">View Project</Link>
             </article>
           ))}
         </FluidGrid>
