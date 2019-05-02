@@ -25,11 +25,11 @@ const styleStrategies2 = [
 
   {
     mediaQuery:  "(max-width: 1279.9px)",
-    style: { numberOfColumns: 1, gutterHeight: 15, gutterWidth: 15 }
+    style: { numberOfColumns: 1, gutterHeight: 0, gutterWidth: 0 }
   },
   {
     mediaQuery: "(min-width: 1280px)",
-    style: { numberOfColumns: 2, gutterHeight: 15, gutterWidth: 30 }
+    style: { numberOfColumns: 2, gutterHeight: 0, gutterWidth: 0 }
   }
 ];
 
