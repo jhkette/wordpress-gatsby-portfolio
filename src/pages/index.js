@@ -22,16 +22,13 @@ const styleStrategies1 = [
 ];
 
 const styleStrategies2 = [
+
   {
-    mediaQuery: "(max-width: 768.9px)",
-    style: { numberOfColumns: 1, gutterHeight: 5, gutterWidth: 0 }
+    mediaQuery:  "(max-width: 1279.9px)",
+    style: { numberOfColumns: 1, gutterHeight: 15, gutterWidth: 15 }
   },
   {
-    mediaQuery: "(min-width: 769px) and (max-width: 1023.9px)",
-    style: { numberOfColumns: 3, gutterHeight: 15, gutterWidth: 15 }
-  },
-  {
-    mediaQuery: "(min-width: 1024px)",
+    mediaQuery: "(min-width: 1280px)",
     style: { numberOfColumns: 2, gutterHeight: 30, gutterWidth: 30 }
   }
 ];
@@ -71,12 +68,12 @@ class Home extends Component {
               }
               </Link>
 
-              <Link
+             
+                <h3 className="slug"> <Link
                 to={`/post/${node.slug}/`}
                 style={ {textDecoration: "none"} }
-              >
-                <h3 className="slug">{node.title}</h3>
-              </Link>
+              >{node.title}</Link></h3>
+              
               <div className="container-codelist">
                 <img src={Code} alt="code" className="code" />
                 {node.acf.test && (
@@ -102,10 +99,10 @@ class Home extends Component {
             transition={transition}
           >
             {allposts.edges.map(({ node }) => (
-              <article key={node.slug} className="allpost">
+              <article key={node.slug} className="container-singlepost">
                 <Link
                   to={`/post/${node.slug}/`}
-                  css={{ textDecoration: "none" }}
+                  style={{textDecoration: "none"}}
                 >
                   <h3>{node.title}</h3>
                 </Link>
