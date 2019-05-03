@@ -31,11 +31,12 @@ const Toolbar = props => (
           <li>
             <Link to="/">Home</Link>
           </li>
+        
           <li>
-            <Link to="/posts">All projects</Link>
+            <Link to="/sample-page/">About</Link>
           </li>
           <li>
-            <Link to="/">All posts</Link>
+            <Link to="/posts">All projects</Link>
           </li>
         </ul>
       </nav>
