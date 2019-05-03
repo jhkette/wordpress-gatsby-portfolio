@@ -62,7 +62,7 @@ class Home extends Component {
               >
               {node.featured_media.localFile.childImageSharp.fluid && 
                 <Img
-                  className="bloglead"
+                  className="image-bloglead"
                   fluid={node.featured_media.localFile.childImageSharp.fluid}
                 />
               }
