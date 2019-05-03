@@ -43,19 +43,7 @@ const postsQuery = `
           }
           acf {
             test
-          } 
-          featured_media{
-            localFile{
-                childImageSharp{
-                    resolutions(width:200, height: 250){
-                        src
-                        width
-                        height
-                    }
-                }
-            }
-        }
-          
+          }          
       }
     }
   }

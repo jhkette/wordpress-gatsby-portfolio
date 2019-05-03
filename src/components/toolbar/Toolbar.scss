@@ -52,9 +52,7 @@ $black: #1a1a1a;
     font-weight: 500;
     // display: inline-block;
     border-bottom: 1px solid $black;
-    &:first-of-type li {
-      padding: 0 0.5rem 0 0;
-    }
+   
 
     @media(max-width: $break-smalldesktop){
      flex-direction: column;
@@ -62,7 +60,8 @@ $black: #1a1a1a;
   }
   
   .toolbar_navigation-items li {
-    padding: 0 0.5rem;
+    padding: 0 0.5rem 0 0;
+    margin-bottom: .35rem;
   }
   
   .toolbar_navigation-items a {

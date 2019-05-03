@@ -33,13 +33,8 @@ const styleStrategies2 = [
   }
 ];
 
-// const styleStrategies3 = [
-//   { mediaQuery: '(max-width: 768.9px)', style: { numberOfColumns: 1, gutterHeight: 5, gutterWidth: 0 } },
-//   { mediaQuery: '(min-width: 769px) and (max-width: 1023.9px)', style: { numberOfColumns: 3, gutterHeight: 15, gutterWidth: 15 } },
-//   { mediaQuery: '(min-width: 1024px)', style: { numberOfColumns: 2, gutterHeight: 30, gutterWidth: 30 } }
-// ]
 
-const transition = "top 400ms ease-in-out, left 400ms ease-in-out";
+const transition = "top 300ms ease-in-out, left 300ms ease-in-out";
 
 class Home extends Component {
   render() {
