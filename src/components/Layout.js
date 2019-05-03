@@ -24,7 +24,7 @@ class Layout extends PureComponent {
             closeHandler={this.closeHandler}
             change={this.state.sideDrawerOpen}
           />
-          <main className="right-container">{this.props.children}</main>
+          <main className="container-bodycontent">{this.props.children}</main>
         </div>
         <footer />
       </div>

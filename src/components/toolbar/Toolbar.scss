@@ -121,8 +121,11 @@ $black: #1a1a1a;
       position: fixed;
       top: 0;
       left: 0;
-      height: 8rem;
+      height: 4rem;
       z-index: 2000;
       margin-bottom: 5rem;
+    }
+    .toolbar-intro{
+      display: none;
     }
   }

@@ -288,7 +288,7 @@ header {
 }
 
 // right container for main content
-.right-container {
+.container-bodycontent {
   flex: 1;
   margin: 2rem auto 0 auto;
   padding: 0 2rem;
@@ -302,7 +302,7 @@ header {
   }
   @media (max-width: $break-small){
    
-   margin-top: 11rem;
+   margin-top: 7rem;
   }
 }
 

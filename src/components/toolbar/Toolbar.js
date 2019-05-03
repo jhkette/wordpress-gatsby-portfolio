@@ -21,7 +21,7 @@ const Toolbar = props => (
         </nav>
       </div>
       <div className="spacer" />
-      <p>
+      <p className ="toolbar-intro">
         {" "}
         lLorem ipsum dolor sit amet, pro mundi commodo at. Numquam honestatis e
         deterruisset mel.
