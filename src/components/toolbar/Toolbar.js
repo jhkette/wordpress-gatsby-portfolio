@@ -1,6 +1,8 @@
 import React from "react";
 import DrawerToggleButton from "../SideDrawer/DrawerToggle.js";
 import { Link } from "gatsby";
+import  Github  from "../../images/github.svg";
+import  Codepen from "../../images/codepen.svg";
 import "./Toolbar.scss";
 
 
@@ -37,6 +39,17 @@ const Toolbar = props => (
           </li>
           <li>
             <Link to="/posts">All projects</Link>
+          </li>
+        </ul>
+      </nav>
+      <nav className="nav-icons">
+        <ul>
+          <li>
+          <img className="github" src ={Github} />
+          </li>
+        
+          <li>
+          <img className="github" src ={Codepen} />
           </li>
         </ul>
       </nav>

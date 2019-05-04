@@ -103,6 +103,17 @@ $black: #1a1a1a;
     width: 100%;
     align-items: center;
   }
+
+  .nav-icons ul{
+    list-style: none;
+    margin-top: 2rem;
+    li{
+      display: inline-block;
+      padding-right: 1rem;
+    }
+  }
+
+  
   
   @media (min-width: $break-tablet) {
     .toolbar__toggle-button {
@@ -128,3 +139,5 @@ $black: #1a1a1a;
       display: none;
     }
   }
+
+  .github{fill:#221E1B; width: 32px; height: 32px;}
