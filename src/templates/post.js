@@ -28,7 +28,7 @@ class PostTemplate extends Component {
           )}
         
           {post.acf.url && ( 
-             <a className ="link-highlight" href= {post.acf.url}> {post.acf.url}</a> 
+             <a className ="link-highlight" href= {post.acf.url} target="_blank"> {post.acf.url}</a> 
           )}
           
           <div
