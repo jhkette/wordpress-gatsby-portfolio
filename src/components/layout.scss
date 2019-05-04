@@ -4,7 +4,7 @@ $break-tablet: 769px;
 $break-large: 1024px;
 $break-smalldesktop: 1279.99px;
 $mainred: #da0e19;
-$turq: #1c9195;
+$turq: #1b898d;
 $turqlight: #bce2e2;
 $black: #1a1a1a;
 
@@ -518,7 +518,7 @@ header {
 }
 
 .link-highlight {
-  color: #04644c;
+  color: $turq;
   font-weight: 900;
   padding-bottom: 1rem;
   display: block;
