@@ -29,10 +29,8 @@ $black: #1a1a1a;
   font-style: normal;
 }
 
-// import fonts
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro|Raleway");
 
-// browser reset
+
 /* browser resest */
 html,
 body,
@@ -480,6 +478,11 @@ header {
 
 // View post page
 
+.container-allpost-content{
+  position: relative;
+  z-index: 500;
+}
+
 .lead-postimage {
   width: 100% !important;
   margin-bottom: 1.5rem;
@@ -501,7 +504,7 @@ header {
 }
 
 .container.text-content {
-  position: relative;
+ 
   p:first-of-type {
     font-size: 1.25rem;
     font-family: "Inter", serif;

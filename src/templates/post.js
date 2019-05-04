@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Link from "gatsby-link";
 import Img from "gatsby-image";
 import Layout from "../components/Layout";
 import Circle from "../components/threecircles.js";
@@ -9,9 +10,11 @@ class PostTemplate extends Component {
 
     return (
       <Layout>
-        <section>
-          <Circle />
+        <Circle />
+        <section className="container-allpost-content">
+         
           <h2> {post.title}</h2>
+         
           {post.acf.test && (
             <div className="categoriespost"> {post.acf.test}</div>
           )}
@@ -23,6 +26,11 @@ class PostTemplate extends Component {
               className="lead-postimage"
             />
           )}
+        
+          {post.acf.url && ( 
+             <a className ="link-highlight" href= {post.acf.url}> {post.acf.url}</a> 
+          )}
+          
           <div
             className="container text-content"
             dangerouslySetInnerHTML={{ __html: post.content }}
@@ -47,6 +55,7 @@ export const pageQuery = graphql`
       }
       acf {
         test
+        url
         leadimage {
           localFile {
             childImageSharp {
