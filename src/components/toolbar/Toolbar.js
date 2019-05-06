@@ -48,11 +48,11 @@ const Toolbar = props => (
       <nav className="nav-icons">
         <ul>
           <li>
-          <a href="https://github.com/jokhenry89" target="_blank" rel="noopener noreferrer"><img className="iconl github" alt="Github" src ={Github} /></a>
+            <a href="https://github.com/jokhenry89" title="github"><img className="iconl github" alt="Github" src ={Github} /></a>
           </li>
         
           <li>
-          <a href="https://github.com/jokhenry89"><img className="iconl codepen" alt="Codepen" src ={Codepen} /></a>
+            <a href="https://github.com/jokhenry89" title="codepen"><img className="iconl codepen" alt="Codepen" src ={Codepen} /></a>
           </li>
         </ul>
       </nav>

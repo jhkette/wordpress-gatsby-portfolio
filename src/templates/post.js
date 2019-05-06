@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { graphql } from 'gatsby' 
-
 import Img from "gatsby-image";
 import Layout from "../components/Layout";
 import Circle from "../components/threecircles.js";
@@ -38,7 +37,7 @@ class PostTemplate extends Component {
           {post.acf.url && (
             <div className = "container-arrow-link">
              <i> →</i>
-             <a className ="link-highlight" href= {post.acf.url} target="_blank" rel="noopener noreferrer"> {post.acf.url}</a> 
+             <a className ="link-highlight" title={post.title} href= {post.acf.url} > {post.acf.url}</a> 
             </div>
           )}
           
@@ -78,12 +77,6 @@ export const pageQuery = graphql`
             }
           }
         }
-      }
-    }
-
-    site {
-      siteMetadata {
-        title
       }
     }
   }

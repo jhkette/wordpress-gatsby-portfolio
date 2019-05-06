@@ -9,21 +9,21 @@ const SideDrawer = props => {
 
   return (
     <nav className={drawerClasses}>
-    <ul>
+      <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" title ="home">Home</Link>
           </li>
         
           <li>
-            <Link to="/sample-page/">About</Link>
+            <Link to="/sample-page/" title ="about">About</Link>
           </li>
           <li>
-            <Link to="/posts">All projects</Link>
+            <Link to="/posts" title ="All projects">All projects</Link>
           </li>
           <li>
-            <Link to="/allposts">All posts</Link>
+            <Link to="/allposts" title ="All posts">All posts</Link>
           </li>
-        </ul>
+       </ul>
     </nav>
   );
 };
