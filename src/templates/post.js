@@ -21,9 +21,7 @@ class PostTemplate extends Component {
     
         <Circle />
         <section className="container-allpost-content">
-         
           <h2> {post.title}</h2>
-         
           {post.acf.test && (
             <div className="categoriespost"> {post.acf.test}</div>
           )}
