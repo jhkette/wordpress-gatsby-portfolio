@@ -2,6 +2,7 @@ import React, { PureComponent } from "react";
 import Toolbar from "./toolbar/Toolbar";
 import SideDrawer from "./SideDrawer/SideDrawer.js";
 import "../styles/layout.scss";
+import {Helmet} from 'react-helmet';
 
 class Layout extends PureComponent {
   state = {
@@ -16,7 +17,12 @@ class Layout extends PureComponent {
 
   render() {
     return (
+     
       <div className="wrapper">
+      <Helmet>
+        <title>All blog posts</title>
+        <meta name="description" content="Portfolio" />
+      </Helmet>
         <SideDrawer show={this.state.sideDrawerOpen} />
         <div className="maincontent">
           <Toolbar

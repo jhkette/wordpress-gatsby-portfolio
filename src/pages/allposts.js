@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby";
 import FluidGrid from "react-fluid-grid";
 import Layout from "../components/Layout";
 import Circle from "../components/circles.js";
-import {Helmet} from "react-helmet";
 
 const transition = "top 200ms ease-in-out, left 200ms ease-in-out";
 const styleStrategies2 = [
@@ -21,16 +20,13 @@ const styleStrategies2 = [
 class BlogPosts extends Component {
   render() {
     const data = this.props.data.posts;
-    console.log(data);
+  
     
    
 
     return (
     <Layout>
-      <Helmet>
-        <title>All blog posts</title>
-        <meta name="description" content="Portfolio" />
-      </Helmet>
+    
       <section>
       <h2>All Posts</h2>
           <Circle />
