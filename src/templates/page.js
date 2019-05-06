@@ -1,5 +1,6 @@
-import React, {Component} from "react"
-import Layout from '../components/Layout'
+import React, {Component} from "react";
+import Layout from '../components/Layout';
+import {Helmet} from 'react-helmet';
 
 class PageTemplate extends Component {
     render() {
@@ -10,6 +11,9 @@ class PageTemplate extends Component {
 
         return (
             <Layout>
+            <Helmet>
+        <title>{currentPage.title}</title>
+      </Helmet>
             <div>
                 <h1 dangerouslySetInnerHTML={{__html: currentPage.title}}/>
                 <div dangerouslySetInnerHTML={{__html: currentPage.content}}/>

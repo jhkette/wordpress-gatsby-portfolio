@@ -3,6 +3,7 @@ import Link from "gatsby-link";
 import Img from "gatsby-image";
 import Layout from "../components/Layout";
 import Circle from "../components/threecircles.js";
+import {Helmet} from 'react-helmet';
 
 import "../styles/post.scss";
 
@@ -13,6 +14,10 @@ class PostTemplate extends Component {
 
     return (
       <Layout>
+      <Helmet>
+        <title>{post.title}</title>
+      </Helmet>
+    
         <Circle />
         <section className="container-allpost-content">
          

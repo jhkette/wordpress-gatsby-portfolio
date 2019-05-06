@@ -19,11 +19,11 @@ class Layout extends PureComponent {
     return (
      
       <div className="wrapper">
-      <Helmet>
-      <html lang="en" />
-        <title>All blog posts</title>
-        <meta name="description" content="Portfolio" />
-      </Helmet>
+        <Helmet>
+          <html lang="en" />
+          <title></title>
+          <meta name="description" content="Portfolio" />
+        </Helmet>
         <SideDrawer show={this.state.sideDrawerOpen} />
         <div className="maincontent">
           <Toolbar
