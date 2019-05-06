@@ -241,13 +241,12 @@ footer {
   width: 100%;
   display: block;
   text-align: center;
+}
+
+.container-projects-posts.blog{
   min-height: 100vh;
 }
 
-// .post {
-//   width: 15rem;
-//   margin: 3rem;
-// }
 
 header {
   @media screen and (max-width: $break-small) {
@@ -396,6 +395,8 @@ header {
    
   }
 }
+
+
 
 // Lead image for articles
 .image-bloglead {

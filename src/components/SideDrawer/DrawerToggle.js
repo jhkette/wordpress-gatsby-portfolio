@@ -1,5 +1,5 @@
 import React from "react";
-import "./DrawerToggleButton.scss";
+import "../../styles/DrawerToggleButton.scss";
 
 const drawerToggleButton = props => {
   let crossLines = "nav-icon1";

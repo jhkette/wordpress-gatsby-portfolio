@@ -28,7 +28,7 @@ class BlogPosts extends Component {
       <h2>All Posts</h2>
           <Circle />
           <FluidGrid
-            className="container-projects-posts"
+            className="container-projects-posts blog"
             styleStrategies={styleStrategies2}
             transition={transition}
           >

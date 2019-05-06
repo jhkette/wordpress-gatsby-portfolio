@@ -1,5 +1,5 @@
 import React from "react";
-import "./SideDrawer.scss";
+import "../../styles/SideDrawer.scss";
 import { Link } from "gatsby";
 const SideDrawer = props => {
   let drawerClasses = "sidedrawer";
