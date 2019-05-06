@@ -3,7 +3,8 @@ import Link from "gatsby-link";
 import Img from "gatsby-image";
 import Layout from "../components/Layout";
 import Circle from "../components/threecircles.js";
-import Arrow from "../images/right-arrow.svg"
+
+import "../styles/post.scss";
 
 
 class PostTemplate extends Component {
