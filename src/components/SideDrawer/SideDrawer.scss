@@ -9,17 +9,17 @@ $black: #1a1a1a;
   height: 100vh;
   background-color: #a8a8a8;
   box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0;
 
   z-index: 1000;
   width: 100%;
-  transition-duration: 0.3s;
-  transform: translateY(-110%);
+  transition-duration: 0.25s;
+   top: -200%;
 }
 .sidedrawer.open {
-  transform: translateY(0%);
+  top: 0%;
   @media screen and (min-width: $break-small) {
     display: none;
   }
@@ -37,4 +37,8 @@ $black: #1a1a1a;
   font-size: 1.3rem;
   padding-bottom:.8rem;
   display: block;
+
+  &:hover {
+    color: $turq;
+  }
 }
