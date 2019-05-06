@@ -20,6 +20,7 @@ class Layout extends PureComponent {
      
       <div className="wrapper">
       <Helmet>
+      <html lang="en" />
         <title>All blog posts</title>
         <meta name="description" content="Portfolio" />
       </Helmet>
