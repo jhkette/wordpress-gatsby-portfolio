@@ -3,7 +3,7 @@ import DrawerToggleButton from "../SideDrawer/DrawerToggle.js";
 import { Link } from "gatsby";
 import  Github  from "../../images/github.svg";
 import  Codepen from "../../images/codepen.svg";
-import "../styles/Toolbar.scss";
+import "../../styles/Toolbar.scss";
 
 
 const Toolbar = props => (

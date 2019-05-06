@@ -1,6 +1,6 @@
 import React from "react";
 import "./SideDrawer.scss";
-
+import { Link } from "gatsby";
 const SideDrawer = props => {
   let drawerClasses = "sidedrawer";
   if (props.show) {
@@ -9,14 +9,21 @@ const SideDrawer = props => {
 
   return (
     <nav className={drawerClasses}>
-      <ul>
-        <li>
-          <a href="/">Index</a>
-        </li>
-        <li>
-          <a href="/">About</a>
-        </li>
-      </ul>
+    <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+        
+          <li>
+            <Link to="/sample-page/">About</Link>
+          </li>
+          <li>
+            <Link to="/posts">All projects</Link>
+          </li>
+          <li>
+            <Link to="/allposts">All posts</Link>
+          </li>
+        </ul>
     </nav>
   );
 };

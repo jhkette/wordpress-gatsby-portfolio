@@ -1,7 +1,6 @@
 $break-small: 768px;
 $break-tablet: 769px;
 $break-large: 1024px;
-$mainred: #da0e19;
 $turq: #1c9195;
 $turqlight: #bce2e2;
 $black: #1a1a1a;
@@ -28,15 +27,14 @@ $black: #1a1a1a;
 
 .sidedrawer ul {
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 5rem;
-  margin-left: 4rem;
+  margin-top: 8rem;
+  margin-left: 2rem;
 }
 
 .sidedrawer a {
   color: $black;
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
+  padding-bottom:.8rem;
+  display: block;
 }
