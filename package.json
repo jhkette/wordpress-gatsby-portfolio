@@ -38,7 +38,7 @@
     "typeface-ibm-plex-sans": "0.0.58"
   },
   "devDependencies": {
-    "prettier": "1.17.0"
+    "prettier": "^1.17.0"
   },
   "husky": {
     "hooks": {
