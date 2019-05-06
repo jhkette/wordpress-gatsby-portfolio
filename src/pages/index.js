@@ -5,6 +5,7 @@ import FluidGrid from "react-fluid-grid";
 import Layout from "../components/Layout";
 import Code from "../images/code.svg";
 import Circle from "../components/circles.js";
+import {Helmet} from "react-helmet";
 
 const styleStrategies1 = [
   {
@@ -42,7 +43,12 @@ class Home extends Component {
     const allposts = this.props.data.posts;
 
     return (
+       
       <Layout>
+      <Helmet>
+        <title>All blog posts</title>
+        <meta name="description" content="Portfolio" />
+      </Helmet>
         <Circle />
         <FluidGrid
           className="container-projects-posts"
