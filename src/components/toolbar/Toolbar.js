@@ -48,7 +48,7 @@ const Toolbar = props => (
       <nav className="nav-icons">
         <ul>
           <li>
-          <a href="https://github.com/jokhenry89"><img className="iconl github" src ={Github} /></a>
+          <a href="https://github.com/jokhenry89" target="_blank"><img className="iconl github" src ={Github} /></a>
           </li>
         
           <li>

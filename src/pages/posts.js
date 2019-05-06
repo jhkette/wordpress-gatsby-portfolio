@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import Img from "gatsby-image";
 import FluidGrid from "react-fluid-grid";
 import Code from "../images/code.svg";
+import Circle from "../components/circles.js";
 
 
 const styleStrategies1 = [
@@ -26,11 +27,12 @@ const transition = "top 200ms ease-in-out, left 200ms ease-in-out";
 class IndexPage extends Component {
   render() {
     const data = this.props.data.projects;
-    const allposts = this.props.data.posts;
+    
 
     return (
     <Layout>
       <h2>All Projects</h2>
+      <Circle />
       <FluidGrid
           className="container-projects-posts"
           styleStrategies={styleStrategies1}

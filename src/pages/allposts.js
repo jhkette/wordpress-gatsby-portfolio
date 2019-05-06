@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Link, graphql } from "gatsby";
-import Img from "gatsby-image";
+
 import FluidGrid from "react-fluid-grid";
 import Layout from "../components/Layout";
-import Code from "../images/code.svg";
+
 import Circle from "../components/circles.js";
 
 const transition = "top 200ms ease-in-out, left 200ms ease-in-out";
@@ -29,9 +29,9 @@ class BlogPosts extends Component {
       <h2>All Posts</h2>
 
 
-<section>
-          
 
+          
+<Circle />
           <FluidGrid
             className="container-projects-posts"
             styleStrategies={styleStrategies2}
@@ -49,7 +49,6 @@ class BlogPosts extends Component {
               </article>
             ))}
           </FluidGrid>
-        </section>
       </Layout>
     );
   }
