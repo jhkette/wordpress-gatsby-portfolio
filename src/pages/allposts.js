@@ -26,6 +26,7 @@ class BlogPosts extends Component {
 
     return (
     <Layout>
+      <section>
       <h2>All Posts</h2>
 
 
@@ -49,6 +50,7 @@ class BlogPosts extends Component {
               </article>
             ))}
           </FluidGrid>
+          </section>  
       </Layout>
     );
   }
