@@ -1,9 +1,12 @@
 // scss variables
+
+// break points
 $break-small: 768px;
 $break-tablet: 769px;
 $break-large: 1024px;
 $break-smalldesktop: 1279.99px;
-$mainred: #da0e19;
+
+// Colour variables
 $turq: #1b898d;
 $turqlight: #bce2e2;
 $black: #1a1a1a;
@@ -12,9 +15,6 @@ $black: #1a1a1a;
 @font-face {
   font-family: Inter;
   src: url("./../../fonts/Inter-Medium.woff") format("woff");
-  // url('../fonts/parisr.eot?#iefix') format("embedded-opentype"),
-  // url('../fonts/parisr.ttf') format("truetype"),
-  // url('../fonts/parisr.svg#Parisr') format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -22,14 +22,9 @@ $black: #1a1a1a;
 @font-face {
   font-family: Inter-regular;
   src: url("./../../fonts/Inter-Regular.woff") format("woff");
-  // url('../fonts/parisr.eot?#iefix') format("embedded-opentype"),
-  // url('../fonts/parisr.ttf') format("truetype"),
-  // url('../fonts/parisr.svg#Parisr') format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
-
 
 /* browser resest */
 html,
@@ -144,6 +139,34 @@ html {
   overflow-y: scroll;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+*:before {
+  box-sizing: inherit;
+}
+
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: $black;
+  font-family: "Inter-regular", sans-serif;
+  font-weight: normal;
+  font-kerning: normal;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Inter-regular", sans-serif;
+  text-rendering: optimizeLegibility;
 }
 
 
@@ -486,146 +509,6 @@ header {
 
 
 
-
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-}
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-a {
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
-}
-
-a:active,
-a:hover {
-  outline-width: 0;
-}
-
-abbr[title] {
-  border-bottom: none;
-  text-decoration: underline;
-  text-decoration: underline dotted;
-}
-
-b,
-strong {
-  font-weight: inherit;
-  font-weight: bolder;
-}
-
-dfn {
-  font-style: italic;
-}
-
-h1 {
-}
-
-mark {
-  background-color: #ff0;
-  color: #000;
-}
-
-small {
-  font-size: 80%;
-}
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-img {
-  border-style: none;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-figure {
-  margin: 1em 40px;
-}
-
-hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
-}
-
-fieldset {
-  border: 1px solid silver;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-
-legend {
-  box-sizing: border-box;
-  color: inherit;
-  display: table;
-  max-width: 100%;
-  padding: 0;
-  white-space: normal;
-}
-
-textarea {
-  overflow: auto;
-}
-
-* {
-  box-sizing: inherit;
-}
-
-*:before {
-  box-sizing: inherit;
-}
-
-*:after {
-  box-sizing: inherit;
-}
-
-body {
-  color: $black;
-  font-family: "Inter-regular", sans-serif;
-  font-weight: normal;
-  word-wrap: break-word;
-  font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "Inter-regular", sans-serif;
-  text-rendering: optimizeLegibility;
-}
 
 
 
