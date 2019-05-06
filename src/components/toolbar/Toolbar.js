@@ -40,16 +40,19 @@ const Toolbar = props => (
           <li>
             <Link to="/posts">All projects</Link>
           </li>
+          <li>
+            <Link to="/posts">All posts</Link>
+          </li>
         </ul>
       </nav>
       <nav className="nav-icons">
         <ul>
           <li>
-          <a href="https://github.com/jokhenry89"><img className="icon-github" src ={Github} /></a>
+          <a href="https://github.com/jokhenry89"><img className="iconl github" src ={Github} /></a>
           </li>
         
           <li>
-          <a href="#"><img className="icon-codepen" src ={Codepen} /></a>
+          <a href="#"><img className="iconl codepen" src ={Codepen} /></a>
           </li>
         </ul>
       </nav>

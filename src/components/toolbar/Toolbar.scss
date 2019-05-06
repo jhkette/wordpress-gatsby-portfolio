@@ -139,9 +139,11 @@ $black: #1a1a1a;
       display: none;
     }
   }
-
-  .icon-github{ width: 32px; height: 32px;}
-  .icon-codepen{ width: 30px; height: 30px;}
+.iconl{
+  opacity: .9;
+}
+  .iconl.github{ width: 32px; height: 32px;}
+  .iconl.codepen{ width: 30px; height: 30px;}
   @media (max-width: $break-small){
   .nav-icons{
     display: none;
