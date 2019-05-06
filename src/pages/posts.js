@@ -1,5 +1,6 @@
 
 import React, { Component } from "react";
+import { graphql } from 'gatsby';
 import Link from "gatsby-link";
 import Layout from "../components/Layout";
 import Img from "gatsby-image";

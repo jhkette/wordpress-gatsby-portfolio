@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Link from "gatsby-link";
+import { graphql } from 'gatsby' 
+
 import Img from "gatsby-image";
 import Layout from "../components/Layout";
 import Circle from "../components/threecircles.js";
@@ -32,13 +33,14 @@ class PostTemplate extends Component {
                 post.acf.leadimage.localFile.childImageSharp.resolutions
               }
               className="lead-postimage"
+              alt ={post.title}
             />
           )}
         
           {post.acf.url && (
             <div className = "container-arrow-link">
              <i> →</i>
-             <a className ="link-highlight" href= {post.acf.url} target="_blank"> {post.acf.url}</a> 
+             <a className ="link-highlight" href= {post.acf.url} target="_blank" rel="noopener noreferrer"> {post.acf.url}</a> 
             </div>
           )}
           
