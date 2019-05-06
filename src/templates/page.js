@@ -4,10 +4,11 @@ import {Helmet} from 'react-helmet';
 
 class PageTemplate extends Component {
     render() {
-        const siteMetadata = this.props.data.site.siteMetadata
+      
         const currentPage = this.props.data.wordpressPage
+       
 
-        console.log(currentPage)
+    
 
         return (
             <Layout>
@@ -37,11 +38,6 @@ export const pageQuery = graphql`
             id
             date(formatString: "MMMM DD, YYYY")
         }
-        site {
-            id
-            siteMetadata {
-                title         
-            }
-        }
+
     }
 `

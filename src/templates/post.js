@@ -15,7 +15,7 @@ class PostTemplate extends Component {
     return (
       <Layout>
       <Helmet>
-        <title>{post.title}</title>
+        <title>Project: {post.title}</title>
       </Helmet>
     
         <Circle />
