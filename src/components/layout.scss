@@ -208,6 +208,7 @@ h3 {
 }
 
 
+
 .wrapper {
   display: flex;
   min-height: 100%;
@@ -522,8 +523,21 @@ header {
 .link-highlight {
   color: $turq;
   font-weight: 900;
-  padding-bottom: 1rem;
+  padding-left: .5rem;
   display: block;
+}
+
+.container-arrow-link{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  margin-bottom: 1rem;
+ }
+
+ .container-arrow-link img{
+   padding-top: .1rem;
+  width: 18px;
 }
 
 audio,

@@ -3,6 +3,8 @@ import Link from "gatsby-link";
 import Img from "gatsby-image";
 import Layout from "../components/Layout";
 import Circle from "../components/threecircles.js";
+import Arrow from "../images/right-arrow.svg"
+
 
 class PostTemplate extends Component {
   render() {
@@ -27,8 +29,11 @@ class PostTemplate extends Component {
             />
           )}
         
-          {post.acf.url && ( 
+          {post.acf.url && (
+            <div className = "container-arrow-link">
+            <img src = {Arrow} />
              <a className ="link-highlight" href= {post.acf.url} target="_blank"> {post.acf.url}</a> 
+            </div>
           )}
           
           <div

@@ -51,8 +51,6 @@ class IndexPage extends Component {
                 />
               }
               </Link>
-
-             
                 <h3 className="slug"> <Link
                 to={`/post/${node.slug}/`}
                 style={ {textDecoration: "none"} }
