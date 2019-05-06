@@ -523,8 +523,9 @@ header {
 .link-highlight {
   color: $turq;
   font-weight: 900;
-  padding-left: .5rem;
+  padding-left: .25rem;
   display: block;
+  margin-top: .15rem;
 }
 
 .container-arrow-link{
@@ -535,9 +536,10 @@ header {
   margin-bottom: 1rem;
  }
 
- .container-arrow-link img{
-   padding-top: .1rem;
-  width: 18px;
+ .container-arrow-link i {
+   font-weight: 900;
+  font-size: 1.3rem;
+ 
 }
 
 audio,
