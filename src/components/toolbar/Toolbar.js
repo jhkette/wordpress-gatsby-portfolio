@@ -41,7 +41,7 @@ const Toolbar = props => (
             <Link to="/posts">All projects</Link>
           </li>
           <li>
-            <Link to="/posts">All posts</Link>
+            <Link to="/allposts">All posts</Link>
           </li>
         </ul>
       </nav>
