@@ -21,7 +21,6 @@ class Layout extends PureComponent {
       <div className="wrapper">
         <Helmet>
           <html lang="en" />
-          <title></title>
           <meta name="description" content="Portfolio" />
         </Helmet>
         <SideDrawer show={this.state.sideDrawerOpen} />

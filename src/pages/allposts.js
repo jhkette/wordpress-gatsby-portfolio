@@ -9,10 +9,6 @@ import Circle from "../components/circles.js";
 class BlogPosts extends Component {
   render() {
     const data = this.props.data.posts;
-  
-    
-   
-
     return (
     <Layout>
     
