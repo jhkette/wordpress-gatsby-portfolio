@@ -4,13 +4,17 @@
 // All Toolbar styles
 .toolbar {
     width: 30%;
-    min-width: 15rem;
+   
     background: #ededed;
     padding: 0 2rem;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    border-right: 1px solid #ddd;
+   
+
+    @media screen and (min-width: $break-large){
+      min-width: 23rem;
+    }
   }
   
   .toolbar__navigation {
@@ -61,7 +65,7 @@
     color: #1a1a1a;
     text-decoration: none;
    
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   
   .toolbar_navigation-items a:hover,
@@ -136,8 +140,14 @@
 .iconl{
   opacity: .85;
 }
-  .iconl.github{ width: 32px; height: 32px;}
-  .iconl.codepen{ width: 30px; height: 30px;}
+  .iconl.github{ width: 37px; height: 37px;
+    padding: .2rem;
+    border-radius: 50%;
+    border: 1px solid $black}
+  .iconl.codepen{ width: 37px; height: 37px;
+    padding: .2rem;
+    border-radius: 50%;
+    border: 1px solid $black}
   @media (max-width: $break-small){
   .nav-icons{
     display: none;

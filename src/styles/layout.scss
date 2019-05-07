@@ -255,6 +255,14 @@ footer {
   article:nth-child(2) {
     padding-left: 2rem;
    }
+   @media (max-width: $break-smalldesktop) {
+    article:nth-child(1){
+       padding: 0;
+     }
+     article:nth-child(2) {
+      padding: 0;
+     }
+   }
   
 }
 
