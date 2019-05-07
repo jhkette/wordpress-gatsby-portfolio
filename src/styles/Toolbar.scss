@@ -12,7 +12,7 @@
     flex-direction: column;
    
 
-    @media screen and (min-width: $break-large){
+    @media screen and (max-width: $break-large){
       min-width: 23rem;
     }
   }
