@@ -335,12 +335,12 @@ header {
 
 .container-post {
   position: relative;
-  width: 280px;
+  width: (100% / 3);
   background-color: white;
   display: inline-block;
   text-align: left;
   margin-bottom: 2rem;
-  padding: 0 0 4rem 0;
+  padding: 0 2rem 4rem 0;
 
   .code {
     width: 25px;
@@ -368,11 +368,11 @@ header {
   }
 
   @media screen and (max-width: $break-smalldesktop) {
-    width: 340px;
+    width: (100% / 2);
   }
 
   @media screen and (max-width: $break-large) {
-    width: 260px;
+    width: 100%;
   }
 
   @media screen and (max-width: $break-small) {
@@ -407,9 +407,9 @@ header {
     opacity: 0.5;
     z-index: 0;
   }
-  @media screen and (max-width: $break-small) {
-    width: 350px;
-    height: 425px;
+  @media screen and (max-width: $break-large) {
+    width: 350px !important;
+    height: 425px  !important;
   }
 }
 
@@ -479,20 +479,21 @@ header {
 
 // Blog posts styling on index page
 .container-singlepost {
-  width: 400px;
-  // background-color: white;
+  width: (100%/2);
+  padding-right: 3rem;
   display: inline-block;
   text-align: left;
   margin-bottom: 2rem;
 
- 
- 
   @media (max-width: $break-smalldesktop){
      width: 100%;
      margin-bottom: 0rem;
+     padding: 0;
     
   }
 }
+
+
 // circles
 .circles {
   position: absolute;

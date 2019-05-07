@@ -1,21 +1,10 @@
 import React, { Component } from "react";
 import { Link, graphql } from "gatsby";
-import FluidGrid from "react-fluid-grid";
+import Masonry from 'react-masonry-component'
 import Layout from "../components/Layout";
 import Circle from "../components/circles.js";
 
-const transition = "top 200ms ease-in-out, left 200ms ease-in-out";
-const styleStrategies2 = [
 
-    {
-      mediaQuery:  "(max-width: 1279.9px)",
-      style: { numberOfColumns: 1, gutterHeight: 0, gutterWidth: 0 }
-    },
-    {
-      mediaQuery: "(min-width: 1280px)",
-      style: { numberOfColumns: 2, gutterHeight: 0, gutterWidth: 0 }
-    }
-  ];
   
 class BlogPosts extends Component {
   render() {
@@ -30,11 +19,8 @@ class BlogPosts extends Component {
       <section>
       <h2>All Posts</h2>
           <Circle />
-          <FluidGrid
-            className="container-projects-posts blog"
-            styleStrategies={styleStrategies2}
-            transition={transition}
-          >
+          <Masonry 
+            className="container-projects-posts blog">
             {data.edges.map(({ node }) => (
               <article key={node.slug} className="container-singlepost">
                 <Link
@@ -46,7 +32,7 @@ class BlogPosts extends Component {
                 <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
               </article>
             ))}
-          </FluidGrid>
+          </Masonry>
           </section>  
       </Layout>
     );

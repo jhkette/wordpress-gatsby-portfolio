@@ -4,27 +4,13 @@ import { graphql } from 'gatsby';
 import Link from "gatsby-link";
 import Layout from "../components/Layout";
 import Img from "gatsby-image";
-import FluidGrid from "react-fluid-grid";
+import Masonry from 'react-masonry-component'
+
 import Code from "../images/code.svg";
 import Circle from "../components/circles.js";
 
 
-const styleStrategies1 = [
-  {
-    mediaQuery: "(max-width: 768.9px)",
-    style: { numberOfColumns: 1, gutterHeight: 5, gutterWidth: 0 }
-  },
-  {
-    mediaQuery: "(min-width: 769px) and (max-width: 1279.99px)",
-    style: { numberOfColumns: 2, gutterHeight: 15, gutterWidth: 15 }
-  },
-  {
-    mediaQuery: "(min-width: 1280px)",
-    style: { numberOfColumns: 3, gutterHeight: 30, gutterWidth: 30 }
-  }
-];
 
-const transition = "top 200ms ease-in-out, left 200ms ease-in-out";
 class IndexPage extends Component {
   render() {
     const data = this.props.data.projects;
@@ -34,10 +20,9 @@ class IndexPage extends Component {
     <Layout>
       <h2>All Projects</h2>
       <Circle />
-      <FluidGrid
+      <Masonry
           className="container-projects-posts"
-          styleStrategies={styleStrategies1}
-          transition={transition}
+         
         >
         {data.edges.map(({ node }) => (
             <article key={node.slug} className="container-post">
@@ -71,7 +56,7 @@ class IndexPage extends Component {
                 to={`/post/${node.slug}/`} class="button arrow">View Project</Link>
             </article>
           ))}
-        </FluidGrid>  
+        </Masonry>  
     </Layout>
   );
 };

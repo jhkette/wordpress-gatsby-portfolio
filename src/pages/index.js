@@ -1,41 +1,14 @@
 import React, { Component } from "react";
 import { Link, graphql } from "gatsby";
 import Img from "gatsby-image";
-import FluidGrid from "react-fluid-grid";
+import Masonry from 'react-masonry-component'
 import Layout from "../components/Layout";
 import Code from "../images/code.svg";
 import Circle from "../components/circles.js";
 import {Helmet} from 'react-helmet';
 
-const styleStrategies1 = [
-  {
-    mediaQuery: "(max-width: 768.9px)",
-    style: { numberOfColumns: 1, gutterHeight: 5, gutterWidth: 0 }
-  },
-  {
-    mediaQuery: "(min-width: 769px) and (max-width: 1279.99px)",
-    style: { numberOfColumns: 2, gutterHeight: 15, gutterWidth: 15 }
-  },
-  {
-    mediaQuery: "(min-width: 1280px)",
-    style: { numberOfColumns: 3, gutterHeight: 30, gutterWidth: 30 }
-  }
-];
-
-const styleStrategies2 = [
-
-  {
-    mediaQuery:  "(max-width: 1279.9px)",
-    style: { numberOfColumns: 1, gutterHeight: 0, gutterWidth: 0 }
-  },
-  {
-    mediaQuery: "(min-width: 1280px)",
-    style: { numberOfColumns: 2, gutterHeight: 0, gutterWidth: 0 }
-  }
-];
 
 
-const transition = "top 300ms ease-in-out, left 300ms ease-in-out";
 
 class Home extends Component {
   render() {
@@ -51,10 +24,8 @@ class Home extends Component {
       </Helmet>
     
         <Circle />
-        <FluidGrid
+        <Masonry 
           className="container-projects-posts"
-          styleStrategies={styleStrategies1}
-          transition={transition}
         >
           {data.edges.map(({ node }) => (
             <article key={node.slug} className="container-post">
@@ -91,15 +62,14 @@ class Home extends Component {
                 to={`/post/${node.slug}/`} class="button arrow">View Project</Link>
             </article>
           ))}
-        </FluidGrid>
+        </Masonry>
 
         <section>
           <h2>Posts</h2>
 
-          <FluidGrid
+          <Masonry 
             className="container-projects-posts"
-            styleStrategies={styleStrategies2}
-            transition={transition}
+          
           >
             {allposts.edges.map(({ node }) => (
               <article key={node.slug} className="container-singlepost">
@@ -112,7 +82,7 @@ class Home extends Component {
                 <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
               </article>
             ))}
-          </FluidGrid>
+          </Masonry>
         </section>
       </Layout>
     );
