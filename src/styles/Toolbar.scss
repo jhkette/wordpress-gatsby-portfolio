@@ -12,7 +12,7 @@
     flex-direction: column;
    
 
-    @media (max-width: $break-smalldesktop){
+    @media (max-width: $break-large){
       min-width: 23rem;
     }
   }
