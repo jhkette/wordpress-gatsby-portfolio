@@ -342,23 +342,12 @@ header {
   }
 }
 
-.flex-main {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  padding: 2rem 1rem;
-  min-height: 100vh;
-  border: 1px red;
 
-  @media screen and (max-width: $break-tablet) {
-    flex-direction: column;
-    align-items: center;
-  }
-}
 
 .container-post {
   position: relative;
   width: (100% / 3);
+  background-color: #fff;
  
   text-align: left;
   margin-bottom: 5rem;
@@ -371,9 +360,7 @@ header {
     margin-top: 0.15rem;
     margin-right: 0.5rem;
   }
-  .excerpt{
-    background-color: #fff;
-  }
+ 
   .svg-inline--fa {
     width: 1rem !important;
     height: 1rem !important;
