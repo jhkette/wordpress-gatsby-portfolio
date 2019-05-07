@@ -5,8 +5,8 @@
 // /Users/joseph/Desktop/wordpress/blog/gatsby-responsive-nav-master/fonts
 @font-face {
   font-family: Inter;
-  src: url("./../../fonts/Inter-Medium.woff") format("woff"),
-  url("./../../fonts/Inter-Medium.woff2") format("woff2");
+  src: url("./../../fonts/Inter-Medium.woff2") format("woff2"),
+  url("./../../fonts/Inter-Medium.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -14,8 +14,9 @@
 
 @font-face {
   font-family: Inter-regular;
-  src: url("./../../fonts/Inter-Regular.woff") format("woff"),
-  url("./../../fonts/Inter-Regular.woff2") format("woff2");
+  src: 
+  url("./../../fonts/Inter-Regular.woff2") format("woff2"),
+  url("./../../fonts/Inter-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
