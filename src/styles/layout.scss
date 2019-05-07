@@ -359,7 +359,7 @@ header {
 .container-post {
   position: relative;
   width: (100% / 3);
-  background-color: white;
+ 
   text-align: left;
   margin-bottom: 5rem;
   padding: 0 1.5rem 2rem 1.5rem;
@@ -370,6 +370,9 @@ header {
     display: inline-block;
     margin-top: 0.15rem;
     margin-right: 0.5rem;
+  }
+  .excerpt{
+    background-color: #fff;
   }
   .svg-inline--fa {
     width: 1rem !important;
