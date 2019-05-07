@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby";
 import Masonry from 'react-masonry-component'
 import Layout from "../components/Layout";
 import Circle from "../components/circles.js";
+import {Helmet} from 'react-helmet';
 
 
   
@@ -11,6 +12,9 @@ class BlogPosts extends Component {
     const data = this.props.data.posts;
     return (
     <Layout>
+    <Helmet>
+        <title>Portfolio: All Projects</title>
+      </Helmet>
     
       <section>
       <h2>All Posts</h2>

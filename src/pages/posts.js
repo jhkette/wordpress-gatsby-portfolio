@@ -5,6 +5,7 @@ import Link from "gatsby-link";
 import Layout from "../components/Layout";
 import Img from "gatsby-image";
 import Masonry from 'react-masonry-component'
+import {Helmet} from 'react-helmet';
 
 import Code from "../images/code.svg";
 import Circle from "../components/circles.js";
@@ -18,6 +19,9 @@ class IndexPage extends Component {
 
     return (
     <Layout>
+    <Helmet>
+        <title>Portfolio: All posts</title>
+      </Helmet>
       <h2>All Projects</h2>
       <Circle />
       <Masonry
