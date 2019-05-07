@@ -52,7 +52,7 @@ const Toolbar = props => (
           </li>
         
           <li>
-            <a href="https://github.com/jokhenry89" title="codepen"><img className="iconl codepen" alt="Codepen" src ={Codepen} /></a>
+            <a href="https://codepen.io/jokhenry89/" title="codepen"><img className="iconl codepen" alt="Codepen" src ={Codepen} /></a>
           </li>
         </ul>
       </nav>
