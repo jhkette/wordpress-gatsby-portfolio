@@ -20,7 +20,7 @@ class BlogPosts extends Component {
       <h2>All Posts</h2>
           <Circle />
           <Masonry 
-            className="container-projects-posts blog">
+            className="container-projects-blogposts blog">
             {data.edges.map(({ node }) => (
               <article key={node.slug} className="container-singlepost">
                 <Link

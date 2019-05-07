@@ -68,7 +68,7 @@ class Home extends Component {
           <h2>Posts</h2>
 
           <Masonry 
-            className="container-projects-posts"
+            className="container-projects-blogposts"
           
           >
             {allposts.edges.map(({ node }) => (
