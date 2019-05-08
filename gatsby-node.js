@@ -32,18 +32,7 @@ const postsQuery = `
         template
         format
         title
-        date
-       
-          categories  {
-            id
-            slug
-            name
-            description
-            
-          }
-          acf {
-            test
-          }          
+        date         
       }
     }
   }
