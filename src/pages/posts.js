@@ -22,9 +22,7 @@ class IndexPage extends Component {
     <Helmet>
         <title>Portfolio: All posts</title>
       </Helmet>
-
-
-<section className ="container-section-post">
+      <section className ="container-section-post">
       <h2>All Projects</h2>
       <Circle />
       <Masonry
