@@ -58,7 +58,6 @@ export const pageQuery = graphql`
     wordpressPost(id: { eq: $id }) {
       title
       content
-
       categories {
         slug
         name

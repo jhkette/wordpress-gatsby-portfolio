@@ -35,16 +35,25 @@
       font-family: 'Inter', sans-serif;
     }
   }
+  h3{
+    border: 0;
+    color: $black;
+  }
+  a{
+    color: $turq;
+    font-weight: 900;
+  }
 
 }
 
 .wp-block-quote {
-  border-left: 6px solid $turqlight;
-  padding: .5rem 1rem;
+  border-left: 2px solid $turqlight;
+  padding: 0 1rem;
+  margin: 1rem 0;
   p {
     &:first-of-type {
       font-size: 1rem !important;
-      font-family: 'Inter', sans-serif  !important;
+      font-family: 'Inter-regular', sans-serif  !important;
       margin-top: .5rem;
     }
   }

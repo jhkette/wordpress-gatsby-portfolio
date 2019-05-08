@@ -64,7 +64,7 @@ class Home extends Component {
           ))}
         </Masonry>
 
-        <section>
+        <section className="container-section-post">
           <h2>Posts</h2>
 
           <Masonry 

@@ -16,7 +16,7 @@ class BlogPosts extends Component {
         <title>Portfolio: All Projects</title>
       </Helmet>
     
-      <section>
+      <section className="container-section-post">
       <h2>All Posts</h2>
           <Circle />
           <Masonry 
