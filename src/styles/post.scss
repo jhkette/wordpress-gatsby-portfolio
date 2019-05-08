@@ -27,8 +27,14 @@
     font-size: 1.2rem;
   }
   
+  .container.text-content {
+    p:first-of-type {
+      font-size: 1.15rem;
+    }
+  }
 
   .link-highlight {
+    font-size: 1.15rem;
     color: $black;
     font-weight: 900;
     padding-left: .25rem;
@@ -70,6 +76,6 @@
   
    .container-arrow-link i {
      font-weight: 900;
-     font-size: 1rem;
-     margin-top: .15rem;
+     font-size: 1.15rem;
+     margin-top: .18rem;
   }
