@@ -4,7 +4,7 @@
 .container-allpost-content{
     position: relative;
     z-index: 500;
-    padding-bottom: 7rem;
+    padding: 0 2rem 6rem 2rem;
   }
   
   .lead-postimage {
@@ -27,12 +27,9 @@
     font-size: 1.2rem;
   }
   
-  .container.text-content {
-    p:first-of-type {
+  .text-content:first-child{
       font-size: 1.15rem;
-      font-family: 'Inter', serif;
-;
-    }
+      font-family: 'Inter', serif;    
   }
 
   .link-highlight {
