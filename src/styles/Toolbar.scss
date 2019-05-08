@@ -56,8 +56,9 @@
   }
   
   .toolbar_navigation-items li {
-    padding: 0 0.5rem 0 0;
-    margin-bottom: .35rem;
+    margin: 0 0.5rem .35rem 0;
+    
+    position: relative;
     
   }
   
@@ -66,12 +67,31 @@
     text-decoration: none;
    
     font-size: 1.1rem;
+    position: relative;
   }
   
-  .toolbar_navigation-items a:hover,
-  .toolbar_navigation-items a:active {
-    color: $turq;
+
+  .toolbar_navigation-items li:before {
+    content: "";
+    position: absolute;
+    background: $turqlight;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+  
+    -webkit-transition: top 0.09s ease-in;
+    transition: top 0.09s ease-in;
+    width: auto;
+    
   }
+  
+  .toolbar_navigation-items li:hover:before {
+    top: 0;
+  }
+
+
+ 
   
   @media screen and (max-width: $break-tablet) {
     .toolbar_navigation-items {
