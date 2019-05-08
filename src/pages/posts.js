@@ -22,6 +22,9 @@ class IndexPage extends Component {
     <Helmet>
         <title>Portfolio: All posts</title>
       </Helmet>
+
+
+<section className ="container-section-post">
       <h2>All Projects</h2>
       <Circle />
       <Masonry
@@ -60,7 +63,9 @@ class IndexPage extends Component {
                 to={`/post/${node.slug}/`} class="button arrow">View Project</Link>
             </article>
           ))}
-        </Masonry>  
+          
+        </Masonry> 
+        </section> 
     </Layout>
   );
 };
