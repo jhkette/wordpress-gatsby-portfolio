@@ -1,79 +1,97 @@
 @import './variables.scss';
 // View individual post page //
 
-.container-allpost-content{
-    position: relative;
-    z-index: 500;
-    padding: 0 2rem 6rem 2rem;
-  }
-  
-  .lead-postimage {
+.container-allpost-content {
+  position: relative;
+  z-index: 500;
+  padding: 0 2rem 6rem 2rem;
+}
+
+.lead-postimage {
+  width: 100% !important;
+  margin-bottom: 1.5rem;
+
+  img {
     width: 100% !important;
-    margin-bottom: 1.5rem;
-    img {
-      width: 100% !important;
-  
-    }
-   
+
   }
-  
-  .categoriespost {
-    background-color: $turqlight;
-    margin-bottom: 1rem;
-    padding: 0.1rem 0.8rem;
-    border-radius: 0.3rem;
-    color: $black;
-    display: inline-block;
-    font-size: 1.2rem;
-  }
-  
-  .text-content:first-child{
+
+}
+
+.categoriespost {
+  background-color: $turqlight;
+  margin-bottom: 1rem;
+  padding: 0.1rem 0.8rem;
+  border-radius: 0.3rem;
+  color: $black;
+  display: inline-block;
+  font-size: 1.2rem;
+}
+
+.container.text-content {
+  p {
+    &:first-of-type {
       font-size: 1.15rem;
-      font-family: 'Inter', serif;    
+      font-family: 'Inter', sans-serif;
+    }
   }
 
-  .link-highlight {
-    color: $black;
-    font-family: 'Inter', serif;
-    padding-left: .25rem;
-    display: block;
-    margin-top: .15rem;
-    display: inline-block;
-    width: auto;
-    height: auto;
-    position: relative;
+}
+
+.wp-block-quote {
+  border-left: 6px solid $turqlight;
+  padding: .5rem 1rem;
+  p {
+    &:first-of-type {
+      font-size: 1rem !important;
+      font-family: 'Inter', sans-serif  !important;
+      margin-top: .5rem;
+    }
   }
-  
-  .link-highlight:before {
-    content: "";
-    position: absolute;
-    background: $turqlight;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 100%;
-    z-index: -1;
-    -webkit-transition: top 0.09s ease-in;
-    transition: top 0.09s ease-in;
-    width: auto;
-    
-  }
-  
-  .link-highlight:hover:before {
-    top: 0;
-  }
+}
+
+.link-highlight {
+  color: $black;
+  font-family: 'Inter', serif;
+  padding-left: .25rem;
+  display: block;
+  margin-top: .15rem;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  position: relative;
+}
+
+.link-highlight:before {
+  content: "";
+  position: absolute;
+  background: $turqlight;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  -webkit-transition: top 0.09s ease-in;
+  transition: top 0.09s ease-in;
+  width: auto;
+
+}
+
+.link-highlight:hover:before {
+  top: 0;
+}
 
 
-  .container-arrow-link{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-content: center;
-    margin-bottom: 1rem;
-   }
-  
-   .container-arrow-link i {
-     font-weight: 900;
-     font-size: 1rem;
-     margin-top: .15rem;
+.container-arrow-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  margin-bottom: 1rem;
+}
+
+.container-arrow-link i {
+  font-weight: 900;
+  font-size: 1rem;
+  margin-top: .15rem;
 }
