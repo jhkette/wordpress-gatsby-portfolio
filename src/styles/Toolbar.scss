@@ -34,7 +34,6 @@
   .toolbar__logo a {
     color: #1a1a1a;
     text-decoration: none;
-  
     display: inline-block;
   }
   
@@ -45,11 +44,8 @@
     display: flex;
     align-items: flex-start;
     align-content: flex-start;
-    font-weight: 500;
-    // display: inline-block;
-    border-bottom: 1px solid $black;
-   
-
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+  
     @media(max-width: $break-smalldesktop){
      flex-direction: column;
     }
