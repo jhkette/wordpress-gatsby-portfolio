@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 
 
-const Circle = ({ bgColor, height, width }) => {
-
-  
- 
-  var diameter = Math.random() * (180 - 40) + 40;
+const Circle = ({ bgColor, height, width }) => {  
+  // a number inbetween 180 and 40 to get diamter of circle
+  var diameter = Math.random() * (90 - 40) + 40;
   var newheight =  (Math.round(Math.random() * height));
   var newwidth = (Math.round(Math.random() * width));
 
@@ -30,9 +28,7 @@ const Circle = ({ bgColor, height, width }) => {
 class Background extends Component {
   
   state = {
-    colors: [
-      
-    ],
+    colors: [],
     contentHeight: 0,
     contentWidth: 0,
 
@@ -58,23 +54,15 @@ class Background extends Component {
       "#85FFC7, #3cb371",
       "#FF8552, #fdc888",
       "#1C89BF, #e3f7ff",
-      
-     
-
      ]
    }
-   
-    // use an if statment here to that sets states for colours based on height of screen. 
+
     this.setState(
-      
       { contentHeight: height,
-      contentWidth: width,
-      colors: [ ...newcolors]
-
-
+        contentWidth: width,
+        colors: [ ...newcolors]
     })
     console.log(`${this.content.getBoundingClientRect().width}, ${this.content.getBoundingClientRect().height}`);
-  
   }
   
   render() {
