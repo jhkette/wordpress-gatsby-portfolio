@@ -37,8 +37,6 @@ class Background extends Component {
       "#A1D363,#90ee90",
       "#85FFC7, #3cb371",
       "#A40E4C ,#ffc2c2",
-      
-     
     ]
   };
 
