@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 const Circle = ({ bgColor }) => {
   var diameter = Math.random() * (275 - 50) + 50;
-  var height = Math.random() * 2000;
+  var height = Math.random() * 2500;
   var width = Math.random() * 900;
 
   var circleStyle = {

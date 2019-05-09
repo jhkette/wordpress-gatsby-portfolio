@@ -5,9 +5,6 @@ import  Github  from "../../images/github.svg";
 import  Codepen from "../../images/codepen.svg";
 import "../../styles/Toolbar.scss";
 
-const activeStyle = {
-  borderBottom: "2px solid #008489"
-}
 
 const Toolbar = props => (
   <header className="toolbar">
@@ -34,17 +31,17 @@ const Toolbar = props => (
       <nav className="toolbar_navigation-items">
         <ul>
           <li>
-            <Link to="/" activeStyle ={activeStyle}>Home</Link>
+            <Link to="/" >Home</Link>
           </li>
         
           <li>
-            <Link to="/sample-page/" activeStyle ={activeStyle}>About</Link>
+            <Link to="/sample-page/" >About</Link>
           </li>
           <li>
-            <Link to="/posts" activeStyle ={activeStyle}>All projects</Link>
+            <Link to="/posts" >All projects</Link>
           </li>
           <li>
-            <Link to="/allposts" activeStyle ={activeStyle}>All posts</Link>
+            <Link to="/allposts">All posts</Link>
           </li>
         </ul>
       </nav>
