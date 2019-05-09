@@ -5,7 +5,7 @@ const Circle = ({ bgColor, height, width }) => {
 
   
  
-  var diameter = Math.random() * (275 - 50) + 50;
+  var diameter = Math.random() * (180 - 40) + 40;
   var newheight =  (Math.round(Math.random() * height));
   var newwidth = (Math.round(Math.random() * width));
 
@@ -31,28 +31,48 @@ class Background extends Component {
   
   state = {
     colors: [
-      "#393E41, #636863 ",
-      "#E94F37, #ff4500",
-      "#1C89BF, #e3f7ff",
-      "#A1D363,#90ee90",
-      "#85FFC7, #3cb371",
-      "#297373, #2f4f4f",
-      "#FF8552, #fdc888",
-      "#A40E4C ,#ffc2c2",
-      "#1C89BF, #e3f7ff",
-      "#A1D363,#90ee90",
-      "#85FFC7, #3cb371",
-      "#A40E4C ,#ffc2c2",
+      
     ],
     contentHeight: 0,
     contentWidth: 0,
 
   };
   componentDidMount() {
+    let newcolors = [];
+   const height = this.content.getBoundingClientRect().height;
+   const width =  this.content.getBoundingClientRect().width;
+   if(height > 2500){
+    newcolors = ["#393E41, #636863 ",
+    "#E94F37, #ff4500",
+    "#1C89BF, #e3f7ff",
+    "#A1D363,#90ee90",
+    "#85FFC7, #3cb371",
+    "#85FFC7, #3cb371",
+    "#A40E4C ,#ffc2c2",
+    "#1C89BF, #e3f7ff",
+  ]
+  
+   }
+   else{
+     newcolors = [
+      "#85FFC7, #3cb371",
+      "#FF8552, #fdc888",
+      "#1C89BF, #e3f7ff",
+      
+     
+
+     ]
+   }
+   
     // use an if statment here to that sets states for colours based on height of screen. 
-    this.setState({ contentHeight: this.content.getBoundingClientRect().height,
-      contentWidth: this.content.getBoundingClientRect().width
-    });
+    this.setState(
+      
+      { contentHeight: height,
+      contentWidth: width,
+      colors: [ ...newcolors]
+
+
+    })
     console.log(`${this.content.getBoundingClientRect().width}, ${this.content.getBoundingClientRect().height}`);
   
   }
