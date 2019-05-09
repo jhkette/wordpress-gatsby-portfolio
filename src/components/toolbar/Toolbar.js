@@ -12,7 +12,7 @@ const Toolbar = props => (
       <div className="heading">
         <div className="toolbar__logo">
           <h1>
-            <Link to="/">Portfolio</Link>
+            <Link to="/">Joseph Ketterer</Link>
           </h1>
         </div>
         <nav className="toolbar__toggle-button">
