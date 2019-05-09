@@ -23,8 +23,8 @@ class Home extends Component {
         <title>Portfolio: Joseph Ketterer</title>
       </Helmet>
     
-      <Circle />
-        <Masonry 
+        <Circle />
+        <Masonry
           className="container-projects-posts"
         >
         

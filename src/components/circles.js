@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 
 const Circle = ({ bgColor, height, width }) => {
+
+  
  
   var diameter = Math.random() * (275 - 50) + 50;
   var newheight =  (Math.round(Math.random() * height));
@@ -23,8 +25,6 @@ const Circle = ({ bgColor, height, width }) => {
   };
   return <div style={circleStyle} />;
 };
-
-
 
 
 class Background extends Component {
@@ -49,20 +49,15 @@ class Background extends Component {
 
   };
   componentDidMount() {
-   
+    // use an if statment here to that sets states for colours based on height of screen. 
     this.setState({ contentHeight: this.content.getBoundingClientRect().height,
       contentWidth: this.content.getBoundingClientRect().width
-    
     });
-
-    console.log(this.content.getBoundingClientRect() )
+    console.log(`${this.content.getBoundingClientRect().width}, ${this.content.getBoundingClientRect().height}`);
+  
   }
   
-
   render() {
-
-    
-    
     let id = 0;
     return (
       <div className="circles"  ref={r => this.content = r}
