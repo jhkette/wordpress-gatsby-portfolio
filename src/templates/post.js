@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { graphql } from 'gatsby' 
 import Img from "gatsby-image";
 import Layout from "../components/Layout";
-import Circle from "../components/threecircles.js";
+import Circle from "../components/circles.js";
 import {Helmet} from 'react-helmet';
 
 import "../styles/post.scss";
@@ -18,8 +18,10 @@ class PostTemplate extends Component {
         <title>Project: {post.title}</title>
       </Helmet>
     
-        <Circle />
+      <Circle />
         <section className="container-allpost-content">
+       
+       
           <h2> {post.title}</h2>
           {post.acf.test && (
             <div className="categoriespost"> {post.acf.test}</div>

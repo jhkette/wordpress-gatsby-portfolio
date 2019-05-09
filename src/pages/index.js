@@ -23,10 +23,11 @@ class Home extends Component {
         <title>Portfolio: Joseph Ketterer</title>
       </Helmet>
     
-        <Circle />
+      <Circle />
         <Masonry 
           className="container-projects-posts"
         >
+        
           {data.edges.map(({ node }) => (
             <article key={node.slug} className="container-post">
               <Link

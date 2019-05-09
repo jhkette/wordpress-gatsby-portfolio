@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 
-const Circle = ({ bgColor }) => {
+
+const Circle = ({ bgColor, height, width }) => {
+ 
   var diameter = Math.random() * (275 - 50) + 50;
-  var height = Math.random() * 2500;
-  var width = Math.random() * 900;
+  var newheight =  (Math.round(Math.random() * height));
+  var newwidth = (Math.round(Math.random() * width));
 
   var circleStyle = {
     padding: 10,
@@ -16,13 +18,17 @@ const Circle = ({ bgColor }) => {
     opacity: 0.25,
     zIndex: 0,
     position: "absolute",
-    top: height + "px",
-    left: width + "px"
+    top: newheight + "px",
+    left: newwidth + "px"
   };
   return <div style={circleStyle} />;
 };
 
+
+
+
 class Background extends Component {
+  
   state = {
     colors: [
       "#393E41, #636863 ",
@@ -37,19 +43,37 @@ class Background extends Component {
       "#A1D363,#90ee90",
       "#85FFC7, #3cb371",
       "#A40E4C ,#ffc2c2",
-    ]
+    ],
+    contentHeight: 0,
+    contentWidth: 0,
+
   };
+  componentDidMount() {
+   
+    this.setState({ contentHeight: this.content.getBoundingClientRect().height,
+      contentWidth: this.content.getBoundingClientRect().width
+    
+    });
+
+    console.log(this.content.getBoundingClientRect() )
+  }
+  
 
   render() {
+
+    
+    
     let id = 0;
     return (
-      <div className="circles">
+      <div className="circles"  ref={r => this.content = r}
+     >
         {this.state.colors.map(color => (
-          <Circle key={id++} bgColor={color} />
+          <Circle key={id++} bgColor={color} height={this.state.contentHeight} width={this.state.contentWidth} />
         ))}
       </div>
     );
   }
+  
 }
 
 export default Background;
