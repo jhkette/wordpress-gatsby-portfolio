@@ -29,7 +29,7 @@ class Home extends Component {
         >
         
           {data.edges.map(({ node }) => (
-            <article key={node.slug} className="container-post">
+            <article key={node.slug} className="masonry-item-post">
               <Link
                 to={`/post/${node.slug}/`}
                 style={{textDecoration: "none"}}
