@@ -37,16 +37,19 @@ class Background extends Component {
     let newcolors = [];
    const height = this.content.getBoundingClientRect().height;
    const width =  this.content.getBoundingClientRect().width;
-   if(height > 2500){
-    newcolors = ["#393E41, #636863 ",
+   if(height > 1900){
+    newcolors = [
+    
     "#E94F37, #ff4500",
     "#1C89BF, #e3f7ff",
     "#A1D363,#90ee90",
     "#85FFC7, #3cb371",
-    "#85FFC7, #3cb371",
-    "#A40E4C ,#ffc2c2",
-    "#1C89BF, #e3f7ff",
-    "#1C89BF, #e3f7ff",
+    "#297373, #2f4f4f",
+    "#FF8552, #fdc888",
+"#A40E4C ,#ffc2c2",
+
+"#FF8552, #fdc888"
+
   ]
   
    }
@@ -55,6 +58,7 @@ class Background extends Component {
       "#85FFC7, #3cb371",
       "#FF8552, #fdc888",
       "#1C89BF, #e3f7ff",
+      "#A1D363,#90ee90"
      ]
    }
 

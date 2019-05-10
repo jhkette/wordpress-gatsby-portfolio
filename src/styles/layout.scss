@@ -199,7 +199,7 @@ h2 {
   display: block;
   border-bottom: 1px solid $black;
   width: 100%;
-  font-size: 1.85rem;
+  font-size: 1.65rem;
   padding-bottom: 0.15rem;
 }
 
@@ -334,6 +334,7 @@ header {
   @media screen and (max-width: $break-tablet) {
     flex: 0;
     width: 100%;
+    padding: 0 1rem;
    
   }
   @media (max-width: $break-small){
@@ -421,12 +422,13 @@ header {
 
 // Button
 .button {
+  text-decoration: none;
   position: absolute;
   height: 40px;
   width: 155px;
   border: 1px solid $black;
   padding-top: 9px;
-  padding-left: 24px !important;
+  padding-left: 27.5px !important;
   font-size: .9rem;
   color: $black;
   text-align: center;
