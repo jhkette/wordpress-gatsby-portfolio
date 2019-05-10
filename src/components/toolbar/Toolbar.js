@@ -27,25 +27,21 @@ const Toolbar = props => (
         </nav>
       </div>
       <div className="spacer" />
-      <p className ="toolbar-intro">
-        {" "}
-        lLorem ipsum dolor sit amet, pro mundi commodo at. Numquam honestatis e
-        deterruisset mel.
-      </p>
+  
       <nav className="toolbar_navigation-items">
         <ul>
           <li>
-            <Link to="/" activeStyle ={activeStyle}>Home</Link>
+       <Link to="/" activeStyle ={activeStyle}>Home</Link>
           </li>
         
           <li>
-            <Link to="/sample-page/" activeStyle ={activeStyle}>About</Link>
+          <Link to="/sample-page/" activeStyle ={activeStyle}>About</Link>
           </li>
           <li>
-            <Link to="/posts" activeStyle ={activeStyle}>All projects</Link>
+          <Link to="/posts" activeStyle ={activeStyle}>All projects</Link>
           </li>
           <li>
-            <Link to="/allposts" activeStyle ={activeStyle}>All posts</Link>
+          <Link to="/allposts" activeStyle ={activeStyle}>All posts</Link>
           </li>
         </ul>
         </nav>

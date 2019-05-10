@@ -4,7 +4,7 @@
 
 .sidedrawer {
   height: 100vh;
-  background-color: #a8a8a8;
+  background-color: #ededed;
   box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0px;
@@ -19,6 +19,9 @@
   @media screen and (min-width: $break-small) {
     display: none;
   }
+  a{
+    opacity:1;
+  }
 }
 
 .sidedrawer ul {
@@ -30,9 +33,10 @@
 .sidedrawer a {
   color: $black;
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   padding-bottom:.8rem;
   display: block;
+  opacity: .1;
 
   &:hover {
     color: $turq;
