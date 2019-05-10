@@ -60,7 +60,7 @@ class Home extends Component {
                 dangerouslySetInnerHTML={{ __html: node.excerpt }}
               />
               <Link
-                to={`/post/${node.slug}/`} class="button arrow">View Project</Link>
+                to={`/post/${node.slug}/`} className="button arrow">View Project</Link>
             </article>
           ))}
         </Masonry>
