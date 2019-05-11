@@ -6,9 +6,7 @@ import Circle from "../components/circles.js";
 
 class PageTemplate extends Component {
     render() {
-      
         const currentPage = this.props.data.wordpressPage
-
         return (
             <Layout>
             <Helmet>
