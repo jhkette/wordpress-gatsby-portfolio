@@ -1,27 +1,22 @@
 import React, { Component } from "react";
-import { graphql } from 'gatsby' 
+import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import Layout from "../components/Layout";
 import Circle from "../components/circles.js";
-import {Helmet} from 'react-helmet';
+import { Helmet } from "react-helmet";
 
 import "../styles/post.scss";
-
 
 class PostTemplate extends Component {
   render() {
     const post = this.props.data.wordpressPost;
-
     return (
       <Layout>
-      <Helmet>
-        <title>Project: {post.title}</title>
-      </Helmet>
-    
-      <Circle />
+        <Helmet>
+          <title>Project: {post.title}</title>
+        </Helmet>
+        <Circle />
         <section className="container-allpost-content">
-       
-       
           <h2> {post.title}</h2>
           {post.acf.test && (
             <div className="categoriespost"> {post.acf.test}</div>
@@ -32,17 +27,24 @@ class PostTemplate extends Component {
                 post.acf.leadimage.localFile.childImageSharp.resolutions
               }
               className="lead-postimage"
-              alt ={post.title}
+              alt={post.title}
             />
           )}
-        
+
           {post.acf.url && (
-            <div className = "container-arrow-link">
-             <i> →</i>
-             <a className ="link-highlight" title={post.title} href= {post.acf.url} > {post.acf.url}</a> 
+            <div className="container-arrow-link">
+              <i> →</i>
+              <a
+                className="link-highlight"
+                title={post.title}
+                href={post.acf.url}
+              >
+                {" "}
+                {post.acf.url}
+              </a>
             </div>
           )}
-          
+
           <div
             className="container text-content"
             dangerouslySetInnerHTML={{ __html: post.content }}

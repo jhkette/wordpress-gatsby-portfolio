@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 
-
-const Circle = ({ bgColor, height, width }) => {  
+const Circle = ({ bgColor, height, width }) => {
   // a number inbetween 120 and 40 to get diamter of circle
   var diameter = Math.random() * (120 - 40) + 40;
-  var newheight =  (Math.round(Math.random() * height));
-  var newwidth = (Math.round(Math.random() * width));
+  var newheight = Math.round(Math.random() * height);
+  var newwidth = Math.round(Math.random() * width);
 
   var circleStyle = {
     padding: 10,
@@ -24,64 +23,57 @@ const Circle = ({ bgColor, height, width }) => {
   return <div style={circleStyle} />;
 };
 
-
 class Background extends Component {
-  
   state = {
     colors: [],
     contentHeight: 0,
-    contentWidth: 0,
-
+    contentWidth: 0
   };
   componentDidMount() {
     let newcolors = [];
-   const height = this.content.getBoundingClientRect().height;
-   const width =  this.content.getBoundingClientRect().width;
-   if(height > 1900){
-    newcolors = [
-    
-    "#E94F37, #ff4500",
-    "#1C89BF, #e3f7ff",
-    "#A1D363,#90ee90",
-    "#85FFC7, #3cb371",
-    "#297373, #2f4f4f",
-    "#FF8552, #fdc888",
-"#A40E4C ,#ffc2c2",
-
-"#FF8552, #fdc888"
-
-  ]
-  
-   }
-   else{
-     newcolors = [
-      "#85FFC7, #3cb371",
-      "#FF8552, #fdc888",
-      "#1C89BF, #e3f7ff",
-      "#A1D363,#90ee90"
-     ]
-   }
-
-    this.setState(
-      { contentHeight: height,
-        contentWidth: width,
-        colors: [ ...newcolors]
-    })
-    console.log(`${this.content.getBoundingClientRect().width}, ${this.content.getBoundingClientRect().height}`);
+    const height = this.content.getBoundingClientRect().height;
+    const width = this.content.getBoundingClientRect().width;
+    if (height > 1900) {
+      newcolors = [
+        "#E94F37, #ff4500",
+        "#1C89BF, #e3f7ff",
+        "#A1D363, #90ee90",
+        "#85FFC7, #3cb371",
+        "#297373, #2f4f4f",
+        "#FF8552, #fdc888",
+        "#A40E4C ,#ffc2c2",
+        "#FF8552, #fdc888"
+      ];
+    } else {
+      newcolors = [
+        "#85FFC7, #3cb371",
+        "#FF8552, #fdc888",
+        "#1C89BF, #e3f7ff",
+        "#A1D363, #90ee90"
+      ];
+    }
+    this.setState({
+      contentHeight: height,
+      contentWidth: width,
+      colors: [...newcolors]
+    });
   }
-  
+
   render() {
     let id = 0;
     return (
-      <div className="circles"  ref={r => this.content = r}
-     >
+      <div className="circles" ref={r => (this.content = r)}>
         {this.state.colors.map(color => (
-          <Circle key={id++} bgColor={color} height={this.state.contentHeight} width={this.state.contentWidth} />
-        ))}
+          <Circle
+            key={id++}
+            bgColor={color}
+            height={this.state.contentHeight}
+            width={this.state.contentWidth}
+          />
+        ))}{" "}
       </div>
     );
   }
-  
 }
 
 export default Background;
