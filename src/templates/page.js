@@ -2,27 +2,26 @@ import React, {Component} from "react";
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import {Helmet} from 'react-helmet';
+import Circle from "../components/circles.js";
 
 class PageTemplate extends Component {
     render() {
       
         const currentPage = this.props.data.wordpressPage
-       
-
-    
 
         return (
             <Layout>
             <Helmet>
         <title>{currentPage.title}</title>
       </Helmet>
-            <div>
+      <Circle />
+        <section className="container-allpost-content">
                 <h1 dangerouslySetInnerHTML={{__html: currentPage.title}}/>
                 <div dangerouslySetInnerHTML={{__html: currentPage.content}}/>
 
                 <p dangerouslySetInnerHTML={{__html: currentPage.date}} />
                 <p dangerouslySetInnerHTML={{__html: currentPage.slug}} />
-            </div>
+            </section>
             </Layout>
         )
     }
