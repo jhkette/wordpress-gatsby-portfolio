@@ -23,8 +23,6 @@ class IndexPage extends Component {
         <title>Portfolio: All posts</title>
       </Helmet>
 
-
-
       <h2>All Projects</h2>
       <Circle />
       <Masonry
