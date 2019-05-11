@@ -1,54 +1,50 @@
 import React, { Component } from "react";
 import { Link, graphql } from "gatsby";
 import Img from "gatsby-image";
-import Masonry from 'react-masonry-component'
+import Masonry from "react-masonry-component";
 import Layout from "../components/Layout";
 import Code from "../images/code.svg";
 import Circle from "../components/circles.js";
-import {Helmet} from 'react-helmet';
-
-
-
+import { Helmet } from "react-helmet";
 
 class Home extends Component {
   render() {
     const data = this.props.data.projects;
     const allposts = this.props.data.posts;
 
-
     return (
-       
       <Layout>
-      <Helmet>
-        <title>Portfolio: Joseph Ketterer</title>
-      </Helmet>
-    
+        <Helmet>
+          <title>Portfolio: Joseph Ketterer</title>
+        </Helmet>
+
         <Circle />
-        <Masonry
-          className="container-projects-posts"
-        >
-        
+        <Masonry className="container-projects-posts" aria role="main">
           {data.edges.map(({ node }) => (
             <article key={node.slug} className="masonry-item-post">
               <Link
                 to={`/post/${node.slug}/`}
-                style={{textDecoration: "none"}}
+                style={{ textDecoration: "none" }}
               >
-              {node.featured_media.localFile.childImageSharp.fluid && 
-                <Img
-                  className="image-bloglead"
-                  fluid={node.featured_media.localFile.childImageSharp.fluid}
-                  alt={node.title}
-                />
-              }
+                {node.featured_media.localFile.childImageSharp.fluid && (
+                  <Img
+                    className="image-bloglead"
+                    fluid={node.featured_media.localFile.childImageSharp.fluid}
+                    alt={node.title}
+                  />
+                )}
               </Link>
 
-             
-                <h3 className="slug"> <Link
-                to={`/post/${node.slug}/`}
-                style={ {textDecoration: "none"} }
-              >{node.title}</Link></h3>
-              
+              <h3 className="slug">
+                {" "}
+                <Link
+                  to={`/post/${node.slug}/`}
+                  style={{ textDecoration: "none" }}
+                >
+                  {node.title}
+                </Link>
+              </h3>
+
               <div className="container-codelist">
                 <img src={Code} alt="code" className="code" />
                 {node.acf.test && (
@@ -59,8 +55,9 @@ class Home extends Component {
                 className="excerpt"
                 dangerouslySetInnerHTML={{ __html: node.excerpt }}
               />
-              <Link
-                to={`/post/${node.slug}/`} className="button arrow">View Project</Link>
+              <Link to={`/post/${node.slug}/`} className="button arrow">
+                View Project
+              </Link>
             </article>
           ))}
         </Masonry>
@@ -68,21 +65,19 @@ class Home extends Component {
         <section className="container-section-post">
           <h2>Posts</h2>
 
-          <Masonry 
-            className="container-projects-blogposts"
-          
-          >
+          <Masonry className="container-projects-blogposts">
             {allposts.edges.map(({ node }) => (
               <article key={node.slug} className="container-singlepost">
                 <Link
                   to={`/post/${node.slug}/`}
-                  style={{textDecoration: "none"}}
+                  style={{ textDecoration: "none" }}
                 >
                   <h3>{node.title}</h3>
                 </Link>
                 <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-                <Link
-                to={`/post/${node.slug}/`} className="button arrow">View Post</Link>
+                <Link to={`/post/${node.slug}/`} className="button arrow">
+                  View Post
+                </Link>
               </article>
             ))}
           </Masonry>

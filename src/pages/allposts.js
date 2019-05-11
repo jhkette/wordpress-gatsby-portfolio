@@ -1,31 +1,32 @@
 import React, { Component } from "react";
 import { Link, graphql } from "gatsby";
-import Masonry from 'react-masonry-component'
+import Masonry from "react-masonry-component";
 import Layout from "../components/Layout";
 import Circle from "../components/circles.js";
-import {Helmet} from 'react-helmet';
+import { Helmet } from "react-helmet";
 
-
-  
 class BlogPosts extends Component {
   render() {
     const data = this.props.data.posts;
     return (
-    <Layout>
-    <Helmet>
-        <title>Portfolio: All Projects</title>
-      </Helmet>
-    
-      <section className="container-section-post">
-      <h2>All Posts</h2>
+      <Layout>
+        <Helmet>
+          <title>Portfolio: All Projects</title>
+        </Helmet>
+
+        <section className="container-section-post">
+          <h2>All Posts</h2>
           <Circle />
-          <Masonry 
-            className="container-projects-blogposts blog">
+          <Masonry
+            className="container-projects-blogposts blog"
+            aria
+            role="main"
+          >
             {data.edges.map(({ node }) => (
               <article key={node.slug} className="container-singlepost">
                 <Link
                   to={`/post/${node.slug}/`}
-                  style={{textDecoration: "none"}}
+                  style={{ textDecoration: "none" }}
                 >
                   <h3>{node.title}</h3>
                 </Link>
@@ -33,7 +34,7 @@ class BlogPosts extends Component {
               </article>
             ))}
           </Masonry>
-          </section>  
+        </section>
       </Layout>
     );
   }
@@ -44,10 +45,7 @@ export default BlogPosts;
 // Set here the ID of the home page.
 export const pageQuery = graphql`
   query {
-    posts: allWordpressPost(
-      filter: { acf: { status: { eq: "post" } } }
-    
-    ) {
+    posts: allWordpressPost(filter: { acf: { status: { eq: "post" } } }) {
       edges {
         node {
           title
@@ -59,7 +57,6 @@ export const pageQuery = graphql`
             name
             description
           }
-         
         }
       }
     }

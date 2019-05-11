@@ -16,7 +16,7 @@ class PostTemplate extends Component {
           <title>Project: {post.title}</title>
         </Helmet>
         <Circle />
-        <section className="container-allpost-content">
+        <section className="container-allpost-content" aria role="main">
           <h2> {post.title}</h2>
           {post.acf.test && (
             <div className="categoriespost"> {post.acf.test}</div>

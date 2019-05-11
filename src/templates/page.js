@@ -13,7 +13,7 @@ class PageTemplate extends Component {
           <title>{currentPage.title}</title>
         </Helmet>
         <Circle />
-        <section className="container-allpost-content">
+        <section className="container-allpost-content" aria role="main">
           <h1 dangerouslySetInnerHTML={{ __html: currentPage.title }} />
           <div dangerouslySetInnerHTML={{ __html: currentPage.content }} />
           <p dangerouslySetInnerHTML={{ __html: currentPage.date }} />
