@@ -35,7 +35,9 @@
     "typeface-ibm-plex-sans": "0.0.58"
   },
   "devDependencies": {
-    "prettier": "^1.17.0"
+    "husky": "^2.2.0",
+    "prettier": "^1.17.0",
+    "pretty-quick": "^1.10.0"
   },
   "husky": {
     "hooks": {
