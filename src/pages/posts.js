@@ -5,9 +5,9 @@ import Layout from "../components/Layout";
 import Img from "gatsby-image";
 import Masonry from "react-masonry-component";
 import { Helmet } from "react-helmet";
-
 import Code from "../images/code.svg";
 import Circle from "../components/circles.js";
+import xss from "xss";
 
 class IndexPage extends Component {
   render() {
@@ -53,7 +53,7 @@ class IndexPage extends Component {
               </div>
               <div
                 className="excerpt"
-                dangerouslySetInnerHTML={{ __html: node.excerpt }}
+                dangerouslySetInnerHTML={{ __html: xss(node.excerpt) }}
               />
               <Link to={`/post/${node.slug}/`} class="button arrow">
                 View Project

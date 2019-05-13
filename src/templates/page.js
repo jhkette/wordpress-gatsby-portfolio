@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import { Helmet } from "react-helmet";
 import Circle from "../components/circles.js";
+import xss from "xss";
 
 class PageTemplate extends Component {
   render() {
@@ -14,10 +15,8 @@ class PageTemplate extends Component {
         </Helmet>
         <Circle />
         <section className="container-allpost-content" aria role="main">
-          <h1 dangerouslySetInnerHTML={{ __html: currentPage.title }} />
-          <div dangerouslySetInnerHTML={{ __html: currentPage.content }} />
-          <p dangerouslySetInnerHTML={{ __html: currentPage.date }} />
-          <p dangerouslySetInnerHTML={{ __html: currentPage.slug }} />
+          <h1> {currentPage.title} </h1>
+          <div dangerouslySetInnerHTML={{ __html: xss(currentPage.content) }} />
         </section>
       </Layout>
     );

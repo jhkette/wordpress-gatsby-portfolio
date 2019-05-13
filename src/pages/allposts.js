@@ -4,6 +4,7 @@ import Masonry from "react-masonry-component";
 import Layout from "../components/Layout";
 import Circle from "../components/circles.js";
 import { Helmet } from "react-helmet";
+import xss from "xss";
 
 class BlogPosts extends Component {
   render() {
@@ -30,7 +31,7 @@ class BlogPosts extends Component {
                 >
                   <h3>{node.title}</h3>
                 </Link>
-                <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                <div dangerouslySetInnerHTML={{ __html: xss(node.excerpt) }} />
                 <Link to={`/post/${node.slug}/`} className="button small arrow">
                   View Post
                 </Link>

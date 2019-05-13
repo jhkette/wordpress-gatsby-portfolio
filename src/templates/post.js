@@ -4,6 +4,7 @@ import Img from "gatsby-image";
 import Layout from "../components/Layout";
 import Circle from "../components/circles.js";
 import { Helmet } from "react-helmet";
+import xss from "xss";
 
 import "../styles/post.scss";
 
@@ -47,7 +48,7 @@ class PostTemplate extends Component {
 
           <div
             className="container text-content"
-            dangerouslySetInnerHTML={{ __html: post.content }}
+            dangerouslySetInnerHTML={{ __html: xss(post.content) }}
           />
         </section>
       </Layout>

@@ -6,6 +6,7 @@ import Layout from "../components/Layout";
 import Code from "../images/code.svg";
 import Circle from "../components/circles.js";
 import { Helmet } from "react-helmet";
+import xss from "xss";
 
 class Home extends Component {
   render() {
@@ -53,7 +54,7 @@ class Home extends Component {
               </div>
               <div
                 className="excerpt"
-                dangerouslySetInnerHTML={{ __html: node.excerpt }}
+                dangerouslySetInnerHTML={{ __html: xss(node.excerpt) }}
               />
               <Link to={`/post/${node.slug}/`} className="button arrow">
                 View Project
@@ -74,7 +75,7 @@ class Home extends Component {
                 >
                   <h3>{node.title}</h3>
                 </Link>
-                <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                <div dangerouslySetInnerHTML={{ __html: xss(node.excerpt) }} />
                 <Link to={`/post/${node.slug}/`} className="button small arrow">
                   View Post
                 </Link>
