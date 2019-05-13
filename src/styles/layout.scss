@@ -1,12 +1,12 @@
 // scss variables
-@import './variables.scss';
+@import "./variables.scss";
 // break points
 
 // /Users/joseph/Desktop/wordpress/blog/gatsby-responsive-nav-master/fonts
 @font-face {
   font-family: Inter;
   src: url("./../../fonts/Inter-Medium.woff2") format("woff2"),
-  url("./../../fonts/Inter-Medium.woff") format("woff");
+    url("./../../fonts/Inter-Medium.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -14,9 +14,8 @@
 
 @font-face {
   font-family: Inter-regular;
-  src: 
-  url("./../../fonts/Inter-Regular.woff2") format("woff2"),
-  url("./../../fonts/Inter-Regular.woff") format("woff");
+  src: url("./../../fonts/Inter-Regular.woff2") format("woff2"),
+    url("./../../fonts/Inter-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -151,7 +150,7 @@ html {
 
 body {
   color: $black;
-  
+
   font-weight: normal;
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
@@ -166,13 +165,11 @@ body {
   font-size: 1rem;
 }
 
-
-
 p {
   padding: 0;
   margin: 0 0 1.4rem 0;
   font-weight: 500;
-  line-height: 1.45;
+  line-height: 1.5;
   font-size: 1rem;
   font-family: "Inter-regular", "Helvetica", "Arial", sans-serif;
 }
@@ -183,7 +180,6 @@ h1 {
   margin: 3rem 0 0 0;
   font-size: 1.1rem;
   text-transform: uppercase;
-
 }
 
 h2,
@@ -216,18 +212,15 @@ h3 {
   &:hover {
     color: $turq;
     text-decoration: none;
-  } 
-  a{
+  }
+  a {
     text-decoration: none;
     color: $black;
   }
- 
 }
 
-
-
 .wrapper {
-position: relative;
+  position: relative;
 }
 
 footer {
@@ -241,7 +234,6 @@ footer {
   width: 100%;
   display: block;
   text-align: center;
-  
 }
 
 .container-projects-blogposts {
@@ -249,26 +241,24 @@ footer {
   display: block;
   text-align: center;
   article:nth-child(1) {
-   padding-right: 2rem;
+    padding-right: 2rem;
   }
   article:nth-child(2) {
     padding-left: 2rem;
-   }
-   @media (max-width: $break-smalldesktop) {
-    article:nth-child(1){
-       padding: 0;
-     }
-     article:nth-child(2) {
+  }
+  @media (max-width: $break-smalldesktop) {
+    article:nth-child(1) {
       padding: 0;
-     }
-   }
-  
+    }
+    article:nth-child(2) {
+      padding: 0;
+    }
+  }
 }
 
-.container-projects-blogposts.blog{
+.container-projects-blogposts.blog {
   min-height: 100vh;
 }
-
 
 header {
   @media screen and (max-width: $break-small) {
@@ -335,26 +325,20 @@ header {
     flex: 0;
     width: 100%;
     padding: 0 1rem;
-   
   }
-  @media (max-width: $break-small){
-   
-   margin-top: 5rem;
+  @media (max-width: $break-small) {
+    margin-top: 5rem;
   }
 }
 
-
-
 .masonry-item-post {
-  
   position: relative;
   width: (100% / 3);
   text-align: left;
   margin-bottom: 3rem;
   padding: 0 1.5rem 3rem 1.5rem;
   display: inline-block;
-  
-  
+
   .code {
     width: 25px;
     height: 25px;
@@ -362,12 +346,12 @@ header {
     margin-top: 0.15rem;
     margin-right: 0.5rem;
   }
- 
+
   .svg-inline--fa {
     width: 1rem !important;
     height: 1rem !important;
   }
-  a{
+  a {
     color: $black;
     text-decoration: none;
   }
@@ -389,7 +373,6 @@ header {
     width: 100%;
   }
 
-
   .highlight-categories {
     border-radius: 0.2rem;
     color: $black;
@@ -400,8 +383,7 @@ header {
     padding: 0.2rem 0.3rem;
     display: block;
     background-color: $turqlight;
-    display: inline-block
-   
+    display: inline-block;
   }
 }
 
@@ -416,7 +398,7 @@ header {
   }
   @media screen and (max-width: $break-large) {
     width: 280px !important;
-    height: 390px  !important;
+    height: 390px !important;
   }
 }
 
@@ -429,54 +411,62 @@ header {
   border: 1px solid $black;
   padding-top: 9px;
   padding-left: 27.5px !important;
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: $black;
   text-align: center;
-  border-radius: .1rem;
+  border-radius: 0.1rem;
   outline: 0;
-  overflow:hidden;
+  overflow: hidden;
   background: white;
   z-index: 500;
   cursor: pointer;
-  transition:         0.08s ease-in;
-  -o-transition:      0.08s ease-in;
-  -ms-transition:     0.08s ease-in;
-  -moz-transition:    0.08s ease-in;
+  transition: 0.08s ease-in;
+  -o-transition: 0.08s ease-in;
+  -ms-transition: 0.08s ease-in;
+  -moz-transition: 0.08s ease-in;
   -webkit-transition: 0.08s ease-in;
 
-  @media (max-width: $break-small){
+  @media (max-width: $break-small) {
     font-size: 16px;
     width: 155px;
     padding: 8.5px 0;
   }
 }
 
-
-.arrow{
-  text-align:left;
-  padding-left:17px;
+.arrow {
+  text-align: left;
+  padding-left: 17px;
   padding-bottom: 7px;
 }
 
-.arrow:before{
-  content:"→";
-  position:absolute;
+.arrow:before {
+  content: "→";
+  position: absolute;
   color: $black;
   font-size: 20px;
   left: 83%;
   top: 15%;
   opacity: 0;
-  transition: ll 250ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
-  -webkit-transition: all 250ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+  transition: ll 250ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 250ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.arrow:hover:before{
-  left:84%;
-  opacity:1;
+.arrow:hover:before {
+  left: 84%;
+  opacity: 1;
 }
 
 .arrow:hover {
-  width:165px;
+  width: 165px;
+}
+
+.button.small {
+  width: 135px;
+  margin-bottom: 4rem;
+}
+
+.button.small.arrow:hover {
+  width: 140px;
 }
 
 // container for blog section and heading
@@ -484,36 +474,22 @@ header {
   padding: 0 1.5rem 2rem 1.5rem;
 }
 
-
 // Blog posts styling on index page
 .container-singlepost {
   width: (100%/2);
   display: inline-block;
   text-align: left;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 
-  @media (max-width: $break-smalldesktop){
-     width: 100%;
-     margin-bottom: 0rem;
-     padding: 0;
-    
+  @media (max-width: $break-smalldesktop) {
+    width: 100%;
   }
 }
 
-
 // circles
 .circles {
-
   width: 100%;
   height: 100%;
   display: block;
-  position: absolute
+  position: absolute;
 }
-
-
-
-
-
-
-
-

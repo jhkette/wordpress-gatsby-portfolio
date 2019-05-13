@@ -62,7 +62,7 @@ class Home extends Component {
           ))}
         </Masonry>
 
-        <section className="container-section-post">
+        <section className="container-section-post" aria role="complementary">
           <h2>Posts</h2>
 
           <Masonry className="container-projects-blogposts">
@@ -75,7 +75,7 @@ class Home extends Component {
                   <h3>{node.title}</h3>
                 </Link>
                 <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-                <Link to={`/post/${node.slug}/`} className="button arrow">
+                <Link to={`/post/${node.slug}/`} className="button small arrow">
                   View Post
                 </Link>
               </article>
