@@ -41,8 +41,7 @@ class Background extends Component {
         "#85FFC7, #3cb371",
         "#297373, #2f4f4f",
         "#FF8552, #fdc888",
-        "#A40E4C ,#ffc2c2",
-        "#FF8552, #fdc328"
+        "#A40E4C ,#ffc2c2"
       ];
     } else {
       newcolors = [

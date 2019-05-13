@@ -2,7 +2,7 @@ import React, { PureComponent } from "react";
 import Toolbar from "./toolbar/Toolbar";
 import SideDrawer from "./SideDrawer/SideDrawer.js";
 import "../styles/layout.scss";
-import {Helmet} from 'react-helmet';
+import { Helmet } from "react-helmet";
 
 class Layout extends PureComponent {
   state = {
@@ -17,7 +17,6 @@ class Layout extends PureComponent {
 
   render() {
     return (
-     
       <div className="wrapper">
         <Helmet>
           <html lang="en" />

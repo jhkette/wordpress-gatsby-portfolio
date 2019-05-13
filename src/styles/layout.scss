@@ -162,7 +162,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: "Inter-regular", Helvetica, Arial, sans-serif;
   text-rendering: optimizeLegibility;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 p {
@@ -170,7 +170,7 @@ p {
   margin: 0 0 1.4rem 0;
   font-weight: 500;
   line-height: 1.5;
-  font-size: 1rem;
+
   font-family: "Inter-regular", "Helvetica", "Arial", sans-serif;
 }
 
@@ -471,7 +471,7 @@ header {
 
 // container for blog section and heading
 .container-section-post {
-  padding: 0 1.5rem 2rem 1.5rem;
+  padding: 0 1.5rem 6rem 1.5rem;
 }
 
 // Blog posts styling on index page
