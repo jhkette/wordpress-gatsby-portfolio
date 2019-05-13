@@ -6,7 +6,10 @@ import Codepen from "../../images/codepen.svg";
 import "../../styles/Toolbar.scss";
 
 const activeStyle = {
-  color: "#008489"
+  color: "#008489",
+  borderBottom: "3px solid #008489",
+  paddingBottom: "3px",
+  fontWeight: "900"
 };
 
 const Toolbar = props => (
