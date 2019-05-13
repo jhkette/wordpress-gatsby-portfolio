@@ -52,8 +52,10 @@ class Home extends Component {
                   <p className="highlight-categories">{node.acf.test}</p>
                 )}
               </div>
+
               <div
                 className="excerpt"
+                /* sanitize innerhtml */
                 dangerouslySetInnerHTML={{ __html: xss(node.excerpt) }}
               />
               <Link to={`/post/${node.slug}/`} className="button arrow">

@@ -53,6 +53,7 @@ class IndexPage extends Component {
               </div>
               <div
                 className="excerpt"
+                /* sanitize innerhtml */
                 dangerouslySetInnerHTML={{ __html: xss(node.excerpt) }}
               />
               <Link to={`/post/${node.slug}/`} class="button arrow">

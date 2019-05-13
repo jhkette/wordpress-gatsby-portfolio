@@ -48,6 +48,8 @@ class PostTemplate extends Component {
 
           <div
             className="container text-content"
+            /* sanitize innerhtml */
+
             dangerouslySetInnerHTML={{ __html: xss(post.content) }}
           />
         </section>
