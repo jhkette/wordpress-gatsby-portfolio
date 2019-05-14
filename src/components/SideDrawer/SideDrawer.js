@@ -10,20 +10,27 @@ const SideDrawer = props => {
   return (
     <nav className={drawerClasses}>
       <ul>
-          <li>
-            <Link to="/" title ="home">Home</Link>
-          </li>
-        
-          <li>
-            <Link to="/sample-page/" title ="about">About</Link>
-          </li>
-          <li>
-            <Link to="/posts" title ="All projects">All projects</Link>
-          </li>
-          <li>
-            <Link to="/allposts" title ="All posts">All posts</Link>
-          </li>
-       </ul>
+        <li>
+          <Link to="/" title="home">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="/sample-page/" title="about">
+            About
+          </Link>
+        </li>
+        <li>
+          <Link to="/posts" title="All projects">
+            All projects
+          </Link>
+        </li>
+        <li>
+          <Link to="/allposts" title="All posts">
+            All posts
+          </Link>
+        </li>
+      </ul>
     </nav>
   );
 };

@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import "./variables.scss";
 // View individual post page //
 
 .container-allpost-content {
@@ -13,9 +13,7 @@
 
   img {
     width: 100% !important;
-
   }
-
 }
 
 .categoriespost {
@@ -32,18 +30,20 @@
   p {
     &:first-of-type {
       font-size: 1.15rem;
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
     }
   }
-  h3{
+  ul {
+    margin-left: 3rem;
+  }
+  h3 {
     border: 0;
     color: $black;
   }
-  a{
+  a {
     color: $turq;
     font-weight: 900;
   }
-
 }
 
 .wp-block-quote {
@@ -53,18 +53,18 @@
   p {
     &:first-of-type {
       font-size: 1rem !important;
-      font-family: 'Inter-regular', sans-serif  !important;
-      margin-top: .5rem;
+      font-family: "Inter-regular", sans-serif !important;
+      margin-top: 0.5rem;
     }
   }
 }
 
 .link-highlight {
   color: $black;
-  font-family: 'Inter', serif;
-  padding-left: .25rem;
+  font-family: "Inter", serif;
+  padding-left: 0.25rem;
   display: block;
-  margin-top: .15rem;
+  margin-top: 0.15rem;
   display: inline-block;
   width: auto;
   height: auto;
@@ -83,13 +83,11 @@
   -webkit-transition: top 0.09s ease-in;
   transition: top 0.09s ease-in;
   width: auto;
-
 }
 
 .link-highlight:hover:before {
   top: 0;
 }
-
 
 .container-arrow-link {
   display: flex;
@@ -102,5 +100,5 @@
 .container-arrow-link i {
   font-weight: 900;
   font-size: 1rem;
-  margin-top: .15rem;
+  margin-top: 0.15rem;
 }
