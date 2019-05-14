@@ -116,7 +116,7 @@ export const pageQuery = graphql`
           featured_media {
             localFile {
               childImageSharp {
-                fluid(maxWidth: 580) {
+                fluid(maxWidth: 660) {
                   ...GatsbyImageSharpFluid
                 }
               }
