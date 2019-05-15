@@ -31,7 +31,6 @@ class Layout extends PureComponent {
           />
           <main className="container-bodycontent">{this.props.children}</main>
         </div>
-        <footer />
       </div>
     );
   }
