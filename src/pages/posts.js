@@ -19,7 +19,7 @@ class IndexPage extends Component {
           <title>Portfolio: All posts</title>
         </Helmet>
 
-        <h2>All Projects</h2>
+        <h2 className="heading-project">All Projects</h2>
         <Circle />
         <Masonry className="container-projects-posts" aria role="main">
           {data.edges.map(({ node }) => (

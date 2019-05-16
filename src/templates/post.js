@@ -31,14 +31,6 @@ class PostTemplate extends Component {
               alt={post.title}
             />
           )}
-
-          <div
-            className="container text-content"
-            /* sanitize innerhtml */
-
-            dangerouslySetInnerHTML={{ __html: xss(post.content) }}
-          />
-
           {post.acf.url && (
             <div className="container-arrow-link">
               <i> →</i>
@@ -52,6 +44,13 @@ class PostTemplate extends Component {
               </a>
             </div>
           )}
+
+          <div
+            className="container text-content"
+            /* sanitize innerhtml */
+
+            dangerouslySetInnerHTML={{ __html: xss(post.content) }}
+          />
         </section>
       </Layout>
     );
