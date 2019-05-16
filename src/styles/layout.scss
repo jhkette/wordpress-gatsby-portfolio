@@ -163,6 +163,7 @@ body {
   font-family: "Inter-regular", Helvetica, Arial, sans-serif;
   text-rendering: optimizeLegibility;
   font-size: 0.95rem;
+  line-height: 1.4;
 }
 
 p {
@@ -201,8 +202,7 @@ h2 {
 
 h3 {
   border-bottom: 1px solid $black;
-  margin-bottom: 0.7rem;
-  padding-bottom: 0.2rem;
+
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
   text-decoration: none;
@@ -336,7 +336,7 @@ header {
   width: (100% / 3);
   text-align: left;
   margin-bottom: 3rem;
-  padding: 0 1.5rem 3rem 1.5rem;
+  padding: 0 1.5rem 6rem 1.5rem;
   display: inline-block;
 
   .code {
@@ -397,8 +397,7 @@ header {
     z-index: 0;
   }
   @media screen and (max-width: $break-large) {
-    width: 280px !important;
-    height: 390px !important;
+    height: 420px !important;
   }
 }
 
@@ -406,11 +405,10 @@ header {
 .button {
   text-decoration: none;
   position: absolute;
-  height: 40px;
+  height: auto;
   width: 155px;
   border: 1px solid $black;
-  padding-top: 9px;
-
+  padding: 8px 0;
   font-size: 0.9rem;
   color: $black;
   text-align: center;
@@ -433,13 +431,7 @@ header {
   }
 }
 
-// .arrow {
-//   text-align: left;
-//   padding-left: 17px;
-//   padding-bottom: 7px;
-// }
-
-.arrow:before {
+.fill:before {
   content: "";
   position: absolute;
   background: $turqlight;
@@ -451,11 +443,11 @@ header {
   -webkit-transition: top 0.09s ease-in;
 }
 
-.arrow:hover {
+.fill:hover {
   color: $black;
 }
 
-.arrow:hover:before {
+.fill:hover:before {
   top: 0;
 }
 

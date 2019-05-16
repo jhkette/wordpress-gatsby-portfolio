@@ -33,7 +33,7 @@ class Background extends Component {
     let newcolors = [];
     const height = this.content.getBoundingClientRect().height;
     const width = this.content.getBoundingClientRect().width;
-    if (height > 1900) {
+    if (height > 2500) {
       newcolors = [
         "#E94F37, #bb2d50",
         "#1C89BF, #e3f7ff",
@@ -41,7 +41,24 @@ class Background extends Component {
         "#85FFC7, #3cb371",
         "#297373, #2f4f4f",
         "#FF8552, #fdc888",
-        "#A40E4C ,#ffc2c2"
+        "#A40E4C ,#ffc2c2",
+        "#E94F37, #bb2d50",
+        "#1C89BF, #e3f7ff",
+        "#A1D363, #90ee90",
+        "#85FFC7, #3cb371",
+        "#297373, #2f4f4f",
+        "#FF8552, #fdc888",
+        "#A40E4C, #ffc2c2"
+      ];
+    } else if (height > 1800 && height < 2500) {
+      newcolors = [
+        "#E94F37, #bb2d50",
+        "#1C89BF, #e3f7ff",
+        "#A1D363, #90ee90",
+        "#85FFC7, #3cb371",
+        "#297373, #2f4f4f",
+        "#FF8552, #fdc888",
+        "#A40E4C, #ffc2c2"
       ];
     } else {
       newcolors = [
