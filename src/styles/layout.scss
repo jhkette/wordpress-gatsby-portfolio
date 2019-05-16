@@ -149,7 +149,7 @@ html {
 }
 
 body {
-  color: $black;
+  color: $darkgrey;
 
   font-weight: normal;
   font-kerning: normal;
@@ -162,7 +162,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: "Inter-regular", Helvetica, Arial, sans-serif;
   text-rendering: optimizeLegibility;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.4;
 }
 
@@ -181,6 +181,7 @@ h1 {
   margin: 3rem 0 0 0;
   font-size: 1.1rem;
   text-transform: uppercase;
+  color: $black;
 }
 
 h2,
@@ -188,13 +189,13 @@ h3,
 h4 {
   font-family: "Inter", "Helvetica", "Arial", sans-serif;
   text-rendering: geometricPrecision;
+  color: $black;
 }
 
 h2 {
   margin: 1rem 0 1rem 0;
   color: $black;
   display: block;
-  border-bottom: 1px dotted $black;
   width: 100%;
   font-size: 1.65rem;
   padding-bottom: 0.05rem;
