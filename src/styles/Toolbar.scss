@@ -8,6 +8,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  border-right: 1px solid #ddd;
 
   @media (min-width: $break-large) {
     min-width: 20rem;
@@ -61,6 +62,9 @@
   display: flex;
   justify-content: flex-start;
   padding-bottom: 3px;
+  @media (max-width: $break-smalldesktop) {
+    margin: 0 0.5rem 0.5rem 0;
+  }
 }
 
 .toolbar_navigation-items a {
@@ -82,6 +86,8 @@ a:focus {
   }
   .toolbar {
     width: 100%;
+    border-bottom: 1px solid #ddd;
+    border-right: 0;
   }
   .toolbar__navigation {
     flex-direction: column;
