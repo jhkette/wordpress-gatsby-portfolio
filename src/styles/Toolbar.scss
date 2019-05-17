@@ -48,6 +48,7 @@
   flex-direction: row;
   font-size: 1rem;
   height: 2.5rem;
+  border-bottom: 1px dotted $black;
   @media (max-width: $break-smalldesktop) {
     flex-direction: column;
     height: auto;
@@ -82,7 +83,6 @@ a:focus {
   }
   .toolbar {
     width: 100%;
-    border-bottom: 1px solid #ddd;
   }
   .toolbar__navigation {
     flex-direction: column;
