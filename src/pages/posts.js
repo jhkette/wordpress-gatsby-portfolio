@@ -56,7 +56,7 @@ class IndexPage extends Component {
                 /* sanitize innerhtml */
                 dangerouslySetInnerHTML={{ __html: xss(node.excerpt) }}
               />
-              <Link to={`/post/${node.slug}/`} class="button arrow">
+              <Link to={`/post/${node.slug}/`} class="button fill">
                 View Project
               </Link>
             </article>
