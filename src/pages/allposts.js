@@ -32,7 +32,7 @@ class BlogPosts extends Component {
                   <h3>{node.title}</h3>
                 </Link>
                 <div dangerouslySetInnerHTML={{ __html: xss(node.excerpt) }} />
-                <Link to={`/post/${node.slug}/`} className="button small arrow">
+                <Link to={`/post/${node.slug}/`} className="button fill">
                   View Post
                 </Link>
               </article>
