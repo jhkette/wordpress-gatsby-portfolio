@@ -15,7 +15,7 @@ class PageTemplate extends Component {
         </Helmet>
         <Circle />
         <section className="container-allpost-content" aria role="main">
-          <h1> {currentPage.title} </h1>
+          <h2> {currentPage.title} </h2>
           {/* sanitize innerhtml */}
           <div dangerouslySetInnerHTML={{ __html: xss(currentPage.content) }} />
         </section>
