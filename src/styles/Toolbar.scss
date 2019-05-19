@@ -48,7 +48,7 @@
   align-content: center;
   flex-direction: row;
   font-size: 1rem;
-  border-bottom: 1px dotted $black;
+  border-bottom: 1px solid $black;
   @media (max-width: $break-smalldesktop) {
     flex-direction: column;
     height: auto;
