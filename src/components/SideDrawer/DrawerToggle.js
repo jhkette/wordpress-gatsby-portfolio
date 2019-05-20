@@ -8,7 +8,7 @@ const drawerToggleButton = props => {
   }
 
   return (
-    <div className={crossLines} onClick={props.clicked}>
+    <div className={crossLines} onClick={props.clicked} aria-hidden="true">
       <span />
       <span />
       <span />

@@ -23,6 +23,7 @@ const Toolbar = props => (
           <DrawerToggleButton
             clicked={props.drawerClickHandler}
             change={props.change}
+            aria-label="Open the menu"
           />
         </nav>
       </div>
@@ -31,26 +32,26 @@ const Toolbar = props => (
       <nav className="toolbar_navigation-items" aria role="navigation">
         <ul>
           <li>
-            <img src={Arrow} />
+            <img src={Arrow} alt="arrow" />
             <Link to="/" activeStyle={activeStyle}>
               Home
             </Link>
           </li>
 
           <li>
-            <img src={Arrow} />
+            <img src={Arrow} alt="arrow" />
             <Link to="/sample-page/" activeStyle={activeStyle}>
               About
             </Link>
           </li>
           <li>
-            <img src={Arrow} />
+            <img src={Arrow} alt="arrow" />
             <Link to="/posts" activeStyle={activeStyle}>
               All projects
             </Link>
           </li>
           <li>
-            <img src={Arrow} />
+            <img src={Arrow} alt="arrow" />
             <Link to="/allposts" activeStyle={activeStyle}>
               All posts
             </Link>
