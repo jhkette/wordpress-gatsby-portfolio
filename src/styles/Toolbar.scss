@@ -48,11 +48,9 @@
   align-content: center;
   flex-direction: row;
   font-size: 1rem;
-  border-bottom: 1px solid $black;
-  @media (max-width: $break-smalldesktop) {
-    flex-direction: column;
-    height: auto;
-  }
+
+  flex-direction: column;
+  height: auto;
 }
 
 .toolbar_navigation-items li {
@@ -62,8 +60,15 @@
   display: flex;
   justify-content: flex-start;
   padding-bottom: 3px;
-  @media (max-width: $break-smalldesktop) {
-    margin: 0 0.5rem 0.5rem 0;
+  display: flex;
+  margin: 0 0.5rem 0.5rem 0;
+
+  img {
+    width: 0.9rem;
+    height: 0.9rem;
+    display: block;
+    margin-top: 0.25rem;
+    margin-right: 0.3rem;
   }
 }
 

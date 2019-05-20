@@ -3,6 +3,7 @@ import DrawerToggleButton from "../SideDrawer/DrawerToggle.js";
 import { Link } from "gatsby";
 import Github from "../../images/github.svg";
 import Codepen from "../../images/codepen.svg";
+import Arrow from "../../images/arrow.svg";
 import "../../styles/Toolbar.scss";
 
 const activeStyle = {
@@ -30,22 +31,26 @@ const Toolbar = props => (
       <nav className="toolbar_navigation-items" aria role="navigation">
         <ul>
           <li>
+            <img src={Arrow} />
             <Link to="/" activeStyle={activeStyle}>
               Home
             </Link>
           </li>
 
           <li>
+            <img src={Arrow} />
             <Link to="/sample-page/" activeStyle={activeStyle}>
               About
             </Link>
           </li>
           <li>
+            <img src={Arrow} />
             <Link to="/posts" activeStyle={activeStyle}>
               All projects
             </Link>
           </li>
           <li>
+            <img src={Arrow} />
             <Link to="/allposts" activeStyle={activeStyle}>
               All posts
             </Link>
