@@ -109,10 +109,10 @@ a:focus {
 
 .heading {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .nav-icons ul {
