@@ -113,6 +113,11 @@ a:focus {
   justify-content: space-between;
   width: 100%;
   align-items: flex-start;
+
+  @media (max-width: $break-small) {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .nav-icons ul {

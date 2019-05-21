@@ -405,7 +405,11 @@ header {
     width: 310px !important;
   }
 }
-
+.text-introduction {
+  @media screen and (max-width: $break-small) {
+    display: none;
+  }
+}
 // Button
 .button {
   text-decoration: none;
