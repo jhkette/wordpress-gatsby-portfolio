@@ -19,6 +19,10 @@ const Toolbar = props => (
             <Link to="/">Joseph Ketterer</Link>
           </h1>
         </div>
+        <p>
+          I am a junior web developer with experience with HTML, CSS,
+          Javascript, React, PHP and MySQL{" "}
+        </p>
         <nav className="toolbar__toggle-button">
           <DrawerToggleButton
             clicked={props.drawerClickHandler}
