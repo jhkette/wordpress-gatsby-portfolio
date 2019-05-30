@@ -206,8 +206,6 @@ h2 {
 }
 
 h3 {
-  border-bottom: 1px solid $black;
-
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
   text-decoration: none;
@@ -392,7 +390,7 @@ header {
   }
 }
 
-// Lead image for articles
+// Lead image for articles  //
 .image-bloglead {
   position: relative;
   // hover image
@@ -411,7 +409,8 @@ header {
     display: none;
   }
 }
-// Button
+
+// Button style //
 .button {
   text-decoration: none;
   position: absolute;
