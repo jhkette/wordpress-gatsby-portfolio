@@ -32,6 +32,7 @@ class IndexPage extends Component {
                   <Img
                     className="image-bloglead"
                     fluid={node.featured_media.localFile.childImageSharp.fluid}
+                    alt={node.title}
                   />
                 )}
               </Link>
