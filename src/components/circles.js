@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 const Circle = ({ bgColor, height, width }) => {
   // a number inbetween 120 and 40 to get diamter of circle
   var diameter = Math.random() * (120 - 40) + 40;
@@ -24,6 +23,10 @@ const Circle = ({ bgColor, height, width }) => {
 };
 
 class Background extends Component {
+  constructor(props) {
+    super(props);
+    this.container = React.createRef();
+  }
   state = {
     colors: [],
     contentHeight: 0,
@@ -31,8 +34,8 @@ class Background extends Component {
   };
   componentDidMount() {
     let newcolors = [];
-    const height = this.content.getBoundingClientRect().height;
-    const width = this.content.getBoundingClientRect().width;
+    const height = this.container.current.clientHeight;
+    const width = this.container.current.clientWidth;
     if (height > 2500) {
       newcolors = [
         "#E94F37, #bb2d50",
@@ -78,7 +81,7 @@ class Background extends Component {
   render() {
     let id = 0;
     return (
-      <div className="circles" ref={r => (this.content = r)}>
+      <div className="circles" ref={this.container}>
         {this.state.colors.map(color => (
           <Circle
             key={id++}
