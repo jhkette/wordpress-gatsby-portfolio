@@ -19,7 +19,7 @@ class Home extends Component {
           <title>Portfolio: Joseph Ketterer</title>
         </Helmet>
 
-        <Circle />
+        {/* <Circle /> */}
         <Masonry className="container-projects-posts" aria role="main">
           {data.edges.map(({ node }) => (
             <article key={node.slug} className="masonry-item-post">
