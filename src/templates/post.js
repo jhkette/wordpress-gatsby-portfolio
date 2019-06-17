@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import Layout from "../components/Layout";
-import Circle from "../components/circles.js";
+// import Circle from "../components/circles.js";
 import { Helmet } from "react-helmet";
 import xss from "xss";
 
@@ -16,7 +16,7 @@ class PostTemplate extends Component {
         <Helmet>
           <title>Project: {post.title}</title>
         </Helmet>
-        <Circle />
+        {/* <Circle /> */}
         <section className="container-allpost-content" aria role="main">
           <h2> {post.title}</h2>
           {post.acf.test && (

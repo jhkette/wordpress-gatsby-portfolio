@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link, graphql } from "gatsby";
 import Masonry from "react-masonry-component";
 import Layout from "../components/Layout";
-import Circle from "../components/circles.js";
+// import Circle from "../components/circles.js";
 import { Helmet } from "react-helmet";
 import xss from "xss";
 
@@ -17,7 +17,7 @@ class BlogPosts extends Component {
 
         <section className="container-section-post">
           <h2>All Posts</h2>
-          <Circle />
+          {/* <Circle /> */}
           <Masonry
             className="container-projects-blogposts blog"
             aria

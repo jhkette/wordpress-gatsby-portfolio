@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import { Helmet } from "react-helmet";
-import Circle from "../components/circles.js";
+// import Circle from "../components/circles.js";
 import xss from "xss";
 
 class PageTemplate extends Component {
@@ -13,7 +13,7 @@ class PageTemplate extends Component {
         <Helmet>
           <title>{currentPage.title}</title>
         </Helmet>
-        <Circle />
+        {/* <Circle /> */}
         <section className="container-allpost-content" aria role="main">
           <h2> {currentPage.title} </h2>
           {/* sanitize innerhtml */}
