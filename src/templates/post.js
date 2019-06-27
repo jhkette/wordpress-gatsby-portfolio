@@ -74,7 +74,7 @@ export const pageQuery = graphql`
         leadimage {
           localFile {
             childImageSharp {
-              resolutions(width: 900, height: 350) {
+              resolutions(width: 900, height: 390) {
                 src
                 width
                 height
