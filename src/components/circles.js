@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 const Circle = ({ bgColor, height, width }) => {
   // a number inbetween 120 and 40 to get diamter of circle
+  // test
   var diameter = Math.random() * (120 - 40) + 40;
   var newheight = Math.round(Math.random() * height);
   var newwidth = Math.round(Math.random() * width);
