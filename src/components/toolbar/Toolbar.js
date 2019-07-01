@@ -66,7 +66,7 @@ const Toolbar = props => (
       <nav className="nav-icons" aria role="navigation">
         <ul>
           <li>
-            <a href="https://github.com/jokhenry89" title="github">
+            <a href="https://github.com/jhkette" title="github">
               <img className="iconl github" alt="Github" src={Github} />
             </a>
           </li>
