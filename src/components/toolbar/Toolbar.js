@@ -44,7 +44,7 @@ const Toolbar = props => (
 
           <li>
             <img src={Arrow} alt="arrow" />
-            <Link to="/sample-page/" activeStyle={activeStyle}>
+            <Link to="/about/" activeStyle={activeStyle}>
               About
             </Link>
           </li>
