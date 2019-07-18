@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 // import Circle from "../components/circles.js";
 import { Helmet } from "react-helmet";
 import xss from "xss";
+import Arrow from "./../images/arrow.svg";
 
 import "../styles/post.scss";
 
@@ -33,7 +34,7 @@ class PostTemplate extends Component {
           )}
           {post.acf.url && (
             <div className="container-arrow-link">
-              <i> →</i>
+              <img src={Arrow} alt="arrow" className="arrow" />
               <a
                 className="link-highlight"
                 title={post.title}

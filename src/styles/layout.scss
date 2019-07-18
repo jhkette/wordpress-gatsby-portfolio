@@ -172,6 +172,7 @@ p {
   margin: 0 0 1.4rem 0;
   font-weight: 500;
   line-height: 1.5;
+  font-size: 1rem;
 
   font-family: "Inter-regular", "Helvetica", "Arial", sans-serif;
 }
@@ -487,12 +488,4 @@ header {
   @media (max-width: $break-smalldesktop) {
     width: 100%;
   }
-}
-
-// circles
-.circles {
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
 }
