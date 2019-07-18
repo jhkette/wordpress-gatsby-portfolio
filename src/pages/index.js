@@ -63,11 +63,7 @@ class Home extends Component {
           ))}
         </Masonry>
 
-        <section
-          className="container-section-post index"
-          aria
-          role="complementary"
-        >
+        <article className="container-section-post index" aria>
           <h2>Posts</h2>
 
           <Masonry className="container-projects-blogposts">
@@ -86,7 +82,7 @@ class Home extends Component {
               </article>
             ))}
           </Masonry>
-        </section>
+        </article>
       </Layout>
     );
   }
