@@ -10,4 +10,4 @@ The gatsby wordpress plugin [gatsby-source-wordpress] and I use graphQL to query
 
 ## Installation/deployemnt
 
-This website probably isn't going to work if you change the config file to another wordpress site. I've added too many custom fields and them subsequently queried them on Gatsby pages. However, if could serve as a useful guide. The gatsby docs are a very good place to start. But I had to learn
+This website probably isn't going to work if you change the config file to add another wordpress site. I've added too many custom fields and then subsequently queried them on Gatsby pages. However, it could serve as a useful guide. The gatsby docs are also a very good place to start. 
