@@ -3,7 +3,7 @@ import DrawerToggleButton from "../SideDrawer/DrawerToggle.js";
 import { Link } from "gatsby";
 import Github from "../../images/github.svg";
 import Codepen from "../../images/codepen.svg";
-import Arrow from "../../images/arrow.svg";
+import Arrow from "../../images/right-arrow-1.svg";
 import "../../styles/Toolbar.scss";
 
 const activeStyle = {
@@ -21,7 +21,7 @@ const Toolbar = props => (
         </div>
         <p className="text-introduction">
           I am a junior Web Developer with experience with HTML, CSS,
-          Javascript, React, PHP and MySQL{" "}
+          Javascript, React, PHP and MySQL.
         </p>
         <nav className="toolbar__toggle-button">
           <DrawerToggleButton
