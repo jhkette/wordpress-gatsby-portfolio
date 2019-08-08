@@ -95,7 +95,7 @@ export const pageQuery = graphql`
   query {
     projects: allWordpressPost(
       filter: { acf: { status: { eq: "project" } } }
-      limit: 9
+      limit: 6
     ) {
       edges {
         node {
