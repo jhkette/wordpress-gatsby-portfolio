@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 // import Circle from "../components/circles.js";
 import { Helmet } from "react-helmet";
 import xss from "xss";
+import Arrow from "./../images/arrow.svg";
 
 class BlogPosts extends Component {
   render() {
@@ -32,9 +33,15 @@ class BlogPosts extends Component {
                   <h3>{node.title}</h3>
                 </Link>
                 <div dangerouslySetInnerHTML={{ __html: xss(node.excerpt) }} />
-                <Link to={`/post/${node.slug}/`} className="button fill">
-                  View Post
-                </Link>
+                <div className="container-arrow-link home">
+                  <img src={Arrow} alt="arrow" className="arrow home" />
+                  <Link
+                    to={`/post/${node.slug}/`}
+                    className="link-highlight home"
+                  >
+                    View Project
+                  </Link>
+                </div>
               </article>
             ))}
           </Masonry>

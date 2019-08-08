@@ -345,7 +345,7 @@ header {
   position: relative;
   width: (100% / 3);
   text-align: left;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   padding: 0 1.5rem 3.5rem 1.5rem;
   display: inline-block;
 
@@ -364,6 +364,11 @@ header {
   a {
     color: $black;
     text-decoration: none;
+    &:hover {
+      color: $black;
+      text-decoration: none;
+      z-index: 5;
+    }
   }
 
   .container-codelist {
@@ -416,55 +421,57 @@ header {
   }
 }
 
-// Button style //
-.button {
-  text-decoration: none;
-  position: absolute;
-  height: auto;
-  width: 145px;
-  border: 1px solid $black;
-  padding: 8px 0;
-  font-size: 0.9rem;
-  color: $black;
-  text-align: center;
-  border-radius: 0.05rem;
-  outline: 0;
-  overflow: hidden;
-  background: white;
-  z-index: 500;
-  cursor: pointer;
-  transition: 0.08s ease-in;
-  -o-transition: 0.08s ease-in;
-  -ms-transition: 0.08s ease-in;
-  -moz-transition: 0.08s ease-in;
-  -webkit-transition: 0.08s ease-in;
+// NOT USING BUTTON STYLE ANYMORE
 
-  @media (max-width: $break-small) {
-    font-size: 16px;
-    width: 155px;
-    padding: 8.5px 0;
-  }
-}
+// // Button style //
+// .button {
+//   text-decoration: none;
+//   position: absolute;
+//   height: auto;
+//   width: 145px;
+//   border: 1px solid $black;
+//   padding: 8px 0;
+//   font-size: 0.9rem;
+//   color: $black;
+//   text-align: center;
+//   border-radius: 0.05rem;
+//   outline: 0;
+//   overflow: hidden;
+//   background: white;
+//   z-index: 500;
+//   cursor: pointer;
+//   transition: 0.08s ease-in;
+//   -o-transition: 0.08s ease-in;
+//   -ms-transition: 0.08s ease-in;
+//   -moz-transition: 0.08s ease-in;
+//   -webkit-transition: 0.08s ease-in;
 
-.fill:before {
-  content: "";
-  position: absolute;
-  background: $turqlight;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 100%;
-  z-index: -1;
-  -webkit-transition: top 0.09s ease-in;
-}
+//   @media (max-width: $break-small) {
+//     font-size: 16px;
+//     width: 155px;
+//     padding: 8.5px 0;
+//   }
+// }
 
-.fill:hover {
-  color: $black;
-}
+// .fill:before {
+//   content: "";
+//   position: absolute;
+//   background: $turqlight;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   top: 100%;
+//   z-index: -1;
+//   -webkit-transition: top 0.09s ease-in;
+// }
 
-.fill:hover:before {
-  top: 0;
-}
+// .fill:hover {
+//   color: $black;
+// }
+
+// .fill:hover:before {
+//   top: 0;
+// }
 
 .button.small {
   width: 135px;
@@ -488,4 +495,76 @@ header {
   @media (max-width: $break-smalldesktop) {
     width: 100%;
   }
+}
+
+.link-highlight {
+  color: $black;
+  font-family: "Inter", serif;
+  padding-left: 0.25rem;
+  display: block;
+  margin-top: 0.15rem;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  position: relative;
+  z-index: 5;
+}
+
+.link-highlight.home {
+  font-family: "Inter-regular", serif;
+  color: #343434;
+  text-decoration: none;
+}
+
+// Highlight modified from here
+// https://codepen.io/wethrift/pen/MVdbQR
+
+.link-highlight:before {
+  content: "";
+  position: absolute;
+  background: $turqlight;
+  bottom: 0;
+  left: 10px;
+  right: 0;
+  top: 100%;
+  word-wrap: break-word;
+  z-index: -1;
+  -webkit-transition: top 0.09s ease-in;
+  transition: top 0.09s ease-in;
+  width: auto;
+}
+
+.link-highlight:hover:before {
+  top: 0;
+  // left: 10px;
+  box-shadow: 5px 0 0 $turqlight, -10px 0 0 $turqlight;
+  // z-index: 0;
+}
+.link-highlight:hover {
+  color: $black;
+  z-index: 2;
+}
+.container-arrow-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.container-arrow-link.home {
+  margin-bottom: 0rem;
+}
+
+.arrow {
+  width: 0.75rem;
+  height: 0.75rem;
+  display: block;
+  margin-top: 0.55rem;
+  margin-right: 0.35rem;
+}
+
+.arrow {
+  margin-top: 0.5rem;
 }

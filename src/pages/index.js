@@ -5,6 +5,7 @@ import Masonry from "react-masonry-component";
 import Layout from "../components/Layout";
 import Code from "../images/code.svg";
 import { Helmet } from "react-helmet";
+import Arrow from "./../images/arrow.svg";
 import xss from "xss";
 
 class Home extends Component {
@@ -56,9 +57,15 @@ class Home extends Component {
                 /* sanitize innerhtml */
                 dangerouslySetInnerHTML={{ __html: xss(node.excerpt) }}
               />
-              <Link to={`/post/${node.slug}/`} className="button fill">
-                View Project
-              </Link>
+              <div className="container-arrow-link home">
+                <img src={Arrow} alt="arrow" className="arrow home" />
+                <Link
+                  to={`/post/${node.slug}/`}
+                  className="link-highlight home"
+                >
+                  View Project
+                </Link>
+              </div>
             </article>
           ))}
         </Masonry>
@@ -76,9 +83,15 @@ class Home extends Component {
                   <h3>{node.title}</h3>
                 </Link>
                 <div dangerouslySetInnerHTML={{ __html: xss(node.excerpt) }} />
-                <Link to={`/post/${node.slug}/`} className="button small fill">
-                  View Post
-                </Link>
+                <div className="container-arrow-link home">
+                  <img src={Arrow} alt="arrow" className="arrow home" />
+                  <Link
+                    to={`/post/${node.slug}/`}
+                    className="link-highlight home"
+                  >
+                    View Post
+                  </Link>
+                </div>
               </article>
             ))}
           </Masonry>
