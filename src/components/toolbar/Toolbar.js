@@ -21,7 +21,7 @@ const Toolbar = props => (
         </div>
         <p className="text-introduction">
           I am a junior Web Developer with experience with HTML, CSS,
-          Javascript, React, PHP and MySQL.
+          Javascript, React, PHP, Python and MySQL.
         </p>
         <nav className="toolbar__toggle-button">
           <DrawerToggleButton
