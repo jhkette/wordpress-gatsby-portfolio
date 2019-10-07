@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet";
 import Code from "../images/code.svg";
 // import Circle from "../components/circles.js";
 import xss from "xss";
+import Arrow from "./../images/arrow.svg";
 
 class IndexPage extends Component {
   render() {
@@ -57,9 +58,15 @@ class IndexPage extends Component {
                 /* sanitize innerhtml */
                 dangerouslySetInnerHTML={{ __html: xss(node.excerpt) }}
               />
-              <Link to={`/post/${node.slug}/`} class="button fill">
-                View Project
-              </Link>
+              <div className="container-arrow-link home">
+                <img src={Arrow} alt="arrow" className="arrow home" />
+                <Link
+                  to={`/post/${node.slug}/`}
+                  className="link-highlight home"
+                >
+                  View Project
+                </Link>
+              </div>
             </article>
           ))}
         </Masonry>
