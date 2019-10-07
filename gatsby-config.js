@@ -35,8 +35,8 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        baseUrl: "jkette.000webhostapp.com",
-        protocol: "https",
+        baseUrl: "178.62.95.151",
+        protocol: "http",
         hostingWPCOM: false,
         useACF: true,
         verboseOutput: true
