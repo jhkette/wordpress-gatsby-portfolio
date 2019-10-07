@@ -13,7 +13,7 @@ class PageTemplate extends Component {
         <Helmet>
           <title>{currentPage.title}</title>
         </Helmet>
-        {/* <Circle /> */}
+
         <section className="container-allpost-content" aria role="main">
           <h2> {currentPage.title} </h2>
           {/* sanitize innerhtml */}
