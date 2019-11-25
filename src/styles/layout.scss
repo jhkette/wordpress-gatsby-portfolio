@@ -412,7 +412,11 @@ header {
   }
   @media screen and (max-width: $break-large) {
     height: 420px !important;
-    width: 260px !important;
+    width: 310px !important;
+  }
+  @media screen and (max-width: $break-small) {
+    height: 250px !important;
+    width: 250px !important;
   }
 }
 .text-introduction {
