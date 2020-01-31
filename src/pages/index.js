@@ -57,7 +57,7 @@ class Home extends Component {
                 /* sanitize innerhtml */
                 dangerouslySetInnerHTML={{ __html: xss(node.excerpt) }}
               />
-              <div className="container-arrow-link home">
+              {/* <div className="container-arrow-link home">
                 <img src={Arrow} alt="arrow" className="arrow home" />
                 <Link
                   to={`/post/${node.slug}/`}
@@ -65,7 +65,7 @@ class Home extends Component {
                 >
                   View Project
                 </Link>
-              </div>
+              </div> */}
             </article>
           ))}
         </Masonry>
