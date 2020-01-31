@@ -83,15 +83,6 @@ class Home extends Component {
                   <h3>{node.title}</h3>
                 </Link>
                 <div dangerouslySetInnerHTML={{ __html: xss(node.excerpt) }} />
-                {/* <div className="container-arrow-link home">
-                  <img src={Arrow} alt="arrow" className="arrow home" />
-                  <Link
-                    to={`/post/${node.slug}/`}
-                    className="link-highlight home"
-                  >
-                    View Post
-                  </Link>
-                </div> */}
               </article>
             ))}
           </Masonry>
