@@ -85,12 +85,12 @@ class Home extends Component {
                 <div dangerouslySetInnerHTML={{ __html: xss(node.excerpt) }} />
                 <div className="container-arrow-link home">
                   <img src={Arrow} alt="arrow" className="arrow home" />
-                  <Link
+                  {/* <Link
                     to={`/post/${node.slug}/`}
                     className="link-highlight home"
                   >
                     View Post
-                  </Link>
+                  </Link> */}
                 </div>
               </article>
             ))}
