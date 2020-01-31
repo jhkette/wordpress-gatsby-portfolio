@@ -5,7 +5,7 @@ import Masonry from "react-masonry-component";
 import Layout from "../components/Layout";
 import Code from "../images/code.svg";
 import { Helmet } from "react-helmet";
-import Arrow from "./../images/arrow.svg";
+// import Arrow from "./../images/arrow.svg";
 import xss from "xss";
 
 class Home extends Component {
@@ -57,6 +57,7 @@ class Home extends Component {
                 /* sanitize innerhtml */
                 dangerouslySetInnerHTML={{ __html: xss(node.excerpt) }}
               />
+              <div className="line"></div>
               {/* <div className="container-arrow-link home">
                 <img src={Arrow} alt="arrow" className="arrow home" />
                 <Link

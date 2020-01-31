@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 // import Circle from "../components/circles.js";
 import { Helmet } from "react-helmet";
 import xss from "xss";
-import Arrow from "./../images/arrow.svg";
+// import Arrow from "./../images/arrow.svg";
 
 class BlogPosts extends Component {
   render() {
