@@ -3,11 +3,7 @@
 // All Toolbar styles
 .toolbar {
   width: 30%;
-  background: linear-gradient(
-    50deg,
-    rgba(171, 171, 171, 1) 40%,
-    rgba(224, 224, 224, 1) 89%
-  );
+  background: $lightgrey;
   padding: 0 2.5rem;
   margin: 0 auto;
   display: flex;
@@ -18,7 +14,11 @@
   }
   @media (min-width: $break-tablet) {
     min-height: 100vh;
-    background-color: $grey;
+    background: linear-gradient(
+      50deg,
+      rgba(171, 171, 171, 1) 40%,
+      rgba(224, 224, 224, 1) 89%
+    );
   }
 }
 
