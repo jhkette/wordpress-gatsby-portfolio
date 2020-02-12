@@ -23,6 +23,7 @@ const Toolbar = props => (
           I am a junior Web Developer with experience with HTML, CSS,
           Javascript, React, PHP, Python and MySQL.
         </p>
+        <div className="underline"></div>
         <nav className="toolbar__toggle-button">
           <DrawerToggleButton
             clicked={props.drawerClickHandler}

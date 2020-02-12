@@ -42,7 +42,13 @@
   display: inline-block;
   height: 100%;
 }
+.underline {
+  width: 70%;
 
+  border-top: 1px solid #595959;
+  padding-bottom: 0.5rem;
+  margin-right: auto;
+}
 .toolbar_navigation-items ul {
   list-style: none;
   margin: 0;
