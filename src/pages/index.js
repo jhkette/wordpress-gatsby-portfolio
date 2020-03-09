@@ -26,13 +26,17 @@ class Home extends Component {
                 to={`/post/${node.slug}/`}
                 style={{ textDecoration: "none" }}
               >
-                {node.featured_media.localFile.childImageSharp.fluid && (
-                  <Img
-                    className="image-bloglead"
-                    fluid={node.featured_media.localFile.childImageSharp.fluid}
-                    alt={node.title}
-                  />
-                )}
+                <div className="img-wrapper">
+                  {node.featured_media.localFile.childImageSharp.fluid && (
+                    <Img
+                      className="image-bloglead"
+                      fluid={
+                        node.featured_media.localFile.childImageSharp.fluid
+                      }
+                      alt={node.title}
+                    />
+                  )}
+                </div>
               </Link>
 
               <h3 className="slug">
