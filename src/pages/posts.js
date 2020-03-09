@@ -6,7 +6,6 @@ import Img from "gatsby-image";
 import Masonry from "react-masonry-component";
 import { Helmet } from "react-helmet";
 import Code from "../images/code.svg";
-// import Circle from "../components/circles.js";
 import xss from "xss";
 
 class IndexPage extends Component {
