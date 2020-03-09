@@ -8,7 +8,6 @@ import { Helmet } from "react-helmet";
 import Code from "../images/code.svg";
 // import Circle from "../components/circles.js";
 import xss from "xss";
-import Arrow from "./../images/arrow.svg";
 
 class IndexPage extends Component {
   render() {
