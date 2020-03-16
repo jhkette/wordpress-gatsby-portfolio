@@ -17,7 +17,7 @@ class BlogPosts extends Component {
 
         <section className="container-section-post">
           <h2>All Posts</h2>
-          {/* <Circle /> */}
+
           <Masonry
             className="container-projects-blogposts blog"
             aria
