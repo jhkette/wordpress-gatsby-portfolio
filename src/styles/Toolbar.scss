@@ -47,10 +47,14 @@
   @media (min-width: $break-tablet) {
     display: block;
     width: 70%;
-    border-top: 1px solid #595959;
+    border-top: 1px solid $grey;
     padding-bottom: 0.5rem;
     margin-right: auto;
   }
+}
+
+.toolbar_navigation-items {
+  width: 100%;
 }
 .toolbar_navigation-items ul {
   list-style: none;
@@ -61,26 +65,27 @@
   align-content: center;
   flex-direction: row;
   font-size: 1rem;
-
+  width: 100%;
   flex-direction: column;
   height: auto;
 }
 
 .toolbar_navigation-items li {
-  margin: 0 0.5rem 0rem 0;
   position: relative;
   overflow: hidden;
-  display: flex;
+
+  width: 70%;
   justify-content: flex-start;
   padding-bottom: 3px;
   display: flex;
-  margin: 0 0.5rem 0.5rem 0;
+  margin: 0.45rem 0.5rem 0.5rem 0;
+  border-bottom: 1px solid $grey;
 
   img {
     width: 0.55rem;
     height: 0.55rem;
     display: block;
-    margin-top: 0.38rem;
+    margin-top: 0.42rem;
     margin-right: 0.35rem;
   }
 }
