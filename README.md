@@ -1,7 +1,7 @@
 # Personal portfolio website
 
-A personal website made using gatsby.
+A personal website made using Gatsby.
 
 [View here](https://jkette.netlify.com/)
 
-change
+
