@@ -61,7 +61,6 @@ class Home extends Component {
                 /* sanitize innerhtml */
                 dangerouslySetInnerHTML={{ __html: xss(node.excerpt) }}
               />
-              <div className="line"></div>
             </article>
           ))}
         </Masonry>
