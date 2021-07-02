@@ -8,6 +8,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  border-right: 1px solid $grey;
 
   @media (min-width: $break-large) {
     min-width: 20rem;
