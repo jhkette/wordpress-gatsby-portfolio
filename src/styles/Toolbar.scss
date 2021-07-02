@@ -75,13 +75,13 @@
   padding-bottom: 3px;
   display: flex;
   margin: 0.45rem 0.5rem 0.5rem 0;
-  border-bottom: 1px solid $grey;
+  // border-bottom: 1px solid $grey;
 
   img {
-    width: 0.55rem;
-    height: 0.55rem;
+    width: 0.5rem;
+    height: 0.5rem;
     display: block;
-    margin-top: 0.42rem;
+    margin-top: 0.48rem;
     margin-right: 0.35rem;
   }
 }

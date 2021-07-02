@@ -405,6 +405,7 @@ header {
   position: relative;
   overflow: hidden;
   text-decoration: none;
+
   @media screen and (max-width: $break-large) {
     height: 375px !important;
     width: 310px !important;
