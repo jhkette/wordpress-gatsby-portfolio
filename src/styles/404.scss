@@ -1,0 +1,15 @@
+.heading-warning {
+  font-size: 12rem;
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+
+  p {
+    font-size: 1.8rem;
+  }
+}

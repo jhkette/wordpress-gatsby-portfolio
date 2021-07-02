@@ -1,6 +1,7 @@
 // scss variables
 @import "./variables.scss";
-// break points
+//import masonry post styles
+@import "./masonrypost.scss";
 
 // /Users/joseph/Desktop/wordpress/blog/gatsby-responsive-nav-master/fonts
 @font-face {
@@ -149,8 +150,6 @@ html {
 }
 
 body {
-  color: $darkgrey;
-
   font-weight: normal;
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
@@ -173,7 +172,6 @@ p {
   font-weight: 500;
   line-height: 1.55;
   font-size: 0.9rem;
-
   font-family: "Inter-regular", "Helvetica", "Arial", sans-serif;
 }
 
@@ -214,10 +212,6 @@ h3 {
   font-size: 1.2rem;
   color: $black;
 
-  &:hover {
-    color: $turq;
-    text-decoration: none;
-  }
   a {
     text-decoration: none;
     color: $black;
@@ -338,102 +332,6 @@ header {
   }
   @media (max-width: $break-small) {
     margin-top: 5rem;
-  }
-}
-
-.masonry-item-post {
-  position: relative;
-  width: (100% / 3);
-  text-align: left;
-  margin-bottom: 1.5rem;
-  padding: 0 1.5rem 3.5rem 1.5rem;
-  display: inline-block;
-
-  .code {
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    margin-top: 0.15rem;
-    margin-right: 0.5rem;
-  }
-
-  .svg-inline--fa {
-    width: 1rem !important;
-    height: 1rem !important;
-  }
-  a {
-    color: $black;
-    text-decoration: none;
-    &:hover {
-      color: $black;
-      text-decoration: none;
-      z-index: 5;
-    }
-  }
-
-  .container-codelist {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-top: 0.7rem;
-    margin-bottom: 0.7rem;
-  }
-
-  @media screen and (max-width: $break-smalldesktop) {
-    width: (100% / 2);
-  }
-
-  @media screen and (max-width: $break-large) {
-    width: 100%;
-  }
-
-  .highlight-categories {
-    border-radius: 0.2rem;
-    color: $black;
-    margin: 0.15rem 0 0 0;
-    font-size: 0.9rem;
-    line-height: 1.1rem;
-    padding: 0.2rem 0.3rem;
-    display: block;
-    background-color: $turqlight;
-    display: inline-block;
-  }
-}
-
-.img-wrapper {
-  position: relative;
-  overflow: hidden;
-  text-decoration: none;
-  &:hover {
-    background-color: $turqlight;
-  }
-
-  @media screen and (max-width: $break-large) {
-    height: 375px !important;
-    width: 310px !important;
-  }
-  @media screen and (max-width: $break-small) {
-    height: 250px !important;
-    width: 250px !important;
-  }
-}
-
-// Lead image for articles  //
-.image-bloglead {
-  position: relative;
-
-  &:hover {
-    opacity: 0.3;
-
-    z-index: 2;
-    transform: scale(1.1);
-    transition: transform 2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-  }
-}
-.text-introduction {
-  @media screen and (max-width: $break-small) {
-    display: none;
   }
 }
 

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import { Helmet } from "react-helmet";
-// import Circle from "../components/circles.js";
 import xss from "xss";
 
 class PageTemplate extends Component {

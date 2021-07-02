@@ -2,6 +2,7 @@ import React, { PureComponent } from "react";
 import Toolbar from "./toolbar/Toolbar";
 import SideDrawer from "./SideDrawer/SideDrawer.js";
 import "../styles/layout.scss";
+// import "../styles/masonrypost.scss";
 import { Helmet } from "react-helmet";
 
 class Layout extends PureComponent {
