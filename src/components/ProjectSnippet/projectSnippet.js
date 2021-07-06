@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { Link, graphql } from "gatsby";
 import Img from "gatsby-image";
-
-import Code from "/Users/joseph/Desktop/Gatsby/gatsby-responsive-nav-master/src/images/code.svg";
-
+import Code from "./../images/code.svg";
 import xss from "xss";
 
 export default class projectSnippet extends Component {
