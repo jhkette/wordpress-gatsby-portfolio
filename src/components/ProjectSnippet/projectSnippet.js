@@ -12,7 +12,6 @@ export default class ProjectSnippet extends Component {
       hover: false
     };
   }
-
   splitCode = code => {
     const mainCode = code.split(",");
     return mainCode[0];
@@ -30,7 +29,14 @@ export default class ProjectSnippet extends Component {
     const node = this.props.node;
     return (
       <article key={node.slug} className="masonry-item-post">
-        <Link to={`/post/${node.slug}/`} style={{ textDecoration: "none" }}>
+        <Link
+          to={`/post/${node.slug}/`}
+          style={{ textDecoration: "none" }}
+          onMouseOut={this.turnHoverOff}
+          onMouseEnter={this.toggleHover}
+          onFocus={this.toggleHover}
+          onBlur={this.turnHoverOff}
+        >
           <div className="img-wrapper">
             <p
               className="maincode"
@@ -38,8 +44,6 @@ export default class ProjectSnippet extends Component {
                 backgroundColor: this.state.hover ? this.styles : "",
                 opacity: this.state.hover ? 1 : 0
               }}
-              onMouseOut={this.turnHoverOff}
-              onMouseEnter={this.toggleHover}
             >
               {this.splitCode(node.acf.test)}
             </p>

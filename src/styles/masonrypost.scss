@@ -93,14 +93,13 @@
     position: relative;
     overflow: hidden;
     text-decoration: none;
-
-    // @media screen and (max-width: $break-large) {
-    //   height: 375px !important;
-    //   width: 310px !important;
-    // }
     @media screen and (max-width: $break-large) {
-      height: 250px !important;
-      width: 250px !important;
+      height: 300px !important;
+      width: 280px !important;
+    }
+    @media screen and (max-width: $break-small) {
+      height: 240px !important;
+      width: 240px !important;
     }
   }
 }
