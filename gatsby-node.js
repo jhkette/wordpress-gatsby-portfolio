@@ -62,7 +62,7 @@ exports.createPages = ({ graphql, actions }) => {
           });
         });
       })
-
+      //
       .then(() => {
         graphql(postsQuery).then(result => {
           if (result.errors) {
