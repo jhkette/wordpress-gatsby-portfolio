@@ -4,7 +4,7 @@ import Img from "gatsby-image";
 import Code from "./../../images/code.svg";
 import xss from "xss";
 
-export default class projectSnippet extends Component {
+export default class ProjectSnippet extends Component {
   constructor() {
     super();
     this.styles = "#3B8A8A";
