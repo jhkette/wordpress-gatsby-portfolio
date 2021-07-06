@@ -11,6 +11,16 @@
   padding: 0 1.5rem 3.5rem 1.5rem;
   display: inline-block;
 
+  @media screen and (max-width: $break-smalldesktop) {
+    width: (100% / 2);
+  }
+
+  @media screen and (max-width: $break-large) {
+    width: 100%;
+    padding-bottom: 0rem;
+    margin-bottom: 0.5rem;
+  }
+
   .code {
     width: 25px;
     height: 25px;
@@ -51,24 +61,16 @@
     color: $lightgrey;
     z-index: 20;
     width: 100%;
-    font-weight: 900;
-    font-size: 1.65rem;
+    font-weight: 500;
+    font-size: 1.55rem;
     height: 100%;
     text-align: center;
     vertical-align: middle;
     &:hover {
       z-index: 2;
-      transform: scale(1.05);
-      transition: transform 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      transform: scale(1.2);
+      transition: transform 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     }
-  }
-
-  @media screen and (max-width: $break-smalldesktop) {
-    width: (100% / 2);
-  }
-
-  @media screen and (max-width: $break-large) {
-    width: 100%;
   }
 
   .highlight-categories {
@@ -86,24 +88,17 @@
   .image-bloglead {
     position: relative;
   }
-  .text-introduction {
-    @media screen and (max-width: $break-small) {
-      display: none;
-    }
-  }
+
   .img-wrapper {
     position: relative;
     overflow: hidden;
     text-decoration: none;
-    &:hover {
-      background-color: $turqlight;
-    }
 
+    // @media screen and (max-width: $break-large) {
+    //   height: 375px !important;
+    //   width: 310px !important;
+    // }
     @media screen and (max-width: $break-large) {
-      height: 375px !important;
-      width: 310px !important;
-    }
-    @media screen and (max-width: $break-small) {
       height: 250px !important;
       width: 250px !important;
     }
