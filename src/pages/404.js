@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 import { Helmet } from "react-helmet";
 import "../styles/404.scss";
 
-// 404 page
+// 404 page for gatsby
 export default class fourofour extends Component {
   render() {
     return (
