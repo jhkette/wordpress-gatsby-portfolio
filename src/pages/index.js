@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import { Link, graphql } from "gatsby";
-import Img from "gatsby-image";
 import Masonry from "react-masonry-component";
 import Layout from "../components/Layout";
 import ProjectSnippet from "../components/ProjectSnippet/projectSnippet";
-import Code from "../images/code.svg";
 import { Helmet } from "react-helmet";
 import xss from "xss";
 
