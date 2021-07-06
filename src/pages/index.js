@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link, graphql } from "gatsby";
 import Masonry from "react-masonry-component";
 import Layout from "../components/Layout";
-import ProjectSnippet from "../components/ProjectSnippet/ProjectSnippet";
+import ProjectSnippet from "../components/ProjectSnippet/projectSnippet";
 import { Helmet } from "react-helmet";
 import xss from "xss";
 
