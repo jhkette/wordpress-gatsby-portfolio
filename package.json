@@ -11,6 +11,7 @@
     "babel-plugin-styled-components": "^1.10.7",
     "bluebird": "^3.7.2",
     "gatsby": "^2.19.10",
+    "gatsby-background-image": "^1.5.3",
     "gatsby-image": "^2.2.39",
     "gatsby-paginate": "^1.1.1",
     "gatsby-plugin-manifest": "^2.2.40",

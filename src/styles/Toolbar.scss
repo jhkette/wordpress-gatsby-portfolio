@@ -189,7 +189,19 @@ a:focus {
   }
 }
 
-// .right {
-//   transform: rotate(-45deg);
-//   -webkit-transform: rotate(-45deg);
-// }
+// arrow for main nav
+.arrow {
+  width: 0.75rem;
+  height: 0.75rem;
+  display: block;
+  margin-top: 0.55rem;
+  margin-right: 0.35rem;
+}
+
+// underline for intro text
+.line {
+  width: 70%;
+  margin: auto;
+  padding-top: 1rem;
+  border-bottom: 1px solid $lightgrey;
+}

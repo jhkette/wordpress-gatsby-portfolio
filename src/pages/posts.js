@@ -19,7 +19,6 @@ class IndexPage extends Component {
         </Helmet>
 
         <h2 className="heading-project">All Projects</h2>
-        {/* <Circle /> */}
         <Masonry className="container-projects-posts" aria role="main">
           {data.edges.map(({ node }) => (
             <article key={node.slug} className="masonry-item-post">

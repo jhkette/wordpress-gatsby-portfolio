@@ -3,12 +3,13 @@ import { Link, graphql } from "gatsby";
 import Img from "gatsby-image";
 import Masonry from "react-masonry-component";
 import Layout from "../components/Layout";
+import ProjectSnippet from "../components/ProjectSnippet/projectSnippet";
 import Code from "../images/code.svg";
 import { Helmet } from "react-helmet";
-// import Arrow from "./../images/arrow.svg";
 import xss from "xss";
 
 class Home extends Component {
+  // }
   render() {
     const data = this.props.data.projects;
     const allposts = this.props.data.posts;
@@ -21,51 +22,11 @@ class Home extends Component {
 
         <Masonry className="container-projects-posts" aria role="main">
           {data.edges.map(({ node }) => (
-            <article key={node.slug} className="masonry-item-post">
-              <Link
-                to={`/post/${node.slug}/`}
-                style={{ textDecoration: "none" }}
-              >
-                <div className="img-wrapper">
-                  {node.featured_media.localFile.childImageSharp.fluid && (
-                    <Img
-                      className="image-bloglead"
-                      fluid={
-                        node.featured_media.localFile.childImageSharp.fluid
-                      }
-                      alt={node.title}
-                    />
-                  )}
-                </div>
-              </Link>
-
-              <h3 className="slug">
-                {" "}
-                <Link
-                  to={`/post/${node.slug}/`}
-                  style={{ textDecoration: "none" }}
-                >
-                  {node.title}
-                </Link>
-              </h3>
-
-              <div className="container-codelist">
-                <img src={Code} alt="code" className="code" />
-                {node.acf.test && (
-                  <p className="highlight-categories">{node.acf.test}</p>
-                )}
-              </div>
-
-              <div
-                className="excerpt"
-                /* sanitize innerhtml */
-                dangerouslySetInnerHTML={{ __html: xss(node.excerpt) }}
-              />
-            </article>
+            <ProjectSnippet node={node} key={node.title} />
           ))}
         </Masonry>
 
-        <article className="container-section-post index" aria>
+        <section className="container-section-post index" aria>
           <h2>Posts</h2>
 
           <Masonry className="container-projects-blogposts">
@@ -81,7 +42,7 @@ class Home extends Component {
               </article>
             ))}
           </Masonry>
-        </article>
+        </section>
       </Layout>
     );
   }
