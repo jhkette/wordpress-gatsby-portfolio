@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Masonry from "react-masonry-component";
 import Layout from "../components/Layout";
 import ProjectSnippet from "../components/ProjectSnippet/projectSnippet";
+import BlogSnippet from "../components/BlogSnippet/BlogSnippet";
 import { Helmet } from "react-helmet";
-import xss from "xss";
 
 class Home extends Component {
   render() {
@@ -16,27 +16,17 @@ class Home extends Component {
         <Helmet>
           <title>Portfolio: Joseph Ketterer</title>
         </Helmet>
-
         <Masonry className="container-projects-posts" aria role="main">
           {data.edges.map(({ node }) => (
             <ProjectSnippet node={node} key={node.title} />
           ))}
         </Masonry>
-
         <section className="container-section-post index" aria>
           <h2>Posts</h2>
 
           <Masonry className="container-projects-blogposts">
             {allposts.edges.map(({ node }) => (
-              <article key={node.slug} className="container-singlepost">
-                <Link
-                  to={`/post/${node.slug}/`}
-                  style={{ textDecoration: "none" }}
-                >
-                  <h3>{node.title}</h3>
-                </Link>
-                <div dangerouslySetInnerHTML={{ __html: xss(node.excerpt) }} />
-              </article>
+              <BlogSnippet node={node} key={node.title} />
             ))}
           </Masonry>
         </section>
