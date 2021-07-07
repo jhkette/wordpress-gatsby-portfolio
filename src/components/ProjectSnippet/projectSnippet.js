@@ -42,7 +42,7 @@ export default class ProjectSnippet extends Component {
               className="maincode"
               style={{
                 backgroundColor: this.state.hover ? this.styles : "",
-                opacity: this.state.hover ? 1 : 0
+                opacity: this.state.hover ? 0.9 : 0
               }}
             >
               {this.splitCode(node.acf.test)}

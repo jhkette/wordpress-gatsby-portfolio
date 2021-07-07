@@ -20,7 +20,7 @@ const Toolbar = props => (
           </h1>
         </div>
         <p className="text-introduction">
-          I am a junior Web Developer with experience with HTML, CSS,
+          I am a junior web developer with experience with HTML, CSS,
           Javascript, React, PHP, Python and MySQL.
         </p>
         <div className="underline"></div>
