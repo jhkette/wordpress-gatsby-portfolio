@@ -31,11 +31,11 @@ export default class ProjectSnippet extends Component {
       <article key={node.slug} className="masonry-item-post">
         <Link
           to={`/post/${node.slug}/`}
-          style={{ textDecoration: "none" }}
           onMouseOut={this.turnHoverOff}
           onMouseEnter={this.toggleHover}
           onFocus={this.toggleHover}
           onBlur={this.turnHoverOff}
+          className="≈"
         >
           <div className="img-wrapper">
             <p
