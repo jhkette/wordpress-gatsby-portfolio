@@ -35,7 +35,7 @@ export default class ProjectSnippet extends Component {
           onMouseEnter={this.toggleHover}
           onFocus={this.toggleHover}
           onBlur={this.turnHoverOff}
-          className="≈"
+          className="masonry-item-link"
         >
           <div className="img-wrapper">
             <p
