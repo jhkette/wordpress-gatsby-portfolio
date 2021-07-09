@@ -368,7 +368,10 @@ header {
 }
 /****** for blog section and heading, also used on all posts page ***************/
 .container-section-post.index {
-  margin-top: -1.5rem;
+  margin-top: 1.5rem;
+  @media (min-width: $break-large) {
+    margin-top: none;
+  }
 }
 
 .container-section-post {

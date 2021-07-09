@@ -50,19 +50,6 @@
   }
 }
 
-.wp-block-quote {
-  border-left: 10px solid $turqlight;
-  padding: 0 1.5rem;
-  margin: 1rem 0;
-  p {
-    &:first-of-type {
-      font-size: 1rem !important;
-      font-family: "Inter-regular", sans-serif !important;
-      margin-top: 0.5rem;
-    }
-  }
-}
-
 .link-highlight {
   color: $black;
   padding-left: 0.25rem;
