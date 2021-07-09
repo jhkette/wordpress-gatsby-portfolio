@@ -8,8 +8,8 @@ import { Helmet } from "react-helmet";
 
 class Home extends Component {
   render() {
-    const data = this.props.data.projects;
-    const allposts = this.props.data.posts;
+    const data = this.props.data.projects; //data for projects
+    const allposts = this.props.data.posts; //data for posts
 
     return (
       <Layout>
@@ -17,7 +17,6 @@ class Home extends Component {
           <title>Portfolio: Joseph Ketterer</title>
         </Helmet>
         <h1 className="lead-intro">
-          {" "}
           I am a junior web developer with experience with HTML, CSS,
           Javascript, React, PHP, Python and MySQL.
         </h1>
@@ -28,7 +27,6 @@ class Home extends Component {
         </Masonry>
         <section className="container-section-post index" aria>
           <h2>Posts</h2>
-
           <Masonry className="container-projects-blogposts">
             {allposts.edges.map(({ node }) => (
               <BlogSnippet node={node} key={node.title} />

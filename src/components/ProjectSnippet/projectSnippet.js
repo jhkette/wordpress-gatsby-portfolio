@@ -56,7 +56,6 @@ export default class ProjectSnippet extends Component {
             )}
           </div>
         </Link>
-
         <h3 className="slug">
           {" "}
           <Link to={`/post/${node.slug}/`} style={{ textDecoration: "none" }}>
@@ -71,7 +70,6 @@ export default class ProjectSnippet extends Component {
             <p className="highlight-categories">{node.acf.test}</p>
           )}
         </div>
-
         <div
           className="excerpt"
           /* sanitize innerhtml */

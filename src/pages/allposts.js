@@ -3,7 +3,6 @@ import { graphql } from "gatsby";
 import Masonry from "react-masonry-component";
 import Layout from "../components/Layout";
 import BlogSnippet from "../components/BlogSnippet/BlogSnippet";
-
 import { Helmet } from "react-helmet";
 
 class BlogPosts extends Component {
@@ -16,7 +15,6 @@ class BlogPosts extends Component {
         </Helmet>
         <section className="container-section-post">
           <h2>All Posts</h2>
-
           <Masonry
             className="container-projects-blogposts blog"
             aria
