@@ -16,6 +16,11 @@ class Home extends Component {
         <Helmet>
           <title>Portfolio: Joseph Ketterer</title>
         </Helmet>
+        <h1 className="lead-intro">
+          {" "}
+          I am a junior web developer with experience with HTML, CSS,
+          Javascript, React, PHP, Python and MySQL.
+        </h1>
         <Masonry className="container-projects-posts" aria role="main">
           {data.edges.map(({ node }) => (
             <ProjectSnippet node={node} key={node.title} />

@@ -13,7 +13,6 @@
   width: 100%;
   transition-duration: 0.25s;
   top: -200%;
-  font-size: 1.1rem;
 }
 .sidedrawer.open {
   display: none;
@@ -32,10 +31,10 @@
   margin-left: 3rem;
 }
 
-.sidedrawer a {
+.sidedrawer li a {
   color: $black;
   text-decoration: none;
-
+  font-size: 1.1rem;
   padding-bottom: 0.8rem;
   display: block;
   opacity: 0.1;
